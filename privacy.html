@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — ThrottleX</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;600&family=Barlow+Condensed:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .policy-page { max-width: 760px; margin: 0 auto; padding: 8rem 2rem 6rem; }
+    .policy-back { display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--font-cond); font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dimmer); margin-bottom: 3rem; transition: color 0.2s; }
+    .policy-back:hover { color: var(--red); }
+    .policy-page h1 { font-family: var(--font-display); font-size: 4rem; color: var(--white); margin-bottom: 0.5rem; }
+    .policy-date { font-family: var(--font-cond); font-size: 0.8rem; letter-spacing: 0.1em; color: var(--text-dimmer); margin-bottom: 3rem; }
+    .policy-page h2 { font-family: var(--font-cond); font-size: 1rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--red); margin: 2.5rem 0 0.75rem; }
+    .policy-page p { font-size: 0.95rem; color: var(--text-dim); line-height: 1.8; margin-bottom: 1rem; }
+    .policy-page ul { padding-left: 1.5rem; margin-bottom: 1rem; }
+    .policy-page ul li { font-size: 0.95rem; color: var(--text-dim); line-height: 1.8; margin-bottom: 0.4rem; }
+    .policy-page a { color: var(--red); }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">THROTTLE<span>X</span></a>
+    </div>
+  </nav>
+
+  <div class="policy-page">
+    <a href="index.html" class="policy-back">← Back to Home</a>
+    <h1>PRIVACY POLICY</h1>
+    <div class="policy-date">Last Updated: February 21, 2025</div>
+
+    <p>ThrottleX ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our mobile application.</p>
+
+    <h2>1. Information Collection and Use</h2>
+
+    <h2>Location Data</h2>
+    <p>ThrottleX requires access to your location (including background location) to:</p>
+    <ul>
+      <li>Calculate real-time ground speed and telemetry.</li>
+      <li>Map your ride pathing.</li>
+      <li>Provide accurate GPS coordinates in the event of an emergency SOS trigger.</li>
+    </ul>
+    <p><strong>Foreground Service:</strong> We use a foreground service to ensure location tracking continues reliably even if you switch apps or turn off your screen during a ride.</p>
+
+    <h2>SMS Data</h2>
+    <p>The app requires the SEND_SMS permission. This is used exclusively for the "Automated SOS" feature. If a crash is detected and you do not cancel the countdown, the app will send a single SMS to your designated emergency contact containing your GPS location. We do not read your personal messages.</p>
+
+    <h2>Sensor Data</h2>
+    <p>We access high-frequency IMU sensors (accelerometer, gyroscope) to calculate lean angles, G-forces, and detect potential impacts and crashes.</p>
+
+    <h2>2. Data Storage</h2>
+    <p>All ride data, telemetry, and settings are stored locally on your device. ThrottleX does not upload your ride history or location data to any external servers.</p>
+
+    <h2>3. Third-Party Services</h2>
+    <p>We use Google Maps API to display maps and Google Assistant (App Actions) to allow voice commands (e.g., "Hey Google, start a ride on ThrottleX"). These services may collect data as governed by Google's Privacy Policy.</p>
+
+    <h2>4. Safety Disclaimer</h2>
+    <p>ThrottleX is for informational purposes only. Motorcycling is inherently dangerous. The Automated SOS feature depends on cellular signal and GPS accuracy and is not a guaranteed life-saving device.</p>
+
+    <h2>5. Contact Us</h2>
+    <p>If you have any questions about this Privacy Policy, please contact us at: <a href="mailto:devsharpedgex@gmail.com">devsharpedgex@gmail.com</a></p>
+  </div>
+</body>
+</html>
