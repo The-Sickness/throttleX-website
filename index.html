@@ -12,7 +12,7 @@
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://throttlexapp.com/" />
 
-  <!-- Open Graph (Facebook, Instagram, iMessage, Discord, etc.) -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://throttlexapp.com/" />
   <meta property="og:title" content="ThrottleX — Professional Motorcycle Telemetry App" />
@@ -30,7 +30,7 @@
   <meta name="twitter:description" content="Real-time lean angle, G-force, GPS speed, voice coaching, ride history, and garage tracker. $14.99 one-time. No subscriptions ever." />
   <meta name="twitter:image" content="https://throttlexapp.com/images/og-image.jpg" />
 
-  <!-- Structured Data — Software App (helps Google show app info in search results) -->
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -144,6 +144,20 @@
     }
     .footer-social a:hover { color: #e8001e; }
     .footer-social svg { width: 18px; height: 18px; display: block; }
+
+    /* CRASH DETECTION DOUBLE SCREEN */
+    .feature-row-screen--crash {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+    }
+    .feature-row-screen--crash img {
+      width: 100%;
+      max-width: 220px;
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+    }
   </style>
 </head>
 <body>
@@ -367,6 +381,26 @@
         </div>
       </div>
 
+      <div class="feature-row feature-row--flip">
+        <div class="feature-row-text">
+          <div class="feature-row-eyebrow">Crash Detection & SOS</div>
+          <h3>Ride alone. Never be alone.</h3>
+          <p>ThrottleX monitors your IMU in real time for impact force and tip-over events. If a crash is detected, a 30 second countdown gives you time to cancel. If you don't respond, it automatically sends an SMS to your emergency contact with your exact GPS location and a Google Maps link.</p>
+          <ul class="feature-list">
+            <li>4.0G impact threshold with sample-window confirmation</li>
+            <li>65 degree tip-over detection with persistence check</li>
+            <li>30 second countdown before SOS fires</li>
+            <li>SMS with live GPS location sent to emergency contact</li>
+            <li>Always-on background protection mode</li>
+            <li>Arms automatically when moving at 8 mph or faster</li>
+          </ul>
+        </div>
+        <div class="feature-row-screen feature-row-screen--crash">
+          <img src="images/screen-crashdetection.png" alt="ThrottleX Crash Detection Settings" />
+          <img src="images/screen-crashdetection2.png" alt="ThrottleX Crash Detection Validation Logic" />
+        </div>
+      </div>
+
       <div class="feature-row">
         <div class="feature-row-text">
           <div class="feature-row-eyebrow">Garage & Service</div>
@@ -405,6 +439,7 @@
         <div class="pill">Landscape Lock</div>
         <div class="pill">Keep Screen On Mode</div>
         <div class="pill">GPS Accuracy Indicator</div>
+        <div class="pill">Crash Detection & SOS</div>
         <div class="pill">Session Export</div>
         <div class="pill">No Account Required</div>
         <div class="pill">No Ads. Ever.</div>
@@ -479,6 +514,7 @@
             <li><span class="check">✓</span> Real-time lean angle, G-force & speed</li>
             <li><span class="check">✓</span> Voice Coach with custom alerts</li>
             <li><span class="check">✓</span> Full ride history & analysis</li>
+            <li><span class="check">✓</span> Crash Detection & SOS</li>
             <li><span class="check">✓</span> Garage & service tracking</li>
             <li><span class="check">✓</span> G-G Traction Diagram</li>
             <li><span class="check">✓</span> Lean Distribution Histogram</li>
@@ -520,6 +556,10 @@
           <div class="faq-a">ThrottleX works with any motorcycle. The Bike Profile setting (Sport / Cruiser / Touring) lets you tell the app your geometry so sensor fusion is tuned for your specific bike's physics.</div>
         </div>
         <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How does Crash Detection work?<span class="faq-arrow">+</span></button>
+          <div class="faq-a">ThrottleX monitors your phone's IMU continuously while you ride. If it detects an impact of 4.0G or greater combined with a tip-over angle of 65 degrees or more, a 30 second countdown begins. Cancel it and nothing happens. If you don't respond, the app sends an SMS to your emergency contact with your exact GPS location and a Google Maps link. It arms automatically once you're moving at 8 mph or faster.</div>
+        </div>
+        <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)">Will it drain my battery?<span class="faq-arrow">+</span></button>
           <div class="faq-a">Expect 40–60% battery use over a 3–4 hour session depending on your phone. A powered handlebar mount with USB pass-through is recommended for full-day track use.</div>
         </div>
@@ -554,8 +594,6 @@
         </div>
         <div class="contact-right">
           <form class="contact-form" action="https://formspree.io/f/xeevbewp" method="POST">
-            
-            
             <div class="form-group">
               <label for="name">Name</label>
               <input type="text" id="name" name="name" placeholder="Your name" required />
