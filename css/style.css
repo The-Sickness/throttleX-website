@@ -238,7 +238,16 @@ a { color: inherit; text-decoration: none; }
   font-family: var(--font-cond); font-size: 0.75rem;
   letter-spacing: 0.05em; color: var(--text-dimmer);
 }
-.reviews-cta { text-align: center; }
+.reviews-cta { text-align: center; margin-top: 3rem; }
+.reviews-cta a {
+  font-family: var(--font-cond); font-weight: 700; font-size: 1.1rem;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: #fbbf24 !important; border-color: #fbbf24 !important;
+  padding: 1rem 2.5rem;
+}
+.reviews-cta a:hover {
+  background: #fbbf24 !important; color: #050507 !important;
+}
 
 @media(max-width:960px){
   .reviews-grid { grid-template-columns: 1fr 1fr; }
