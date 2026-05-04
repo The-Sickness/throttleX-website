@@ -14,7 +14,13 @@
   </url>
   <url>
     <loc>https://throttlexapp.com/blog/what-is-motorcycle-telemetry.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://throttlexapp.com/blog/what-is-lean-angle-on-a-motorcycle.html</loc>
+    <lastmod>2026-05-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
