@@ -4,10 +4,10 @@ This is the source code for [throttlexapp.com](https://throttlexapp.com), the of
 
 ## About ThrottleX
 
-ThrottleX transforms your Android phone into a professional grade motorcycle telemetry system. Real-time lean angle, G-force, GPS speed, voice coaching, crash detection, ride history, and garage tracking — all in one app, for one price.
+ThrottleX transforms your Android phone into a professional grade motorcycle telemetry system. Real-time lean angle, G-force, GPS speed, voice coaching, crash detection, ride history, and garage tr[...]
 
 - **Platform:** Android
-- **Price:** $14.99 one-time purchase with 7-day free trial
+- **Price:** $9.99 one-time purchase with 7-day free trial
 - **No subscriptions. No ads. Ever.**
 
 ## Links
@@ -16,7 +16,7 @@ ThrottleX transforms your Android phone into a professional grade motorcycle tel
 - **Google Play:** [Download ThrottleX](https://play.google.com/store/apps/details?id=com.alloy.throttlex)
 - **TikTok:** [@throttlexapp](https://www.tiktok.com/@throttlexapp)
 - **YouTube:** [@ThrottleXApp](https://www.youtube.com/@ThrottleXApp/videos)
-- **Instagram:** [@devsharpedgex](https://www.instagram.com/devsharpedgex/)
+- **Instagram:** [@devsharpedgex](https://www.instagram.com/@devsharpedgex/)
 
 ## Tech Stack
 
