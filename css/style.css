@@ -265,27 +265,25 @@ a { color: inherit; text-decoration: none; }
 .video-wrap {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%; /* 16:9 */
+  padding-bottom: 56.25%;
   height: 0;
-  overflow: hidden;
+  overflow: visible;
   border: 2px solid var(--border);
   box-shadow: 0 0 60px var(--red-glow), 0 30px 80px rgba(0,0,0,0.6);
 }
+.video-wrap .yt-facade,
 .video-wrap iframe {
   position: absolute;
   top: 0; left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100%; height: 100%;
 }
 .yt-facade {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
   cursor: pointer;
   background: #000;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 .yt-thumbnail {
   position: absolute;
