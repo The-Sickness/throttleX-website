@@ -1,5 +1,20 @@
 // ThrottleX — main.js v2
 
+// ── YouTube lazy facade ──────────────────────
+function loadYouTube() {
+  const facade = document.getElementById('ytFacade');
+  if (!facade) return;
+  const iframe = document.createElement('iframe');
+  iframe.src = 'https://www.youtube.com/embed/vTubq93eGOc?autoplay=1&rel=0';
+  iframe.title = 'ThrottleX Real Motorcycle Telemetry on Elder Hill Road';
+  iframe.frameBorder = '0';
+  iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+  iframe.allowFullscreen = true;
+  iframe.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;border:0;';
+  facade.parentNode.style.position = 'relative';
+  facade.parentNode.replaceChild(iframe, facade);
+}
+
 // ── Nav scroll ───────────────────────────────
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
