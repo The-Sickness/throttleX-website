@@ -418,197 +418,298 @@
   </section>
 
   <!-- FEATURES -->
-  <section class="features" id="features">
+  <section class="showcase" id="features">
     <div class="container">
-      <div class="section-header">
+      <div class="showcase-header">
         <div class="section-eyebrow">Features</div>
-        <h2 class="section-title">BUILT DEEP.<br/><span>NOT WIDE.</span></h2>
-        <p class="section-desc">Every feature was designed by a rider, for riders. Nothing bloated. Nothing missing.</p>
+        <h2 class="section-title">EVERY FEATURE.<br/><span>EVERY SCREENSHOT.</span></h2>
+        <p class="section-desc">This is the real app. Every screenshot below is captured directly from ThrottleX. No mockups. No marketing renders. Just the actual thing.</p>
       </div>
+    </div>
 
-      <div class="feature-row">
-        <div class="feature-row-text">
-          <div class="feature-row-eyebrow">Live Telemetry Dashboard</div>
-          <h3>Real data. Every corner.</h3>
-          <p>ThrottleX pulls from your phone's IMU and GPS simultaneously using a custom Kalman filter that removes engine vibration noise from the data stream. No external hardware, no OBD dongle. Lean angle, G-force, and GPS speed all live on one dashboard built for glanceability at speed.</p>
-          <ul class="feature-list">
-            <li>Real-time lean angle with decimal precision</li>
-            <li>Peak lean angle with tap to reset</li>
-            <li>Lateral and longitudinal G-force with peak tracking</li>
-            <li>GPS speed in mph or km/h with one tap toggle</li>
-            <li>Top speed tracker per session</li>
-            <li>Live Friction Circle showing current traction budget (Pro)</li>
-            <li>Live Lean Distribution Histogram (Pro)</li>
-            <li>GPS quality indicator with color coded accuracy pill</li>
-          </ul>
-        </div>
-        <div class="feature-row-screen portrait">
-          <img src="images/screen-digital.webp" alt="ThrottleX Digital Dashboard" loading="lazy" style="width:100%;height:auto;" />
-        </div>
-      </div>
-
-      <div class="feature-row feature-row--flip">
-        <div class="feature-row-text">
-          <div class="feature-row-eyebrow">Session Recording</div>
-          <h3>Every lap. Automatically.</h3>
-          <p>Start a session manually or use Voice Start to trigger recording hands-free with a custom spoken phrase. ThrottleX automatically detects laps using a GPS start/finish anchor set at session start, splits your data into individual laps, and saves everything continuously so nothing is lost if a session is interrupted.</p>
-          <ul class="feature-list">
-            <li>One tap start and end session recording</li>
-            <li>Voice Start for completely hands-free session trigger (Pro)</li>
-            <li>Configurable 0 to 30 second start delay</li>
-            <li>Automatic lap detection with GPS anchor</li>
-            <li>Smart out-lap arming logic before timing begins</li>
-            <li>Route naming dialog at end of session</li>
-            <li>Continuous save so interruptions never lose data</li>
-          </ul>
-        </div>
-        <div class="feature-row-screen portrait">
-          <img src="images/screen-road.png" alt="ThrottleX Session Recording" loading="lazy" style="width:100%;height:auto;" />
-        </div>
-      </div>
-
-      <div class="feature-row">
-        <div class="feature-row-text">
-          <div class="feature-row-eyebrow">Ride History and Analysis</div>
-          <h3>Know your numbers after the ride.</h3>
-          <p>Every session is archived automatically. Pull up any ride and see top speed, average speed, max G, distance, duration, peak lean, and a full corner performance breakdown. Advanced coaching analytics give you smoothness score, braking score, traction efficiency per side, and corner type breakdown for slow, medium, and fast corners.</p>
-          <ul class="feature-list">
-            <li>Corner Confidence Score showing left and right symmetry</li>
-            <li>Smoothness, braking, and traction efficiency scores (Pro)</li>
-            <li>Flick Rate measuring turn-in speed in degrees per second (Pro)</li>
-            <li>Entry Bite measuring G-load at corner turn-in (Pro)</li>
-            <li>Corner type breakdown: slow, medium, and fast (Pro)</li>
-            <li>Ride Comparison PDF for head to head session analysis (Pro)</li>
-            <li>Full history archive with delete and download options (Pro)</li>
-          </ul>
-          <div class="export-block">
-            <div class="export-eyebrow">Session Export (Pro)</div>
-            <div class="export-item">
-              <span class="export-label">PDF</span>
-              <span class="export-desc">A professional HUD Analysis Report generated with iText7. Includes a MotoGP style rear-view motorcycle silhouette with dynamic lean arcs, Technical Skill Radar spider chart, G-G Traction Diagram, lean angle distribution, longitudinal G-force log, side to side symmetry forensics, flick rate, and entry bite. Built to share with a coach or study on your own.</span>
-            </div>
-            <div class="export-item">
-              <span class="export-label">KML</span>
-              <span class="export-desc">A 3D heatmap for Google Earth. On a track it shows your route, laps, lap times, and floating Apex Labels with peak lean angle overlaid in 3D space over every corner, color coded green to red by intensity. On a point to point ride it maps your full route with color coded lean on any corner 20 degrees or greater.</span>
-            </div>
-            <div class="export-item">
-              <span class="export-label">GPX</span>
-              <span class="export-desc">High resolution GPS data compatible with Strava, Rever, Garmin, Komoot, and any mapping tool that accepts GPS data. Take your ride data wherever you need it.</span>
-            </div>
-            <div class="export-all">Export all three formats at once with one tap.</div>
+    <!-- 1. LIVE DASHBOARD -->
+    <div class="showcase-section" id="feat-dashboard">
+      <div class="container">
+        <div class="showcase-row">
+          <div class="showcase-text">
+            <div class="showcase-eyebrow">Live Dashboard</div>
+            <h3 class="showcase-title">Everything you need. Nothing you don't.</h3>
+            <p>The ThrottleX dashboard is designed for one thing: glanceability at speed. Large high-contrast numerals, color-coded speed tiers, real-time lean angle with decimal precision, G-force live and peak, and a GPS quality indicator. All of it readable in a fraction of a second while you are focused on the road.</p>
+            <ul class="showcase-list">
+              <li>Digital speedometer with color-coded speed tiers</li>
+              <li>Real-time lean angle with decimal precision</li>
+              <li>Peak lean angle with tap to reset</li>
+              <li>G-force live and peak tracking</li>
+              <li>Top speed per session</li>
+              <li>GPS quality indicator</li>
+              <li>Session recording indicator</li>
+              <li>Service alert icon when maintenance is due</li>
+            </ul>
+          </div>
+          <div class="showcase-screens showcase-screens--landscape">
+            <img src="images/screen-road.png" alt="ThrottleX Live Dashboard Road Mode" loading="lazy" />
           </div>
         </div>
-        <div class="feature-row-screen portrait">
-          <img src="images/screen-ridehistory.webp" alt="ThrottleX Ride History" loading="lazy" style="width:100%;height:auto;" />
-        </div>
-      </div>
-
-      <div class="feature-row feature-row--flip">
-        <div class="feature-row-text">
-          <div class="feature-row-eyebrow">AI Voice Coach</div>
-          <h3>Your auditory knee puck.</h3>
-          <p>Set a max lean threshold and ThrottleX calls it out through your headset the instant you hit it. No screen glances mid-corner. Direct Bluetooth integration with Sena and Cardo intercoms via Android Audio Focus management. Configure periodic status updates at any interval with individual toggles for each stat.</p>
-          <ul class="feature-list">
-            <li>Auditory lean angle alert at your defined threshold</li>
-            <li>Custom warning phrases to choose from</li>
-            <li>Periodic status updates: speed, top speed, time, distance, lean</li>
-            <li>Each stat individually toggleable</li>
-            <li>Configurable update intervals from 1 minute to 1 hour</li>
-            <li>Direct Bluetooth headset integration via Android Audio Focus</li>
-          </ul>
-        </div>
-        <div class="feature-row-screen feature-row-screen--double">
-          <img src="images/screen-voicecoach.webp" alt="ThrottleX Voice Coach" loading="lazy" style="width:100%;height:auto;" />
-          <img src="images/screen-periodicstatus.webp" alt="ThrottleX Periodic Status Updates" loading="lazy" style="width:100%;height:auto;" />
-        </div>
-      </div>
-
-      <div class="feature-row">
-        <div class="feature-row-text">
-          <div class="feature-row-eyebrow">Crash Detection and SOS</div>
-          <h3>Ride alone. Never be alone.</h3>
-          <p>ThrottleX monitors your IMU in real time using sensor fusion crash detection. A high-G impact above 4.0G or a tip-over beyond 65 degrees triggers a 30 second full-screen countdown. If you do not respond, it automatically sends an SMS to your emergency contact with your GPS coordinates and a Google Maps link. Always-on background mode keeps monitoring even when the app is closed.</p>
-          <ul class="feature-list">
-            <li>4.0G impact threshold with sample-window confirmation</li>
-            <li>65 degree tip-over detection with persistence check</li>
-            <li>30 second countdown with large cancel button</li>
-            <li>Automated SMS with GPS location to emergency contact</li>
-            <li>Always-on background protection mode</li>
-            <li>Arms automatically at 8 mph or faster</li>
-          </ul>
-        </div>
-        <div class="feature-row-screen feature-row-screen--crash">
-          <img src="images/screen-crashdetection.webp" alt="ThrottleX Crash Detection" loading="lazy" style="width:100%;height:auto;" />
-          <img src="images/screen-crashdetection2.webp" alt="ThrottleX Crash Detection Logic" loading="lazy" style="width:100%;height:auto;" />
-        </div>
-      </div>
-
-      <div class="feature-row feature-row--flip">
-        <div class="feature-row-text">
-          <div class="feature-row-eyebrow">Garage and Service Tracker</div>
-          <h3>Keep your bike healthy.</h3>
-          <p>ThrottleX is a full garage companion. Every service interval is tied to your GPS-tracked odometer so the numbers are always accurate. An animated wrench icon appears on your main dashboard the moment any item is overdue so you never miss a service interval again.</p>
-          <ul class="feature-list">
-            <li>GPS-tracked master odometer with background service option</li>
-            <li>Trip Meter 1 and Trip Meter 2 both resettable</li>
-            <li>Oil life monitor with configurable change interval</li>
-            <li>Chain replacement and lubrication interval tracking</li>
-            <li>Brake fluid, pads, rotors, and brake lines tracking</li>
-            <li>Coolant flush interval tracking</li>
-            <li>Fork oil, oil seals, and dust seals tracking</li>
-            <li>Dashboard wrench alert when any item is overdue</li>
-          </ul>
-        </div>
-        <div class="feature-row-screen portrait">
-          <img src="images/screen-garage.webp" alt="ThrottleX Garage and Service" loading="lazy" style="width:100%;height:auto;" />
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- PILL GRID -->
-  <section class="pill-section">
-    <div class="container">
-      <div class="section-eyebrow" style="text-align:center;margin-bottom:2rem;">Everything Inside ThrottleX</div>
-      <div class="pill-grid">
-        <div class="pill">Custom Kalman Filter Sensor Fusion</div>
-        <div class="pill">Automatic Lap Detection</div>
-        <div class="pill">GPS Start/Finish Anchor</div>
-        <div class="pill">Voice Start (Hands-Free)</div>
-        <div class="pill">Configurable Start Delay</div>
-        <div class="pill">Analog and Digital Speedo</div>
-        <div class="pill">Live Friction Circle</div>
-        <div class="pill">Live Lean Distribution Histogram</div>
-        <div class="pill">3D KML Heatmap with Apex Labels</div>
-        <div class="pill">MotoGP Style PDF Ride Report</div>
-        <div class="pill">Technical Skill Radar Chart</div>
-        <div class="pill">Ride Comparison PDF</div>
-        <div class="pill">Flick Rate Measurement</div>
-        <div class="pill">Entry Bite Measurement</div>
-        <div class="pill">GPX Export (Strava, Garmin, Rever)</div>
-        <div class="pill">Bluetooth Headset Integration</div>
-        <div class="pill">Sena and Cardo Compatible</div>
-        <div class="pill">Crash Detection and SOS</div>
-        <div class="pill">Always-On Background Protection</div>
-        <div class="pill">Bike Profile (Sport / Cruiser / Touring)</div>
-        <div class="pill">Grip Model (Conservative / Standard / Performance)</div>
-        <div class="pill">Real Tire Database with Profile Values</div>
-        <div class="pill">Lean Angle Offset Calibration</div>
-        <div class="pill">Master Odometer with Background Service</div>
-        <div class="pill">Trip Meter 1 and Trip Meter 2</div>
-        <div class="pill">Oil Life Monitor</div>
-        <div class="pill">Chain and Brake Service Tracking</div>
-        <div class="pill">Fork and Coolant Tracking</div>
-        <div class="pill">Dashboard Service Alert Icon</div>
-        <div class="pill">Landscape Lock</div>
-        <div class="pill">Keep Screen On Mode</div>
-        <div class="pill">GPS Accuracy Indicator</div>
-        <div class="pill">Pilot Profile</div>
-        <div class="pill">No Account Required</div>
-        <div class="pill">No Ads. Ever.</div>
       </div>
     </div>
+
+    <!-- 2. RIDE MODES -->
+    <div class="showcase-section showcase-section--alt" id="feat-modes">
+      <div class="container">
+        <div class="showcase-eyebrow" style="text-align:center;">Ride Modes</div>
+        <h3 class="showcase-title" style="text-align:center;margin-bottom:0.75rem;">Four looks. One app. Full precision in every mode.</h3>
+        <p style="text-align:center;max-width:600px;margin:0 auto 3rem;font-size:0.95rem;color:var(--text-dim);line-height:1.7;">The ride mode you choose only changes the color of the UI. Sensors run at full precision in every mode, all the time.</p>
+        <div class="showcase-modes-grid">
+          <div class="showcase-mode-card">
+            <img src="images/screen-road.png" alt="ThrottleX Road Mode" loading="lazy" />
+            <div class="showcase-mode-label">
+              <span class="mode-dot-sm white"></span> Road
+            </div>
+          </div>
+          <div class="showcase-mode-card">
+            <img src="images/screen-track.png" alt="ThrottleX Track Mode" loading="lazy" />
+            <div class="showcase-mode-label">
+              <span class="mode-dot-sm red"></span> Track
+            </div>
+          </div>
+          <div class="showcase-mode-card">
+            <img src="images/screen-rain.png" alt="ThrottleX Rain Mode" loading="lazy" />
+            <div class="showcase-mode-label">
+              <span class="mode-dot-sm cyan"></span> Rain
+            </div>
+          </div>
+          <div class="showcase-mode-card">
+            <img src="images/screen-night.png" alt="ThrottleX Night Mode" loading="lazy" />
+            <div class="showcase-mode-label">
+              <span class="mode-dot-sm darkred"></span> Night
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. RIDE HISTORY -->
+    <div class="showcase-section" id="feat-history">
+      <div class="container">
+        <div class="showcase-row showcase-row--flip">
+          <div class="showcase-text">
+            <div class="showcase-eyebrow">Ride History and Analysis</div>
+            <h3 class="showcase-title">Your data. After every ride.</h3>
+            <p>Every session is archived automatically. Pull up any ride and see top speed, average speed, max G, distance, duration, and peak lean. The corner performance card shows your confidence score, left and right symmetry bars, and automated coaching text identifying your weaker side.</p>
+            <ul class="showcase-list">
+              <li>Top speed, avg speed, max G, distance, duration, peak lean</li>
+              <li>Corner Confidence Score showing left and right symmetry</li>
+              <li>Smoothness, braking, and traction efficiency scores (Pro)</li>
+              <li>Flick Rate and Entry Bite measurements (Pro)</li>
+              <li>Corner type breakdown: slow, medium, and fast (Pro)</li>
+              <li>Ride Comparison PDF for head to head sessions (Pro)</li>
+            </ul>
+          </div>
+          <div class="showcase-screens showcase-screens--portrait">
+            <img src="images/screen-ridehistory.png" alt="ThrottleX Ride History" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. PDF REPORT -->
+    <div class="showcase-section showcase-section--alt" id="feat-pdf">
+      <div class="container">
+        <div class="showcase-eyebrow" style="text-align:center;">PDF Ride Report</div>
+        <h3 class="showcase-title" style="text-align:center;margin-bottom:0.75rem;">A professional report after every session.</h3>
+        <p style="text-align:center;max-width:600px;margin:0 auto 3rem;font-size:0.95rem;color:var(--text-dim);line-height:1.7;">Generated by the ThrottleX Telemetry Engine. Three pages of data built to share with a coach or study on your own. This is what a real ride report looks like.</p>
+        <div class="showcase-pdf-grid">
+          <div class="showcase-pdf-card">
+            <img src="images/pdf-page1.png" alt="ThrottleX PDF Report Page 1" loading="lazy" />
+            <div class="showcase-pdf-label">Page 1: Session Stats, Lean Distribution, G-Force Log, G-G Traction Diagram</div>
+          </div>
+          <div class="showcase-pdf-card">
+            <img src="images/pdf-page2.png" alt="ThrottleX PDF Report Page 2" loading="lazy" />
+            <div class="showcase-pdf-label">Page 2: Side to Side Symmetry, Technical Skill Radar, Performance Insights, Flick Rate</div>
+          </div>
+          <div class="showcase-pdf-card">
+            <img src="images/pdf-page3.png" alt="ThrottleX PDF Report Page 3" loading="lazy" />
+            <div class="showcase-pdf-label">Page 3: Professional Data Definitions for every metric in the report</div>
+          </div>
+        </div>
+        <div class="showcase-export-row">
+          <div class="showcase-export-item">
+            <span class="showcase-export-label">PDF</span>
+            <span class="showcase-export-desc">The full report above. Share with a coach or keep for your own records.</span>
+          </div>
+          <div class="showcase-export-item">
+            <span class="showcase-export-label">GPX</span>
+            <span class="showcase-export-desc">High resolution GPS data. Compatible with Strava, Rever, and Garmin.</span>
+          </div>
+          <div class="showcase-export-item">
+            <span class="showcase-export-label">KML</span>
+            <span class="showcase-export-desc">3D heatmap for Google Earth. See below for what this actually looks like.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. KML HEATMAP -->
+    <div class="showcase-section showcase-kml" id="feat-kml">
+      <div class="container">
+        <div class="showcase-kml-text">
+          <div class="showcase-eyebrow">3D KML Heatmap</div>
+          <h3 class="showcase-title">Your ride. In Google Earth. In 3D.</h3>
+          <p>Export your session as a KML file and open it in Google Earth. On a track it renders your full route in green, highlights every corner in yellow where your lean angle climbed, and floats apex labels with your peak lean angle in 3D space directly over each corner. This is not a basic GPS trace. This is a professional race data visualization built into a $9.99 app.</p>
+          <ul class="showcase-list">
+            <li>Full route color-coded green to yellow to red by lean intensity</li>
+            <li>Floating apex labels with peak lean angle over every corner</li>
+            <li>3D rendering in Google Earth satellite view</li>
+            <li>Point to point rides show color-coded lean on corners 20 degrees or greater</li>
+          </ul>
+        </div>
+        <div class="showcase-kml-image">
+          <img src="images/kml-heatmap.png" alt="ThrottleX 3D KML Heatmap in Google Earth showing track with lean angle apex labels" loading="lazy" />
+          <div class="showcase-kml-caption">Real KML export from ThrottleX · Google Earth · Lean angles labeled on every corner</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. VOICE COACH -->
+    <div class="showcase-section" id="feat-voice">
+      <div class="container">
+        <div class="showcase-row">
+          <div class="showcase-text">
+            <div class="showcase-eyebrow">AI Voice Coach</div>
+            <h3 class="showcase-title">Gloves on. Helmet closed. Still in control.</h3>
+            <p>ThrottleX can start recording with your voice. Tap the start button then say your chosen phrase and the session begins, no screen tap needed mid-ride. Once you are riding, the Voice Coach calls out your lean angle through your headset the instant you hit your defined threshold. Choose from "Start Recording", "Begin Ride", "Let's Ride", or "Go" as your trigger phrase.</p>
+            <ul class="showcase-list">
+              <li>Voice Start: tap start then say the phrase to begin recording</li>
+              <li>Four trigger phrases to choose from</li>
+              <li>Lean angle threshold alert through your headset</li>
+              <li>Periodic status updates: speed, top speed, time, distance, lean</li>
+              <li>Each stat individually toggleable</li>
+              <li>Direct Bluetooth integration with Sena and Cardo intercoms</li>
+            </ul>
+          </div>
+          <div class="showcase-screens showcase-screens--double-portrait">
+            <img src="images/screen-voicestart2.png" alt="ThrottleX Voice Coach and Voice Start" loading="lazy" />
+            <img src="images/screen-periodicstatus.png" alt="ThrottleX Periodic Status Updates" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7. CRASH DETECTION -->
+    <div class="showcase-section showcase-section--alt" id="feat-crash">
+      <div class="container">
+        <div class="showcase-row showcase-row--flip">
+          <div class="showcase-text">
+            <div class="showcase-eyebrow">Crash Detection and SOS</div>
+            <h3 class="showcase-title">Ride alone. Never be alone.</h3>
+            <p>ThrottleX monitors your IMU in real time using sensor fusion crash detection. A high-G impact above 4.0G or a tip-over beyond 65 degrees triggers a 30 second full-screen countdown. If you do not cancel it, the app sends an SMS to your emergency contact with your GPS coordinates and a Google Maps link. Always-on background mode keeps monitoring even when the app is closed.</p>
+            <ul class="showcase-list">
+              <li>4.0G impact detection with sample-window confirmation</li>
+              <li>65 degree tip-over detection with persistence check</li>
+              <li>30 second countdown with large cancel button</li>
+              <li>Automated SMS with GPS location to emergency contact</li>
+              <li>Always-on background protection mode</li>
+              <li>Arms automatically at 8 mph or faster</li>
+            </ul>
+          </div>
+          <div class="showcase-screens showcase-screens--double-portrait">
+            <img src="images/screen-crashdetect.png" alt="ThrottleX Crash Detection" loading="lazy" />
+            <img src="images/screen-crashdetect2.png" alt="ThrottleX Crash Detection Validation Logic" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8. SENSORS AND ANALYTICS -->
+    <div class="showcase-section" id="feat-sensors">
+      <div class="container">
+        <div class="showcase-eyebrow" style="text-align:center;">Sensors and Analytics</div>
+        <h3 class="showcase-title" style="text-align:center;margin-bottom:0.75rem;">Professional tools. Phone-based precision.</h3>
+        <p style="text-align:center;max-width:600px;margin:0 auto 3rem;font-size:0.95rem;color:var(--text-dim);line-height:1.7;">ThrottleX uses a custom Kalman filter to remove engine vibration noise from the sensor stream. Then it gives you four dedicated tools to understand and calibrate exactly what you are measuring.</p>
+        <div class="showcase-sensors-grid">
+          <div class="showcase-sensor-card">
+            <img src="images/screen-calibration.png" alt="ThrottleX Sensor Calibration" loading="lazy" />
+            <div class="showcase-sensor-info">
+              <h4>Sensor Calibration</h4>
+              <p>Sit upright on the bike and hold to calibrate. ThrottleX zeros the lean angle sensor to your specific phone mount position. Auto-calibrate detects when the bike is stopped and ready.</p>
+            </div>
+          </div>
+          <div class="showcase-sensor-card">
+            <img src="images/screen-leandistribution.png" alt="ThrottleX Lean Distribution" loading="lazy" />
+            <div class="showcase-sensor-info">
+              <h4>Lean Distribution Histogram</h4>
+              <p>A real-time statistical breakdown of your cornering habits. Tracks the percentage of ride time spent at each lean angle bracket. Identifies which side you favor and helps you aim for symmetry.</p>
+            </div>
+          </div>
+          <div class="showcase-sensor-card">
+            <img src="images/screen-voicecoach2.png" alt="ThrottleX Max Lean Threshold" loading="lazy" />
+            <div class="showcase-sensor-info">
+              <h4>Max Lean Threshold</h4>
+              <p>Set your personal red line for cornering. This is the trigger point for the Voice Coach alert. Most sport tires perform optimally between 45 and 55 degrees. Adjust based on your rubber and your confidence level.</p>
+            </div>
+          </div>
+          <div class="showcase-sensor-card">
+            <img src="images/screen-crashdetection.png" alt="ThrottleX G-G Traction Diagram" loading="lazy" />
+            <div class="showcase-sensor-info">
+              <h4>G-G Traction Diagram</h4>
+              <p>A professional racing tool that visualizes the relationship between cornering forces and longitudinal forces. Shows how close you are to the outer limit of your tire's traction budget in real time.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 9. GARAGE -->
+    <div class="showcase-section showcase-section--alt" id="feat-garage">
+      <div class="container">
+        <div class="showcase-row">
+          <div class="showcase-text">
+            <div class="showcase-eyebrow">Garage and Service Tracker</div>
+            <h3 class="showcase-title">Your bike. Always maintained.</h3>
+            <p>ThrottleX is a full garage companion. Every service interval is tied to your GPS-tracked odometer so the numbers are always accurate. An animated wrench icon appears on your main dashboard the moment any item is overdue. Never miss a service interval again.</p>
+            <ul class="showcase-list">
+              <li>GPS-tracked master odometer with background service</li>
+              <li>Trip Meter 1 and Trip Meter 2 both resettable</li>
+              <li>Oil life monitor with configurable change interval</li>
+              <li>Chain replacement and lubrication interval tracking</li>
+              <li>Brake fluid, pads, rotors, and brake lines</li>
+              <li>Coolant flush interval tracking</li>
+              <li>Fork oil, oil seals, and dust seals</li>
+              <li>Dashboard wrench alert when any item is overdue</li>
+            </ul>
+          </div>
+          <div class="showcase-screens showcase-screens--portrait">
+            <img src="images/screen-garage.png" alt="ThrottleX Garage and Service Tracker" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10. BIKE AND TIRE PROFILE -->
+    <div class="showcase-section" id="feat-bike">
+      <div class="container">
+        <div class="showcase-row showcase-row--flip">
+          <div class="showcase-text">
+            <div class="showcase-eyebrow">Bike and Tire Profile</div>
+            <h3 class="showcase-title">Calibrated for your machine.</h3>
+            <p>ThrottleX is not a one-size-fits-all data logger. The Bike Profile tells the app what kind of machine it is on — Sport, Cruiser, or Touring — and adjusts the sensor fusion physics accordingly. Select your actual tire from the library and the traction model auto-calibrates to your rubber's specific grip profile.</p>
+            <ul class="showcase-list">
+              <li>Bike Geometry: Sport, Cruiser, or Touring sensor fusion</li>
+              <li>Traction Model: Conservative, Standard, or Performance grip window</li>
+              <li>Sensor Smoothing: Smooth, Neutral, or Quick response</li>
+              <li>Searchable real tire database with profile sharpness values</li>
+              <li>Tire selection auto-calibrates the Friction Circle rendering</li>
+              <li>User-calibrated lean limit for your personal edge angle</li>
+            </ul>
+          </div>
+          <div class="showcase-screens showcase-screens--double-portrait">
+            <img src="images/screen-bikeprofile2.png" alt="ThrottleX Bike Profile" loading="lazy" />
+            <img src="images/screen-tireselector.png" alt="ThrottleX Tire Selector" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+
   </section>
 
   <!-- TAGLINE -->
@@ -622,29 +723,28 @@
   <!-- FOLLOW THE RIDE -->
   <section class="social-section" id="social">
     <div class="container">
-      <div class="section-eyebrow">// Follow The Ride</div>
-      <h2>STAY IN THE<br/><span>PACK.</span></h2>
-      <p>POV rides, live telemetry data, track day breakdowns and behind the scenes development. Follow along on your platform of choice.</p>
-      <div class="social-icons">
+      <div class="section-eyebrow" style="text-align:center;margin-bottom:1rem;">Follow the Ride</div>
+      <h2 class="section-title" style="text-align:center;margin-bottom:2.5rem;">STAY IN<br/><span>THE PACK.</span></h2>
+      <div class="social-links">
 
         <!-- TikTok -->
-        <a href="https://www.tiktok.com/@throttlexapp" class="social-icon-link" target="_blank" rel="noopener">
+        <a href="https://www.tiktok.com/@throttlexapp" target="_blank" rel="noopener" class="social-icon-link" aria-label="TikTok">
           <svg viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
-            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.17 8.17 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/>
+            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/>
           </svg>
           <span>TikTok</span>
         </a>
 
         <!-- YouTube -->
-        <a href="https://www.youtube.com/@ThrottleXApp/videos" class="social-icon-link" target="_blank" rel="noopener">
+        <a href="https://www.youtube.com/@ThrottleXApp/videos" target="_blank" rel="noopener" class="social-icon-link" aria-label="YouTube">
           <svg viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
-            <path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.54 3.5 12 3.5 12 3.5s-7.54 0-9.38.55A3.02 3.02 0 0 0 .5 6.19 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.81 3.02 3.02 0 0 0 2.12 2.14C4.46 20.5 12 20.5 12 20.5s7.54 0 9.38-.55a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.81zM9.75 15.5v-7l6.5 3.5-6.5 3.5z"/>
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
           </svg>
           <span>YouTube</span>
         </a>
 
         <!-- Instagram -->
-        <a href="https://www.instagram.com/devsharpedgex/" class="social-icon-link" target="_blank" rel="noopener">
+        <a href="https://www.instagram.com/throttlexapp" target="_blank" rel="noopener" class="social-icon-link" aria-label="Instagram">
           <svg viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
             <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
           </svg>
@@ -654,6 +754,7 @@
       </div>
     </div>
   </section>
+
 
   <!-- PRICING -->
   <section class="pricing" id="pricing">
