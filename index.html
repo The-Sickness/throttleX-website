@@ -66,13 +66,20 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;600&family=Barlow+Condensed:wght@400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;600&family=Barlow+Condensed:wght@400;500;700&display=swap" /></noscript>
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8PRHNYKLWZ"></script>
+  <!-- Google Analytics (deferred for performance) -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-8PRHNYKLWZ');
+    window.addEventListener('load', function() {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-8PRHNYKLWZ';
+      s.onload = function() {
+        gtag('js', new Date());
+        gtag('config', 'G-8PRHNYKLWZ');
+      };
+      document.head.appendChild(s);
+    });
   </script>
 
   <!-- Microsoft Clarity -->
@@ -269,11 +276,11 @@
       <div class="video-wrap">
         <div class="yt-facade" id="ytFacade" onclick="loadYouTube()" role="button" aria-label="Play video">
           <img
-            src="https://i.ytimg.com/vi/vTubq93eGOc/maxresdefault.jpg"
+            src="https://i.ytimg.com/vi/vTubq93eGOc/hqdefault.jpg"
             alt="ThrottleX real motorcycle telemetry on Elder Hill Road"
             class="yt-thumbnail"
-            width="1280"
-            height="720"
+            width="480"
+            height="360"
             loading="lazy"
           />
           <div class="yt-play-btn" aria-hidden="true">
