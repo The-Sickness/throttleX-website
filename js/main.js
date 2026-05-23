@@ -107,3 +107,57 @@ revealEls.forEach((el, i) => {
   el.style.transition = `opacity 0.5s ${i * 0.04}s ease, transform 0.5s ${i * 0.04}s ease`;
   observer.observe(el);
 });
+
+// ── Lightbox ─────────────────────────────────
+function initLightbox() {
+  // Create overlay
+  const overlay = document.createElement('div');
+  overlay.id = 'lightbox';
+  overlay.innerHTML = `
+    <div class="lb-backdrop"></div>
+    <div class="lb-content">
+      <img class="lb-img" src="" alt="" />
+      <button class="lb-close" aria-label="Close">&times;</button>
+    </div>
+  `;
+  document.body.appendChild(overlay);
+
+  const lbImg = overlay.querySelector('.lb-img');
+  const lbClose = overlay.querySelector('.lb-close');
+  const lbBackdrop = overlay.querySelector('.lb-backdrop');
+
+  function openLightbox(src, alt) {
+    lbImg.src = src;
+    lbImg.alt = alt || '';
+    overlay.classList.add('lb-open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    overlay.classList.remove('lb-open');
+    document.body.style.overflow = '';
+    setTimeout(() => { lbImg.src = ''; }, 300);
+  }
+
+  lbClose.addEventListener('click', closeLightbox);
+  lbBackdrop.addEventListener('click', closeLightbox);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+
+  // Target every img inside the showcase section
+  document.querySelectorAll('.showcase img, .showcase-kml-image img').forEach(img => {
+    img.style.cursor = 'zoom-in';
+    img.title = 'Click to enlarge';
+    img.addEventListener('click', function() {
+      openLightbox(this.src, this.alt);
+    });
+  });
+}
+
+// Wait for full DOM before initialising
+if (document.readyState === 'complete' || document.readyState === 'interactive') {
+  setTimeout(initLightbox, 0);
+} else {
+  document.addEventListener('DOMContentLoaded', initLightbox);
+}
