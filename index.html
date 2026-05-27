@@ -58,59 +58,30 @@
   }
   </script>
 
-  <!-- VideoObject Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "Real Motorcycle Telemetry — Live Lean Angle and G-Force Data | ThrottleX App",
-    "description": "Live lean angle and G-force telemetry data captured on Elder Hill Road in the Texas Hill Country using the ThrottleX motorcycle telemetry app for Android.",
-    "thumbnailUrl": "https://i.ytimg.com/vi/vTubq93eGOc/hqdefault.jpg",
-    "uploadDate": "2026-03-01T00:00:00+00:00",
-    "contentUrl": "https://www.youtube.com/watch?v=vTubq93eGOc",
-    "embedUrl": "https://www.youtube.com/embed/vTubq93eGOc",
-    "publisher": {
-      "@type": "Organization",
-      "name": "ThrottleX",
-      "url": "https://throttlexapp.com"
-    }
-  }
-  </script>
-
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/favicon.png" />
   <link rel="apple-touch-icon" href="images/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="image" href="images/screen-road.webp" />
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;600&family=Barlow+Condensed:wght@400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;600&family=Barlow+Condensed:wght@400;500;700&display=swap" /></noscript>
 
-  <!-- Google Analytics (deferred for performance) -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8PRHNYKLWZ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    window.addEventListener('load', function() {
-      var s = document.createElement('script');
-      s.async = true;
-      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-8PRHNYKLWZ';
-      s.onload = function() {
-        gtag('js', new Date());
-        gtag('config', 'G-8PRHNYKLWZ');
-      };
-      document.head.appendChild(s);
-    });
+    gtag('js', new Date());
+    gtag('config', 'G-8PRHNYKLWZ');
   </script>
 
-  <!-- Microsoft Clarity (deferred for performance) -->
+  <!-- Microsoft Clarity -->
   <script type="text/javascript">
-    window.addEventListener('load', function() {
-      (function(c,l,a,r,i,t,y){
-          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-      })(window, document, "clarity", "script", "ws11p9jp3h");
-    });
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "ws11p9jp3h");
   </script>
 
   <link rel="stylesheet" href="css/style.css" />
@@ -298,11 +269,11 @@
       <div class="video-wrap">
         <div class="yt-facade" id="ytFacade" onclick="loadYouTube()" role="button" aria-label="Play video">
           <img
-            src="https://i.ytimg.com/vi/vTubq93eGOc/hqdefault.jpg"
+            src="https://i.ytimg.com/vi/vTubq93eGOc/maxresdefault.jpg"
             alt="ThrottleX real motorcycle telemetry on Elder Hill Road"
             class="yt-thumbnail"
-            width="480"
-            height="360"
+            width="1280"
+            height="720"
             loading="lazy"
           />
           <div class="yt-play-btn" aria-hidden="true">
@@ -982,6 +953,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js" defer></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
