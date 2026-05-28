@@ -58,6 +58,18 @@ layout: none
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://throttlexapp.com/blog/what-is-a-traction-circle-and-why-does-it-matter.html</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://throttlexapp.com/blog/how-to-mount-your-phone-on-a-motorcycle-for-telemetry.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://throttlexapp.com/privacy.html</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
