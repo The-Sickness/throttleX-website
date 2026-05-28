@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What Is a Traction Circle and Why Does It Matter? | ThrottleX Blog</title>
+  <meta name="description" content="The traction circle is one of the most important concepts in motorsport. Here is what it is, how it works, and how understanding it makes you a faster and safer rider." />
+  <meta name="keywords" content="traction circle motorcycle, friction circle explained, motorcycle traction budget, G-G diagram motorcycle, what is traction circle, motorcycle physics cornering, traction circle track day" />
+  <link rel="canonical" href="https://throttlexapp.com/blog/what-is-a-traction-circle-and-why-does-it-matter.html" />
+
+  <meta property="og:title" content="What Is a Traction Circle and Why Does It Matter?" />
+  <meta property="og:description" content="The traction circle is one of the most important concepts in motorsport. Here is what it is, how it works, and how understanding it makes you a faster and safer rider." />
+  <meta property="og:url" content="https://throttlexapp.com/blog/what-is-a-traction-circle-and-why-does-it-matter.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://throttlexapp.com/images/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="What Is a Traction Circle and Why Does It Matter?" />
+  <meta name="twitter:description" content="The traction circle is one of the most important concepts in motorsport. Here is what it is, how it works, and how understanding it makes you a faster and safer rider." />
+  <meta name="twitter:image" content="https://throttlexapp.com/images/og-image.jpg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What Is a Traction Circle and Why Does It Matter?",
+    "description": "The traction circle is one of the most important concepts in motorsport. Here is what it is, how it works, and how understanding it makes you a faster and safer rider.",
+    "author": { "@type": "Organization", "name": "ThrottleX" },
+    "publisher": { "@type": "Organization", "name": "ThrottleX", "url": "https://throttlexapp.com" },
+    "datePublished": "2026-05-27",
+    "url": "https://throttlexapp.com/blog/what-is-a-traction-circle-and-why-does-it-matter.html"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="../images/favicon.png" />
+
+  <script type="text/javascript">
+    window.addEventListener('load', function() {
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "ws11p9jp3h");
+    });
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.addEventListener('load', function() {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-8PRHNYKLWZ';
+      s.onload = function() { gtag('js', new Date()); gtag('config', 'G-8PRHNYKLWZ'); };
+      document.head.appendChild(s);
+    });
+  </script>
+
+  <style>
+    :root {
+      --red: #e8001e; --red-glow: rgba(232,0,30,0.15);
+      --black: #050507; --dark: #0d0d10; --dark2: #121215; --dark3: #1a1a1f;
+      --border: rgba(255,255,255,0.07); --border-red: rgba(232,0,30,0.3);
+      --text: #e8e8ec; --text-dim: #7a7a88; --text-dimmer: #4a4a55;
+      --font-display: 'Bebas Neue', sans-serif;
+      --font-cond: 'Barlow Condensed', sans-serif;
+      --font-body: 'Barlow', sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--black); color: var(--text); font-family: var(--font-body); font-weight: 300; line-height: 1.6; overflow-x: hidden; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; background: rgba(5,5,7,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-logo { font-family: var(--font-display); font-size: 1.6rem; color: #fff; }
+    .nav-logo span { color: var(--red); }
+    .nav-links { display: flex; gap: 2rem; align-items: center; }
+    .nav-links a { font-family: var(--font-cond); font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim); transition: color 0.2s; }
+    .nav-links a:hover { color: #fff; }
+    .nav-cta { background: var(--red); color: #fff !important; padding: 0.5rem 1.25rem; font-weight: 700; }
+    @media(max-width:900px){ .nav-links { display: none; } }
+    .article-header { padding: 9rem 0 4rem; border-bottom: 1px solid var(--border); }
+    .breadcrumb { font-family: var(--font-cond); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-dimmer); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .breadcrumb a:hover { color: var(--red); }
+    .article-tag { font-family: var(--font-cond); font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--red); display: block; margin-bottom: 1rem; }
+    .article-header h1 { font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 5rem); line-height: 0.95; color: #fff; margin-bottom: 1.5rem; max-width: 820px; }
+    .article-meta { display: flex; gap: 2rem; flex-wrap: wrap; }
+    .meta-item { font-family: var(--font-cond); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dimmer); }
+    .meta-item strong { color: var(--text-dim); }
+    .article-body { display: grid; grid-template-columns: 1fr 320px; gap: 5rem; padding: 5rem 0; align-items: start; }
+    article h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.8rem); color: #fff; margin: 3rem 0 1.25rem; line-height: 1; }
+    article h3 { font-family: var(--font-cond); font-size: 1.1rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); margin: 2rem 0 0.75rem; }
+    article p { font-size: 0.97rem; color: var(--text-dim); line-height: 1.85; margin-bottom: 1.25rem; }
+    article strong { color: var(--text); font-weight: 600; }
+    article ul { list-style: none; margin: 0.5rem 0 1.5rem; display: flex; flex-direction: column; gap: 0.6rem; }
+    article ul li { font-size: 0.95rem; color: var(--text-dim); line-height: 1.6; display: flex; align-items: flex-start; gap: 0.6rem; }
+    article ul li::before { content: '//'; color: var(--red); font-family: var(--font-cond); font-size: 0.75rem; margin-top: 0.2rem; flex-shrink: 0; }
+    .callout { background: var(--dark2); border-left: 3px solid var(--red); padding: 1.5rem 1.75rem; margin: 2rem 0; }
+    .callout-label { font-family: var(--font-cond); font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--red); display: block; margin-bottom: 0.75rem; }
+    .callout p { margin-bottom: 0; font-size: 0.95rem; }
+    .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; background: var(--border); margin: 2rem 0; }
+    .stat-box { background: var(--dark2); padding: 1.5rem; text-align: center; }
+    .stat-box .num { font-family: var(--font-display); font-size: 2.2rem; color: var(--red); line-height: 1; display: block; }
+    .stat-box .label { font-family: var(--font-cond); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-dimmer); margin-top: 0.4rem; display: block; }
+    .article-sidebar { position: sticky; top: 6rem; }
+    .sidebar-card { background: var(--dark2); border: 1px solid var(--border); padding: 1.75rem; margin-bottom: 1.5rem; }
+    .sidebar-card h4 { font-family: var(--font-cond); font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 1rem; }
+    .sidebar-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .sidebar-card ul li a { font-size: 0.85rem; color: var(--text-dim); display: flex; align-items: flex-start; gap: 0.5rem; line-height: 1.4; transition: color 0.2s; }
+    .sidebar-card ul li a::before { content: '//'; color: var(--red); font-family: var(--font-cond); font-size: 0.7rem; margin-top: 0.15rem; flex-shrink: 0; }
+    .sidebar-card ul li a:hover { color: #fff; }
+    .sidebar-cta { background: var(--dark2); border: 1px solid var(--border-red); padding: 1.75rem; text-align: center; margin-bottom: 1.5rem; }
+    .sidebar-cta h4 { font-family: var(--font-display); font-size: 1.4rem; color: #fff; margin-bottom: 0.75rem; }
+    .sidebar-cta p { font-size: 0.85rem; color: var(--text-dim); margin-bottom: 1.25rem; line-height: 1.6; }
+    .sidebar-cta a { display: block; background: var(--red); color: #fff; font-family: var(--font-cond); font-weight: 700; font-size: 0.9rem; letter-spacing: 0.08em; padding: 0.85rem; transition: background 0.2s; }
+    .sidebar-cta a:hover { background: #c0001a; }
+    .related-section { padding: 5rem 0; border-top: 1px solid var(--border); }
+    .section-label { font-family: var(--font-cond); font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--red); margin-bottom: 0.75rem; display: block; }
+    .related-section h2 { font-family: var(--font-display); font-size: 2.5rem; color: #fff; margin-bottom: 2.5rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+    .related-card { background: var(--dark2); border: 1px solid var(--border); padding: 1.75rem; transition: border-color 0.2s; display: block; }
+    .related-card:hover { border-color: var(--border-red); }
+    .related-card-tag { font-family: var(--font-cond); font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 0.6rem; display: block; }
+    .related-card h3 { font-family: var(--font-cond); font-weight: 700; font-size: 1.1rem; color: #fff; margin-bottom: 0.5rem; line-height: 1.3; }
+    .related-card p { font-size: 0.85rem; color: var(--text-dim); line-height: 1.6; }
+    footer { padding: 2.5rem 0; border-top: 1px solid var(--border); }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-logo { font-family: var(--font-display); font-size: 1.2rem; }
+    .footer-logo span { color: var(--red); }
+    .footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    .footer-links a { font-family: var(--font-cond); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dimmer); transition: color 0.2s; }
+    .footer-links a:hover { color: var(--red); }
+    .footer-copy { font-size: 0.78rem; color: var(--text-dimmer); }
+    @media(max-width:900px){ .article-body { grid-template-columns: 1fr; gap: 3rem; } .article-sidebar { position: static; } .stat-row { grid-template-columns: 1fr 1fr; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="../index.html" class="nav-logo">THROTTLE<span>X</span></a>
+    <div class="nav-links">
+      <a href="../index.html#video">Video</a>
+      <a href="../index.html#reviews">Reviews</a>
+      <a href="../index.html#features">Features</a>
+      <a href="../index.html#pricing">Pricing</a>
+      <a href="../blog.html">Blog</a>
+      <a href="../index.html#contact">Contact</a>
+      <a href="https://play.google.com/store/apps/details?id=com.alloy.throttlex" target="_blank" class="nav-cta">Get the App</a>
+    </div>
+  </nav>
+
+  <header class="article-header">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <span>//</span>
+        <a href="../blog.html">Blog</a>
+        <span>//</span>
+        <span>Data and Telemetry</span>
+      </div>
+      <span class="article-tag">// Data and Telemetry</span>
+      <h1>What Is a Traction Circle and Why Does It Matter?</h1>
+      <div class="article-meta">
+        <span class="meta-item">By <strong>ThrottleX Team</strong></span>
+        <span class="meta-item">Published <strong>May 27, 2026</strong></span>
+        <span class="meta-item">Read time <strong>8 min</strong></span>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="article-body">
+      <article>
+
+        <p>The traction circle goes by several names. Friction circle. G-G diagram. Traction budget. Whatever you call it, it is one of the most useful mental models in all of motorsport and one of the least understood concepts among everyday riders. Once you understand it, the way you think about cornering, braking, and acceleration changes permanently.</p>
+
+        <p>This article explains what the traction circle is, how it works, and why every motorcycle rider should understand it even if they never plan to look at a data graph.</p>
+
+        <h2 id="what-is-it">WHAT IS A TRACTION CIRCLE?</h2>
+
+        <p>A traction circle is a visual representation of the total grip available at your tire's contact patch at any given moment. Picture a circle drawn on a piece of paper. The center of the circle represents zero forces on the tire. The outer edge of the circle represents the maximum grip the tire can provide before it loses traction.</p>
+
+        <p>The circle has two axes. The horizontal axis represents lateral forces, which is cornering. Left is leaning left, right is leaning right. The vertical axis represents longitudinal forces. Up is acceleration. Down is braking.</p>
+
+        <p>At any moment while you are riding, a single point on that diagram represents what your tire is doing. Cruising down a straight with no braking and no cornering, the point sits near the center. Braking hard for a corner, the point moves down toward the bottom of the circle. Leaned over in a corner, the point moves left or right. The further from the center the point moves, the more of your tire's traction budget you are spending.</p>
+
+        <div class="callout">
+          <span class="callout-label">// The Key Insight</span>
+          <p>Your tire does not care which direction the force is coming from. It only has a fixed amount of total grip to give. That grip can be spent on cornering, braking, acceleration, or any combination. The traction circle is the boundary of what is possible before the tire gives up.</p>
+        </div>
+
+        <h2 id="the-budget">THE TRACTION BUDGET</h2>
+
+        <p>Think of your tire's grip as a budget. You get a fixed amount to spend each moment. How you spend it is up to you, but the moment you try to spend more than you have, the tire slides.</p>
+
+        <p>If you are using 100 percent of your budget on cornering, leaned over at maximum angle, you have zero left for braking or acceleration. Any sudden input in either of those directions pushes you past the circle's edge. That is what causes crashes. Not going too fast in a straight line. Going past the outer edge of the traction circle in a corner.</p>
+
+        <p>This is why smooth inputs matter so much. Every motorcycle instructor talks about smooth throttle, smooth brakes, smooth steering. The reason is not style. It is physics. Sudden inputs create sudden load spikes at the contact patch that can momentarily push your tire past its limit even when the overall forces are within budget.</p>
+
+        <div class="stat-row">
+          <div class="stat-box">
+            <span class="num">100%</span>
+            <span class="label">Cornering = 0% Left for Braking</span>
+          </div>
+          <div class="stat-box">
+            <span class="num">50/50</span>
+            <span class="label">Corner and Brake Balanced</span>
+          </div>
+          <div class="stat-box">
+            <span class="num">0%</span>
+            <span class="label">Grip Remaining When You Slide</span>
+          </div>
+        </div>
+
+        <h2 id="trail-braking">HOW TRAIL BRAKING USES THE CIRCLE</h2>
+
+        <p>Trail braking is the technique of carrying brake pressure into the initial phase of a corner rather than completing all braking before turning. It is one of the most discussed and least understood skills in motorcycle riding. The traction circle explains exactly how and why it works.</p>
+
+        <p>When you brake in a straight line before the corner, your traction budget is being spent entirely on braking. The point is at the bottom of the circle. As you begin to tip into the corner, you start spending budget on cornering. If you release all brake pressure at the same moment you turn in, that transition can feel abrupt and the front end can become unsettled.</p>
+
+        <p>Trail braking transitions the budget smoothly. As lean angle increases and cornering forces build, brake pressure tapers off at the same rate. The point on the traction circle travels along the edge of the circle rather than jumping across it. At the apex, braking is fully released and the budget is committed entirely to cornering. Then as the bike stands up on exit, the budget transitions again to acceleration.</p>
+
+        <p>A well-executed trail braking sequence traces a smooth arc around the inside of the traction circle. A poorly executed one creates spikes that touch or exceed the outer edge. The difference between the two is what separates riders who feel fast from riders who are fast.</p>
+
+        <h2 id="what-your-data-shows">WHAT A G-G DIAGRAM TELLS YOU</h2>
+
+        <p>A G-G diagram is simply the traction circle rendered from your actual ride data. Instead of a theoretical circle, it shows you a scatter plot of every moment of your session plotted against those same axes. Lateral G on one axis. Longitudinal G on the other.</p>
+
+        <p>A G-G diagram from a well-rounded rider looks like a full, roughly circular scatter plot that fills the available space evenly. High points at the top indicate hard acceleration. High points at the bottom indicate hard braking. Wide points on the sides indicate deep cornering. A diagram that fills the circle evenly shows a rider using all of the available traction efficiently.</p>
+
+        <p>A G-G diagram from a conservative rider looks like a small cluster near the center. Lots of available traction never used. A diagram from a rider who is aggressive on straights but conservative in corners shows a tall narrow shape, high braking and acceleration numbers, low lateral numbers. That is extremely common and it shows clearly in the data what feel alone would never reveal.</p>
+
+        <h3>What the shape of your diagram tells you</h3>
+        <p>If your diagram is narrow vertically and wide horizontally, you are comfortable leaning but not using much braking or acceleration force. If it is tall and narrow, you brake and accelerate hard but back off significantly in corners. If it is small overall and clustered near the center, you have a lot of available grip you are not accessing. Each pattern points to a specific area to work on.</p>
+
+        <h2 id="in-real-time">THE TRACTION CIRCLE IN REAL TIME</h2>
+
+        <p>The real power of the traction circle comes from seeing it live while you ride rather than only reviewing it after the session. A live G-G display on your dashboard shows a moving dot tracking your current traction state in real time. The dot moves toward the edge as load increases and back toward center as load decreases.</p>
+
+        <p>Watching that dot while riding gives you immediate feedback about where your traction budget is going. You can see when a braking zone pushes the dot deep toward the bottom edge. You can see how much of that braking force carries through the turn-in into the apex. You can see the transition from cornering to acceleration as the dot moves from the side of the circle back toward the top.</p>
+
+        <p>This kind of real-time feedback is what professional riders have had access to for decades through factory data systems. ThrottleX brings it to your Android phone. The Apex Hunter G-G Friction Telemetry dashboard shows live lateral G, longitudinal G, and the moving dot on the traction circle all at once. The same data appears in the PDF ride report after every session, plotted across the full session as a historical scatter plot.</p>
+
+        <div class="callout">
+          <span class="callout-label">// See Your Traction Circle Live</span>
+          <p>ThrottleX Pro includes a live G-G Friction Circle on the Apex Hunter dashboard and a full Max Traction Log in your PDF ride report after every session. One-time $9.99 with a 7 day free trial. No subscriptions.</p>
+        </div>
+
+        <h2 id="practical-application">HOW TO USE THIS KNOWLEDGE ON THE ROAD</h2>
+
+        <p>You do not need to be looking at a diagram while you ride to benefit from understanding the traction circle. The mental model alone changes how you approach inputs.</p>
+
+        <h3>Think before you combine forces</h3>
+        <p>The most dangerous moment in motorcycling is when a rider combines braking and cornering without thinking about the traction budget. A sudden squeeze of the front brake while leaned over can instantly push the contact patch past its limit. Understanding the budget makes you naturally more cautious about stacking forces without thinking.</p>
+
+        <h3>Smooth is always the answer</h3>
+        <p>Every time someone tells you to be smooth on a motorcycle, they are describing traction circle management even if they do not call it that. Smooth inputs keep the dot moving gradually within the circle rather than spiking across it. The budget does not change. How you spend it does.</p>
+
+        <h3>Use data to find your gaps</h3>
+        <p>If your G-G diagram after a session shows you are consistently staying near the center, you have room to grow your pace safely. If it shows you touching the outer edge in certain corners, those are the corners to be thoughtful about. The diagram does not tell you to push harder. It tells you where you are relative to the boundary so you can make informed decisions.</p>
+
+        <h2 id="bottom-line">THE BOTTOM LINE</h2>
+
+        <p>The traction circle is not a concept only for racers. It is the physical reality of what is happening at your tire's contact patch every single time you brake, corner, or accelerate. Understanding it does not require a data engineering degree. It requires grasping one simple idea: your tire has a fixed grip budget, and every input spends from that budget.</p>
+
+        <p>Once that clicks, everything else in motorcycle dynamics makes more sense. Why smooth matters. Why trail braking works. Why combining braking and cornering without thinking is dangerous. Why riders who use data improve faster than riders who only use feel.</p>
+
+        <p>Your phone already has the sensors to show you this in real time. All you need is the right app on your bars.</p>
+
+      </article>
+
+      <aside class="article-sidebar">
+        <div class="sidebar-card">
+          <h4>// In This Article</h4>
+          <ul>
+            <li><a href="#what-is-it">What Is a Traction Circle?</a></li>
+            <li><a href="#the-budget">The Traction Budget</a></li>
+            <li><a href="#trail-braking">Trail Braking and the Circle</a></li>
+            <li><a href="#what-your-data-shows">What a G-G Diagram Shows</a></li>
+            <li><a href="#in-real-time">The Circle in Real Time</a></li>
+            <li><a href="#practical-application">How to Use This Knowledge</a></li>
+            <li><a href="#bottom-line">The Bottom Line</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-cta">
+          <h4>SEE YOUR TRACTION LIVE.</h4>
+          <p>ThrottleX shows your live G-G Friction Circle and generates a full traction diagram in your PDF report after every session.</p>
+          <a href="https://play.google.com/store/apps/details?id=com.alloy.throttlex" target="_blank">GET THROTTLEX · $9.99</a>
+        </div>
+        <div class="sidebar-card">
+          <h4>// More From The Blog</h4>
+          <ul>
+            <li><a href="understanding-g-force-data-on-a-motorcycle.html">Understanding G-Force Data on a Motorcycle</a></li>
+            <li><a href="what-is-lean-angle-on-a-motorcycle.html">What Is Lean Angle on a Motorcycle?</a></li>
+            <li><a href="how-to-improve-your-cornering-on-a-motorcycle.html">How to Improve Your Cornering on a Motorcycle</a></li>
+            <li><a href="how-to-prepare-for-your-first-motorcycle-track-day.html">How to Prepare for Your First Track Day</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <section class="related-section">
+    <div class="container">
+      <span class="section-label">// Keep Reading</span>
+      <h2>MORE FROM THE BLOG</h2>
+      <div class="related-grid">
+        <a href="understanding-g-force-data-on-a-motorcycle.html" class="related-card">
+          <span class="related-card-tag">// Data and Telemetry</span>
+          <h3>Understanding G-Force Data on a Motorcycle</h3>
+          <p>G-force data tells you exactly how hard your motorcycle is working in every corner, brake zone, and acceleration point.</p>
+        </a>
+        <a href="what-is-lean-angle-on-a-motorcycle.html" class="related-card">
+          <span class="related-card-tag">// Fundamentals</span>
+          <h3>What Is Lean Angle on a Motorcycle and Why Does It Matter?</h3>
+          <p>Every time you tip into a corner your bike leans. That angle in degrees is one of the most important numbers in motorcycling.</p>
+        </a>
+        <a href="how-to-improve-your-cornering-on-a-motorcycle.html" class="related-card">
+          <span class="related-card-tag">// Riding Skills</span>
+          <h3>How to Improve Your Cornering on a Motorcycle</h3>
+          <p>A complete breakdown of what actually makes riders faster and safer through corners and how to develop those skills deliberately.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">THROTTLE<span>X</span></div>
+        <div class="footer-links">
+          <a href="../index.html#features">Features</a>
+          <a href="../index.html#pricing">Pricing</a>
+          <a href="../blog.html">Blog</a>
+          <a href="../privacy.html">Privacy Policy</a>
+        </div>
+        <div class="footer-copy">© 2026 ThrottleX · Hand-coded by a Solo Rider.</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
