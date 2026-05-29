@@ -58,30 +58,59 @@
   }
   </script>
 
+  <!-- VideoObject Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Real Motorcycle Telemetry — Live Lean Angle and G-Force Data | ThrottleX App",
+    "description": "Live lean angle and G-force telemetry data captured on Elder Hill Road in the Texas Hill Country using the ThrottleX motorcycle telemetry app for Android.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/vTubq93eGOc/hqdefault.jpg",
+    "uploadDate": "2026-03-01T00:00:00+00:00",
+    "contentUrl": "https://www.youtube.com/watch?v=vTubq93eGOc",
+    "embedUrl": "https://www.youtube.com/embed/vTubq93eGOc",
+    "publisher": {
+      "@type": "Organization",
+      "name": "ThrottleX",
+      "url": "https://throttlexapp.com"
+    }
+  }
+  </script>
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/favicon.png" />
   <link rel="apple-touch-icon" href="images/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="image" href="images/screen-road.webp" />
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;600&family=Barlow+Condensed:wght@400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;600&family=Barlow+Condensed:wght@400;500;700&display=swap" /></noscript>
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8PRHNYKLWZ"></script>
+  <!-- Google Analytics (deferred for performance) -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-8PRHNYKLWZ');
+    window.addEventListener('load', function() {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-8PRHNYKLWZ';
+      s.onload = function() {
+        gtag('js', new Date());
+        gtag('config', 'G-8PRHNYKLWZ');
+      };
+      document.head.appendChild(s);
+    });
   </script>
 
-  <!-- Microsoft Clarity -->
+  <!-- Microsoft Clarity (deferred for performance) -->
   <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "ws11p9jp3h");
+    window.addEventListener('load', function() {
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "ws11p9jp3h");
+    });
   </script>
 
   <link rel="stylesheet" href="css/style.css" />
@@ -228,7 +257,7 @@
         </a>
         <a href="#features" class="btn-ghost">See All Features ↓</a>
       </div>
-      <p class="trial-sub">🎉 Free to start. Try Pro free for 7 days. Then $9.99 one-time.</p>
+      <p class="trial-sub">🎉 Free to start. Try Pro free for 3 days or 3 sessions, whichever comes first. Then $9.99 one-time.</p>
       <div class="hero-stats">
         <div class="stat">
           <span class="stat-num">4</span>
@@ -269,11 +298,11 @@
       <div class="video-wrap">
         <div class="yt-facade" id="ytFacade" onclick="loadYouTube()" role="button" aria-label="Play video">
           <img
-            src="https://i.ytimg.com/vi/vTubq93eGOc/maxresdefault.jpg"
+            src="https://i.ytimg.com/vi/vTubq93eGOc/hqdefault.jpg"
             alt="ThrottleX real motorcycle telemetry on Elder Hill Road"
             class="yt-thumbnail"
-            width="1280"
-            height="720"
+            width="480"
+            height="360"
             loading="lazy"
           />
           <div class="yt-play-btn" aria-hidden="true">
@@ -762,7 +791,7 @@
       <div class="section-header">
         <div class="section-eyebrow">Pricing</div>
         <h2 class="section-title">FREE TO START.<br/><span>$9.99 TO UNLOCK.</span></h2>
-        <p class="section-desc">Try the full app free for 7 days. After that, the core dashboard stays free forever. Pro unlocks everything else for a one-time $9.99. No subscriptions. Not ever.</p>
+        <p class="section-desc">Try Pro free for 3 days or 3 sessions, whichever comes first. After that, the core dashboard stays free forever. Pro unlocks everything else for a one-time $9.99. No subscriptions. Not ever.</p>
       </div>
       <div class="pricing-split">
 
@@ -793,7 +822,7 @@
         </div>
 
         <div class="pricing-tier pricing-tier--pro">
-          <div class="pricing-tier-badge">7-Day Free Trial</div>
+          <div class="pricing-tier-badge">3 Days or 3 Sessions Free</div>
           <div class="pricing-tier-label">ThrottleX Pro</div>
           <div class="pricing-tier-price">$9<span class="pricing-cents">.99</span></div>
           <div class="pricing-tier-note">One-time purchase. All future updates included.</div>
@@ -953,6 +982,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
