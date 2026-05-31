@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Motorcycle Tire Compound Explained | ThrottleX Blog</title>
+  <meta name="description" content="Tire compound is one of the most misunderstood topics in motorcycling. Here is a plain-English breakdown of what compound means, how it affects grip, and how ThrottleX uses your specific tire data to calibrate your telemetry." />
+  <meta name="keywords" content="motorcycle tire compound explained, tire compound motorcycle grip, Michelin Power 5 compound, motorcycle tire grip model, sport tire vs touring tire compound, motorcycle tire selection, tire compound track day" />
+  <link rel="canonical" href="https://throttlexapp.com/blog/motorcycle-tire-compound-explained.html" />
+
+  <meta property="og:title" content="Motorcycle Tire Compound Explained" />
+  <meta property="og:description" content="Tire compound is one of the most misunderstood topics in motorcycling. Here is a plain-English breakdown of what compound means, how it affects grip, and how your tire choice affects your telemetry." />
+  <meta property="og:url" content="https://throttlexapp.com/blog/motorcycle-tire-compound-explained.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://throttlexapp.com/images/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Motorcycle Tire Compound Explained" />
+  <meta name="twitter:description" content="Tire compound is one of the most misunderstood topics in motorcycling. Here is a plain-English breakdown of what compound means and how it affects your riding." />
+  <meta name="twitter:image" content="https://throttlexapp.com/images/og-image.jpg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Motorcycle Tire Compound Explained",
+    "description": "Tire compound is one of the most misunderstood topics in motorcycling. Here is a plain-English breakdown of what compound means, how it affects grip, and how ThrottleX uses your specific tire data to calibrate your telemetry.",
+    "author": { "@type": "Organization", "name": "ThrottleX" },
+    "publisher": { "@type": "Organization", "name": "ThrottleX", "url": "https://throttlexapp.com" },
+    "datePublished": "2026-05-31",
+    "url": "https://throttlexapp.com/blog/motorcycle-tire-compound-explained.html"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="../images/favicon.png" />
+
+  <script type="text/javascript">
+    window.addEventListener('load', function() {
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "ws11p9jp3h");
+    });
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.addEventListener('load', function() {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-8PRHNYKLWZ';
+      s.onload = function() { gtag('js', new Date()); gtag('config', 'G-8PRHNYKLWZ'); };
+      document.head.appendChild(s);
+    });
+  </script>
+
+  <style>
+    :root {
+      --red: #e8001e; --red-glow: rgba(232,0,30,0.15);
+      --black: #050507; --dark: #0d0d10; --dark2: #121215; --dark3: #1a1a1f;
+      --border: rgba(255,255,255,0.07); --border-red: rgba(232,0,30,0.3);
+      --text: #e8e8ec; --text-dim: #7a7a88; --text-dimmer: #4a4a55;
+      --font-display: 'Bebas Neue', sans-serif;
+      --font-cond: 'Barlow Condensed', sans-serif;
+      --font-body: 'Barlow', sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--black); color: var(--text); font-family: var(--font-body); font-weight: 300; line-height: 1.6; overflow-x: hidden; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; background: rgba(5,5,7,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-logo { font-family: var(--font-display); font-size: 1.6rem; color: #fff; }
+    .nav-logo span { color: var(--red); }
+    .nav-links { display: flex; gap: 2rem; align-items: center; }
+    .nav-links a { font-family: var(--font-cond); font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim); transition: color 0.2s; }
+    .nav-links a:hover { color: #fff; }
+    .nav-cta { background: var(--red); color: #fff !important; padding: 0.5rem 1.25rem; font-weight: 700; }
+    @media(max-width:900px){ .nav-links { display: none; } }
+    .article-header { padding: 9rem 0 4rem; border-bottom: 1px solid var(--border); }
+    .breadcrumb { font-family: var(--font-cond); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-dimmer); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .breadcrumb a:hover { color: var(--red); }
+    .article-tag { font-family: var(--font-cond); font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--red); display: block; margin-bottom: 1rem; }
+    .article-header h1 { font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 5rem); line-height: 0.95; color: #fff; margin-bottom: 1.5rem; max-width: 820px; }
+    .article-meta { display: flex; gap: 2rem; flex-wrap: wrap; }
+    .meta-item { font-family: var(--font-cond); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dimmer); }
+    .meta-item strong { color: var(--text-dim); }
+    .article-body { display: grid; grid-template-columns: 1fr 320px; gap: 5rem; padding: 5rem 0; align-items: start; }
+    article h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.8rem); color: #fff; margin: 3rem 0 1.25rem; line-height: 1; }
+    article h3 { font-family: var(--font-cond); font-size: 1.1rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); margin: 2rem 0 0.75rem; }
+    article p { font-size: 0.97rem; color: var(--text-dim); line-height: 1.85; margin-bottom: 1.25rem; }
+    article strong { color: var(--text); font-weight: 600; }
+    article ul { list-style: none; margin: 0.5rem 0 1.5rem; display: flex; flex-direction: column; gap: 0.6rem; }
+    article ul li { font-size: 0.95rem; color: var(--text-dim); line-height: 1.6; display: flex; align-items: flex-start; gap: 0.6rem; }
+    article ul li::before { content: '//'; color: var(--red); font-family: var(--font-cond); font-size: 0.75rem; margin-top: 0.2rem; flex-shrink: 0; }
+    .callout { background: var(--dark2); border-left: 3px solid var(--red); padding: 1.5rem 1.75rem; margin: 2rem 0; }
+    .callout-label { font-family: var(--font-cond); font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--red); display: block; margin-bottom: 0.75rem; }
+    .callout p { margin-bottom: 0; font-size: 0.95rem; }
+    .tire-table-wrap { overflow-x: auto; margin: 2rem 0; }
+    .tire-table { width: 100%; border-collapse: collapse; min-width: 500px; }
+    .tire-table th { font-family: var(--font-cond); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.85rem 1rem; text-align: left; border-bottom: 1px solid var(--border-red); color: var(--red); }
+    .tire-table td { font-size: 0.88rem; color: var(--text-dim); padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.5; }
+    .tire-table tr:last-child td { border-bottom: none; }
+    .tire-table td:first-child { color: var(--text); font-weight: 400; }
+    .michelin-spotlight { background: var(--dark2); border: 1px solid var(--border-red); padding: 2rem; margin: 2.5rem 0; position: relative; overflow: hidden; }
+    .michelin-spotlight::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--red), transparent); }
+    .michelin-spotlight-label { font-family: var(--font-cond); font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--red); display: block; margin-bottom: 0.75rem; }
+    .michelin-spotlight h4 { font-family: var(--font-display); font-size: 1.6rem; color: var(--white); margin-bottom: 0.75rem; line-height: 1; }
+    .michelin-spotlight p { font-size: 0.92rem; color: var(--text-dim); line-height: 1.75; margin-bottom: 0.75rem; }
+    .michelin-spotlight p:last-child { margin-bottom: 0; }
+    .article-sidebar { position: sticky; top: 6rem; }
+    .sidebar-card { background: var(--dark2); border: 1px solid var(--border); padding: 1.75rem; margin-bottom: 1.5rem; }
+    .sidebar-card h4 { font-family: var(--font-cond); font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 1rem; }
+    .sidebar-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .sidebar-card ul li a { font-size: 0.85rem; color: var(--text-dim); display: flex; align-items: flex-start; gap: 0.5rem; line-height: 1.4; transition: color 0.2s; }
+    .sidebar-card ul li a::before { content: '//'; color: var(--red); font-family: var(--font-cond); font-size: 0.7rem; margin-top: 0.15rem; flex-shrink: 0; }
+    .sidebar-card ul li a:hover { color: #fff; }
+    .sidebar-cta { background: var(--dark2); border: 1px solid var(--border-red); padding: 1.75rem; text-align: center; margin-bottom: 1.5rem; }
+    .sidebar-cta h4 { font-family: var(--font-display); font-size: 1.4rem; color: #fff; margin-bottom: 0.75rem; }
+    .sidebar-cta p { font-size: 0.85rem; color: var(--text-dim); margin-bottom: 1.25rem; line-height: 1.6; }
+    .sidebar-cta a { display: block; background: var(--red); color: #fff; font-family: var(--font-cond); font-weight: 700; font-size: 0.9rem; letter-spacing: 0.08em; padding: 0.85rem; transition: background 0.2s; }
+    .sidebar-cta a:hover { background: #c0001a; }
+    .related-section { padding: 5rem 0; border-top: 1px solid var(--border); }
+    .section-label { font-family: var(--font-cond); font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--red); margin-bottom: 0.75rem; display: block; }
+    .related-section h2 { font-family: var(--font-display); font-size: 2.5rem; color: #fff; margin-bottom: 2.5rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+    .related-card { background: var(--dark2); border: 1px solid var(--border); padding: 1.75rem; transition: border-color 0.2s; display: block; }
+    .related-card:hover { border-color: var(--border-red); }
+    .related-card-tag { font-family: var(--font-cond); font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 0.6rem; display: block; }
+    .related-card h3 { font-family: var(--font-cond); font-weight: 700; font-size: 1.1rem; color: #fff; margin-bottom: 0.5rem; line-height: 1.3; }
+    .related-card p { font-size: 0.85rem; color: var(--text-dim); line-height: 1.6; }
+    footer { padding: 2.5rem 0; border-top: 1px solid var(--border); }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-logo { font-family: var(--font-display); font-size: 1.2rem; }
+    .footer-logo span { color: var(--red); }
+    .footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    .footer-links a { font-family: var(--font-cond); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dimmer); transition: color 0.2s; }
+    .footer-links a:hover { color: var(--red); }
+    .footer-copy { font-size: 0.78rem; color: var(--text-dimmer); }
+    @media(max-width:900px){ .article-body { grid-template-columns: 1fr; gap: 3rem; } .article-sidebar { position: static; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="../index.html" class="nav-logo">THROTTLE<span>X</span></a>
+    <div class="nav-links">
+      <a href="../index.html#video">Video</a>
+      <a href="../index.html#reviews">Reviews</a>
+      <a href="../index.html#features">Features</a>
+      <a href="../index.html#pricing">Pricing</a>
+      <a href="../blog.html">Blog</a>
+      <a href="../index.html#contact">Contact</a>
+      <a href="https://play.google.com/store/apps/details?id=com.alloy.throttlex" target="_blank" class="nav-cta">Get the App</a>
+    </div>
+  </nav>
+
+  <header class="article-header">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <span>//</span>
+        <a href="../blog.html">Blog</a>
+        <span>//</span>
+        <span>Gear and Setup</span>
+      </div>
+      <span class="article-tag">// Gear and Setup</span>
+      <h1>Motorcycle Tire Compound Explained</h1>
+      <div class="article-meta">
+        <span class="meta-item">By <strong>ThrottleX Team</strong></span>
+        <span class="meta-item">Published <strong>May 31, 2026</strong></span>
+        <span class="meta-item">Read time <strong>9 min</strong></span>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="article-body">
+      <article>
+
+        <p>Tire compound is one of those terms that gets used constantly in motorcycle circles and explained rarely. Riders talk about soft compounds, hard compounds, dual compounds, and hypersport compounds as if everyone already understands what those words actually mean at a physical level. Most do not. That gap in understanding leads to poor tire selection, wrong expectations, and riding behavior that does not match the rubber underneath.</p>
+
+        <p>This article explains what tire compound actually is, how it determines grip and performance characteristics, how different compound types behave differently under real riding conditions, and how ThrottleX uses your specific tire profile to calibrate its physics engine for accurate telemetry.</p>
+
+        <h2 id="what-is-compound">WHAT IS TIRE COMPOUND?</h2>
+
+        <p>A motorcycle tire is not made of a single material. It is a composite structure with multiple layers: the carcass, the belt package, and the tread. The tread is what contacts the road and the compound refers specifically to the chemical formula of the rubber used to make that tread layer.</p>
+
+        <p>Tire engineers mix natural rubber, synthetic rubber, carbon black, silica, and various chemical additives in specific ratios to achieve target performance characteristics. The exact formula is proprietary to each manufacturer and is one of the most guarded pieces of intellectual property in the tire industry. What changes between compound types is the balance of those ingredients and how they interact with road surfaces at different temperatures.</p>
+
+        <h3>Why compound determines grip</h3>
+        <p>Grip between a tire and a road surface comes from two primary sources. The first is mechanical interlocking, where the rubber deforms into microscopic surface irregularities of the road and creating physical resistance. The second is molecular adhesion, where rubber molecules form temporary bonds with the road surface molecules. Softer, stickier compounds produce more of both. Harder compounds produce less.</p>
+
+        <p>A softer compound deforms more easily, fills road surface irregularities more completely, and creates stronger molecular adhesion. This produces higher peak grip but at a cost. Soft rubber wears faster because it is being continuously abraded and deformed. It also requires heat to activate its full grip potential. Cold soft tires can actually provide less grip than warm hard tires in the initial minutes of a ride.</p>
+
+        <h2 id="compound-categories">COMPOUND CATEGORIES IN REAL TERMS</h2>
+
+        <h3>Hypersport and race compounds</h3>
+        <p>Tires like the Pirelli Supercorsa V4 and Michelin Power GP 2 use the softest street-legal compounds available. Maximum mechanical deformation, maximum molecular adhesion, and a very narrow operating temperature window. These tires need heat to work and they generate that heat through the friction of use. A cold Supercorsa on a cold morning provides modest grip. The same tire after four corners at pace provides exceptional grip. The tradeoff is wear rate. A set of hypersport tires at track pace might last one hard day.</p>
+
+        <h3>Premium sport street compounds</h3>
+        <p>This is the category most serious street and canyon riders should be in. Tires like the Michelin Power 5, Pirelli Angel GT II, and Bridgestone S23 use compounds that balance peak grip with a broader operating temperature window and significantly better durability. They do not require the same warmup as a race tire and they perform across a wider range of conditions including cooler temperatures, light rain, and sustained road use. For a rider doing canyon runs, occasional track days, and daily riding these tires represent the best overall balance.</p>
+
+        <h3>Sport touring compounds</h3>
+        <p>Tires like the Michelin Road 6 and Bridgestone T32 use harder, more durable compounds designed for high mileage and all-weather performance. They sacrifice some peak dry grip for dramatically improved wet grip, cold temperature performance, and longevity. A Road 6 will comfortably exceed 10,000 miles where a Power 5 might see 5,000 to 7,000 depending on riding style. For a rider who commutes daily and does occasional spirited rides the sport touring compound is often the smarter choice.</p>
+
+        <h3>Dual compound construction</h3>
+        <p>Many modern sport and sport touring tires use different compounds across the tread width. The center strip uses a harder compound for straight line stability and longevity since that section contacts the road most during normal riding. The shoulders use a softer compound to provide better grip when the tire is leaned over in corners. This is why you might see a tire labeled as using two compounds. They are literally using different rubber formulas across different zones of the tread.</p>
+
+        <h2 id="profile-sharpness">PROFILE SHARPNESS AND TRANSITION SPEED</h2>
+
+        <p>Beyond compound softness, tire profile has a significant effect on how the bike handles. Profile sharpness refers to how quickly the tire's radius transitions from the center to the shoulder. A sharply profiled tire has a more pronounced curve from center to edge. A rounder profile has a more gradual transition.</p>
+
+        <p>A sharper profile makes the bike feel more responsive at turn-in. The bike tips into corners more quickly because the contact patch moves to the leaned portion of the tire more rapidly as the bike leans. Racing tires like the Supercorsa have deliberately sharp profiles to encourage fast, aggressive turn-in. Sport touring tires have rounder profiles that produce a more gradual, stable lean behavior suited to loaded bikes and two-up riding.</p>
+
+        <p>This profile sharpness is one of the parameters that ThrottleX captures in its tire database and uses to calibrate the Flick Rate measurement in your ride analysis. A sharper tire profile means a faster natural transition from upright to lean. ThrottleX accounts for that when interpreting how quickly your bike moved from straight line to cornering in each corner of your session.</p>
+
+        <h2 id="michelin-power-5">THE MICHELIN POWER 5: A REAL WORLD EXAMPLE</h2>
+
+        <div class="michelin-spotlight">
+          <span class="michelin-spotlight-label">// Featured Tire: Michelin Power 5</span>
+          <h4>Premium Sport Street. Maximum Feedback.</h4>
+          <p>The Michelin Power 5 occupies the top of Michelin's street performance range. It is a premium sport street tire designed specifically around rider feedback: the sensation of what the tire is doing at the contact patch communicated through the chassis to the rider's hands and seat. That feedback orientation makes it a particularly good pairing with a telemetry app because both the tire and the app are trying to give the rider more information about what is happening at the contact patch.</p>
+          <p>The Power 5 uses a dual compound construction with a harder center strip for durability under straight line load and a softer, stickier shoulder compound for cornering grip. Its profile is sharper than a touring tire, producing responsive turn-in characteristics. ThrottleX classifies it under the Standard grip model, balanced performance calibrated for the class of modern premium sport street rubber in dry conditions.</p>
+          <p>A rider selecting the Michelin Power 5 in ThrottleX's Tire Picker is telling the physics engine: this is the compound and profile under me. The Friction Circle and Traction Efficiency calculations are then calibrated to that specific tire's grip envelope. The Efficiency Score shows how much of the Power 5's available grip budget the rider is actually accessing during the session.</p>
+        </div>
+
+        <h2 id="throttlex-tire-picker">HOW THROTTLEX USES YOUR TIRE DATA</h2>
+
+        <p>Most telemetry apps treat the tire as a fixed variable and apply the same physics model regardless of what compound is underneath the bike. ThrottleX takes a different approach. The Tire Picker allows you to select your specific tire from a database of real-world models, and that selection anchors the physics engine for your session.</p>
+
+        <p>Each tire in the database is mapped to three parameters that directly affect how the app interprets your data:</p>
+
+        <h3>Grip Model</h3>
+        <p>An enum of Conservative, Standard, or Performance that sets the baseline friction coefficient for the physics calculations. A Supercorsa V4 is classified as Performance. A Michelin Power 5 is Standard. A Michelin Road 6 is Conservative. This classification determines how the Friction Circle's outer limit ring is scaled. A Performance tire expands the circle's radius, representing a larger traction envelope. A Conservative tire contracts it. The outer boundary of the Friction Circle is not a fixed 1.0G ring. It is dynamically scaled to match the theoretical limit of your specific rubber.</p>
+
+        <h3>Max Lean</h3>
+        <p>The manufacturer-recommended or tested maximum safe lean angle for that tire profile. A Supercorsa V4 supports up to 62 degrees of lean. A Michelin Road 6 is mapped at 51 degrees. These limits reflect the physical geometry of the tire profile and the compound's grip characteristics at extreme lean angles. ThrottleX uses this value to calibrate the lean angle thresholds that appear in your coaching analysis and ride report.</p>
+
+        <h3>Profile Sharpness</h3>
+        <p>A multiplier that reflects how aggressively the tire's cross-section transitions from center to shoulder. Racing tires carry a sharpness value of 1.4. Sport touring tires are closer to 1.0. This value feeds into the Flick Rate calculation, which measures how fast you transition from upright to full lean. A sharper tire will naturally produce faster Flick Rate readings for the same rider input because the contact patch geometry is assisting the lean transition. ThrottleX accounts for this so your Flick Rate scores are meaningful comparisons even if you switch between tire types.</p>
+
+        <div class="tire-table-wrap">
+          <table class="tire-table">
+            <thead>
+              <tr>
+                <th>Tire</th>
+                <th>Grip Model</th>
+                <th>Max Lean</th>
+                <th>Profile Sharpness</th>
+                <th>Best For</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Pirelli Supercorsa V4</td>
+                <td>Performance</td>
+                <td>62°</td>
+                <td>1.4</td>
+                <td>Track days, hypersport riding</td>
+              </tr>
+              <tr>
+                <td>Michelin Power GP 2</td>
+                <td>Performance</td>
+                <td>60°</td>
+                <td>1.35</td>
+                <td>Track days, aggressive street</td>
+              </tr>
+              <tr>
+                <td>Michelin Power 5</td>
+                <td>Standard</td>
+                <td>57°</td>
+                <td>1.2</td>
+                <td>Sport street, canyon riding</td>
+              </tr>
+              <tr>
+                <td>Michelin Power 6</td>
+                <td>Standard</td>
+                <td>56°</td>
+                <td>1.2</td>
+                <td>Sport street, daily and canyon</td>
+              </tr>
+              <tr>
+                <td>Michelin Road 6</td>
+                <td>Conservative</td>
+                <td>51°</td>
+                <td>1.0</td>
+                <td>Touring, commuting, all-weather</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="traction-efficiency">WHAT TRACTION EFFICIENCY ACTUALLY MEANS</h2>
+
+        <p>Once ThrottleX knows what tire is under your bike, it can calculate something meaningful: your Traction Efficiency score. This is the ratio between the combined G-forces you are actually generating and the theoretical limit of the selected tire.</p>
+
+        <p>An efficiency score of 85 percent on a Michelin Power 5 means you are generating combined lateral and longitudinal G-forces that reach 85 percent of what that specific compound is theoretically capable of providing at your lean angle. You have 15 percent of the Power 5's grip budget still available. An efficiency score of 95 percent means you are very close to the limit of what that rubber can provide.</p>
+
+        <p>This is the measurement that makes tire selection meaningful in a telemetry context. A rider on Road 6 touring tires with a 90 percent efficiency score is riding very close to the limit of conservative rubber. The same rider switching to Power 5 tires with a 75 percent efficiency score has significantly more headroom. The data tells you where you are relative to the specific envelope of your current rubber, not against a generic reference that ignores what compound you actually chose to put under your bike.</p>
+
+        <div class="callout">
+          <span class="callout-label">// Your Tire. Your Limit. Your Data.</span>
+          <p>ThrottleX Pro includes a searchable database of real-world tire profiles from Michelin, Pirelli, Bridgestone, Dunlop, and more. Select your rubber and the physics engine calibrates your Friction Circle, Traction Efficiency, and Flick Rate to your specific compound and profile. One-time $9.99 on Google Play with a free trial of 3 days or 3 sessions.</p>
+        </div>
+
+        <h2 id="choosing-right-compound">CHOOSING THE RIGHT COMPOUND FOR YOUR RIDING</h2>
+
+        <p>The right compound depends entirely on how you actually ride, not on what you aspire to ride like. Here is an honest framework:</p>
+
+        <h3>If you do track days regularly</h3>
+        <p>A hypersport or performance compound gives you the grip your pace demands. The Michelin Power GP 2 is an excellent choice for riders who split time between street and track. If you are doing full track days at pace, a dedicated track tire is worth considering. Just know that those tires need warmup laps and cold compound grip is significantly reduced.</p>
+
+        <h3>If you primarily ride canyons and backroads</h3>
+        <p>A premium sport street compound like the Michelin Power 5 or Power 6 is the right choice. You get excellent dry grip with a broader temperature window than a pure sport tire, reasonable durability, and performance that genuinely matches what a street rider needs. The Power 5 specifically was designed around rider feedback which makes it well suited to someone using ThrottleX and paying attention to what the tire is communicating.</p>
+
+        <h3>If you commute and tour with occasional spirited riding</h3>
+        <p>A sport touring compound like the Michelin Road 6 gives you the mileage, wet grip, and cold temperature performance that matters for real-world daily use. You sacrifice some peak dry grip but gain a tire that works well in a much broader range of conditions. The Road 6 in particular has exceptional wet grip for its category.</p>
+
+        <h3>If you are unsure</h3>
+        <p>Default to the premium sport street category. It is the most versatile range available and covers the widest range of riding styles without significant compromise in any direction.</p>
+
+        <h2 id="bottom-line">THE BOTTOM LINE</h2>
+
+        <p>Tire compound is not marketing language. It is a real physical property that determines how much grip your tire generates, how quickly it reaches operating temperature, how long it lasts, and how it behaves at the limit. Understanding the compound under your bike changes how you interpret what the bike is telling you and makes the data from your telemetry system significantly more meaningful.</p>
+
+        <p>When ThrottleX knows your tire it can tell you not just how hard you are pushing but how hard you are pushing relative to what your specific compound is actually capable of. That is the difference between raw numbers and real insight.</p>
+
+      </article>
+
+      <aside class="article-sidebar">
+        <div class="sidebar-card">
+          <h4>// In This Article</h4>
+          <ul>
+            <li><a href="#what-is-compound">What Is Tire Compound?</a></li>
+            <li><a href="#compound-categories">Compound Categories</a></li>
+            <li><a href="#profile-sharpness">Profile Sharpness</a></li>
+            <li><a href="#michelin-power-5">The Michelin Power 5</a></li>
+            <li><a href="#throttlex-tire-picker">How ThrottleX Uses Your Tire Data</a></li>
+            <li><a href="#traction-efficiency">Traction Efficiency Explained</a></li>
+            <li><a href="#choosing-right-compound">Choosing the Right Compound</a></li>
+            <li><a href="#bottom-line">The Bottom Line</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-cta">
+          <h4>CALIBRATE TO YOUR RUBBER.</h4>
+          <p>ThrottleX Pro includes a real-world tire database. Select your compound and the physics engine calibrates your Friction Circle and Traction Efficiency to your specific tire.</p>
+          <a href="https://play.google.com/store/apps/details?id=com.alloy.throttlex" target="_blank">GET THROTTLEX · $9.99</a>
+        </div>
+        <div class="sidebar-card">
+          <h4>// More From The Blog</h4>
+          <ul>
+            <li><a href="what-is-a-traction-circle-and-why-does-it-matter.html">What Is a Traction Circle and Why Does It Matter?</a></li>
+            <li><a href="what-is-trail-braking-and-how-do-you-learn-it.html">What Is Trail Braking and How Do You Learn It?</a></li>
+            <li><a href="understanding-g-force-data-on-a-motorcycle.html">Understanding G-Force Data on a Motorcycle</a></li>
+            <li><a href="how-to-improve-your-cornering-on-a-motorcycle.html">How to Improve Your Cornering on a Motorcycle</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <section class="related-section">
+    <div class="container">
+      <span class="section-label">// Keep Reading</span>
+      <h2>MORE FROM THE BLOG</h2>
+      <div class="related-grid">
+        <a href="what-is-a-traction-circle-and-why-does-it-matter.html" class="related-card">
+          <span class="related-card-tag">// Data and Telemetry</span>
+          <h3>What Is a Traction Circle and Why Does It Matter?</h3>
+          <p>The traction circle is one of the most important concepts in motorsport. Here is what it is and how understanding it makes you a faster and safer rider.</p>
+        </a>
+        <a href="what-is-trail-braking-and-how-do-you-learn-it.html" class="related-card">
+          <span class="related-card-tag">// Riding Skills</span>
+          <h3>What Is Trail Braking and How Do You Learn It?</h3>
+          <p>Trail braking is one of the most discussed and least understood skills in motorcycle riding. Here is exactly what it is and how to develop it safely.</p>
+        </a>
+        <a href="how-to-improve-your-cornering-on-a-motorcycle.html" class="related-card">
+          <span class="related-card-tag">// Riding Skills</span>
+          <h3>How to Improve Your Cornering on a Motorcycle</h3>
+          <p>A complete breakdown of what actually makes riders faster and safer through corners and how to develop those skills deliberately.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">THROTTLE<span>X</span></div>
+        <div class="footer-links">
+          <a href="../index.html#features">Features</a>
+          <a href="../index.html#pricing">Pricing</a>
+          <a href="../blog.html">Blog</a>
+          <a href="../privacy.html">Privacy Policy</a>
+        </div>
+        <div class="footer-copy">© 2026 ThrottleX · Hand-coded by a Solo Rider.</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
