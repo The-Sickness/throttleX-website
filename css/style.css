@@ -666,7 +666,7 @@ a { color: inherit; text-decoration: none; }
 }
 .ui-card-screen {
   width: 100%;
-  aspect-ratio: 16/9;
+  aspect-ratio: 900 / 415;
   overflow: hidden;
   background: #000;
   cursor: zoom-in;
