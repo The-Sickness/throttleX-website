@@ -146,7 +146,7 @@ function initLightbox() {
   });
 
   // Target every img inside the showcase section
-  document.querySelectorAll('.showcase img, .showcase-kml-image img').forEach(img => {
+  document.querySelectorAll('.showcase img, .showcase-kml-image img, .ui-card-screen img').forEach(img => {
     img.style.cursor = 'zoom-in';
     img.title = 'Click to enlarge';
     img.addEventListener('click', function() {
