@@ -1,301 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ThrottleX Blog — Motorcycle Performance &amp; Telemetry</title>
-  <meta name="description" content="Guides, tips, and insights for serious motorcycle riders. Learn about telemetry, track days, lean angles, and riding performance from the team behind ThrottleX." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --red: #e8001e;
-      --red-glow: rgba(232,0,30,0.15);
-      --black: #050507;
-      --dark: #0d0d10;
-      --dark2: #121215;
-      --dark3: #1a1a1f;
-      --border: rgba(255,255,255,0.07);
-      --border-red: rgba(232,0,30,0.3);
-      --text: #e8e8ec;
-      --text-dim: #7a7a88;
-      --text-dimmer: #4a4a55;
-      --font-display: 'Bebas Neue', sans-serif;
-      --font-cond: 'Barlow Condensed', sans-serif;
-      --font-body: 'Barlow', sans-serif;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { background: var(--black); color: var(--text); font-family: var(--font-body); font-weight: 300; line-height: 1.6; overflow-x: hidden; }
-    a { color: inherit; text-decoration: none; }
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-
-    /* NAV */
-    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; background: rgba(5,5,7,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
-    .nav-logo { font-family: var(--font-display); font-size: 1.6rem; letter-spacing: 0.05em; color: #fff; }
-    .nav-logo span { color: var(--red); }
-    .nav-links { display: flex; gap: 2rem; align-items: center; }
-    .nav-links a { font-family: var(--font-cond); font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim); transition: color 0.2s; }
-    .nav-links a:hover { color: #fff; }
-    .nav-cta { background: var(--red); color: #fff !important; padding: 0.5rem 1.25rem; font-weight: 700; }
-    .nav-cta:hover { background: #c0001a !important; }
-
-    /* HERO */
-    .blog-hero { padding: 10rem 0 5rem; border-bottom: 1px solid var(--border); position: relative; overflow: hidden; }
-    .blog-hero::before { content: 'BLOG'; position: absolute; right: -2rem; top: 50%; transform: translateY(-50%); font-family: var(--font-display); font-size: 20rem; color: rgba(255,255,255,0.015); line-height: 1; pointer-events: none; }
-    .hero-tag { font-family: var(--font-cond); font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--red); margin-bottom: 1rem; display: block; }
-    .blog-hero h1 { font-family: var(--font-display); font-size: clamp(3rem, 7vw, 6rem); line-height: 0.95; color: #fff; margin-bottom: 1.5rem; }
-    .blog-hero p { font-size: 1.05rem; color: var(--text-dim); max-width: 520px; line-height: 1.7; }
-
-    /* POSTS GRID */
-    .posts-section { padding: 6rem 0; }
-    .posts-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 2rem; }
-    .post-card { background: var(--dark2); border: 1px solid var(--border); transition: border-color 0.25s, transform 0.25s; display: flex; flex-direction: column; }
-    .post-card:hover { border-color: var(--border-red); transform: translateY(-3px); }
-    .post-card-tag { font-family: var(--font-cond); font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); padding: 1.5rem 1.75rem 0; }
-    .post-card h2 { font-family: var(--font-cond); font-weight: 700; font-size: 1.3rem; line-height: 1.25; color: #fff; padding: 0.6rem 1.75rem 0.75rem; }
-    .post-card p { font-size: 0.88rem; color: var(--text-dim); line-height: 1.65; padding: 0 1.75rem; flex: 1; }
-    .post-card-footer { display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 1.75rem; margin-top: 1.5rem; border-top: 1px solid var(--border); }
-    .post-date { font-family: var(--font-cond); font-size: 0.75rem; letter-spacing: 0.1em; color: var(--text-dimmer); }
-    .post-read { font-family: var(--font-cond); font-size: 0.8rem; letter-spacing: 0.1em; color: var(--red); font-weight: 600; display: flex; align-items: center; gap: 0.4rem; transition: gap 0.2s; }
-    .post-card:hover .post-read { gap: 0.7rem; }
-
-    /* FOOTER */
-    footer { padding: 2.5rem 0; border-top: 1px solid var(--border); }
-    .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-    .footer-logo { font-family: var(--font-display); font-size: 1.2rem; letter-spacing: 0.05em; }
-    .footer-logo span { color: var(--red); }
-    .footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
-    .footer-links a { font-family: var(--font-cond); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dimmer); transition: color 0.2s; }
-    .footer-links a:hover { color: var(--red); }
-    .footer-copy { font-size: 0.78rem; color: var(--text-dimmer); }
-  </style>
-    <!-- Microsoft Clarity -->
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "ws11p9jp3h");
-    </script>
-  </head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ThrottleX Blog — Motorcycle Performance &amp; Telemetry</title>
+<meta name="description" content="Guides, tips, and insights for serious motorcycle riders. Learn about telemetry, track days, lean angles, and riding performance from the team behind ThrottleX." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+:root {
+--red: #e8001e;
+--red-glow: rgba(232,0,30,0.15);
+--black: #050507;
+--dark: #0d0d10;
+--dark2: #121215;
+--dark3: #1a1a1f;
+--border: rgba(255,255,255,0.07);
+--border-red: rgba(232,0,30,0.3);
+--text: #e8e8ec;
+--text-dim: #7a7a88;
+--text-dimmer: #4a4a55;
+--font-display: 'Bebas Neue', sans-serif;
+--font-cond: 'Barlow Condensed', sans-serif;
+--font-body: 'Barlow', sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--black); color: var(--text); font-family: var(--font-body); font-weight: 300; line-height: 1.6; overflow-x: hidden; }
+a { color: inherit; text-decoration: none; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+/* NAV */
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; background: rgba(5,5,7,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+.nav-logo { font-family: var(--font-display); font-size: 1.6rem; letter-spacing: 0.05em; color: #fff; }
+.nav-logo span { color: var(--red); }
+.nav-links { display: flex; gap: 2rem; align-items: center; }
+.nav-links a { font-family: var(--font-cond); font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim); transition: color 0.2s; }
+.nav-links a:hover { color: #fff; }
+.nav-cta { background: var(--red); color: #fff !important; padding: 0.5rem 1.25rem; font-weight: 700; }
+.nav-cta:hover { background: #c0001a !important; }
+/* HERO */
+.blog-hero { padding: 10rem 0 5rem; border-bottom: 1px solid var(--border); position: relative; overflow: hidden; }
+.blog-hero::before { content: 'BLOG'; position: absolute; right: -2rem; top: 50%; transform: translateY(-50%); font-family: var(--font-display); font-size: 20rem; color: rgba(255,255,255,0.015); line-height: 1; pointer-events: none; }
+.hero-tag { font-family: var(--font-cond); font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--red); margin-bottom: 1rem; display: block; }
+.blog-hero h1 { font-family: var(--font-display); font-size: clamp(3rem, 7vw, 6rem); line-height: 0.95; color: #fff; margin-bottom: 1.5rem; }
+.blog-hero p { font-size: 1.05rem; color: var(--text-dim); max-width: 520px; line-height: 1.7; }
+/* POSTS GRID */
+.posts-section { padding: 6rem 0; }
+.posts-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 2rem; }
+.post-card { background: var(--dark2); border: 1px solid var(--border); transition: border-color 0.25s, transform 0.25s; display: flex; flex-direction: column; }
+.post-card:hover { border-color: var(--border-red); transform: translateY(-3px); }
+.post-card-tag { font-family: var(--font-cond); font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); padding: 1.5rem 1.75rem 0; }
+.post-card h2 { font-family: var(--font-cond); font-weight: 700; font-size: 1.3rem; line-height: 1.25; color: #fff; padding: 0.6rem 1.75rem 0.75rem; }
+.post-card p { font-size: 0.88rem; color: var(--text-dim); line-height: 1.65; padding: 0 1.75rem; flex: 1; }
+.post-card-footer { display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 1.75rem; margin-top: 1.5rem; border-top: 1px solid var(--border); }
+.post-date { font-family: var(--font-cond); font-size: 0.75rem; letter-spacing: 0.1em; color: var(--text-dimmer); }
+.post-read { font-family: var(--font-cond); font-size: 0.8rem; letter-spacing: 0.1em; color: var(--red); font-weight: 600; display: flex; align-items: center; gap: 0.4rem; transition: gap 0.2s; }
+.post-card:hover .post-read { gap: 0.7rem; }
+/* FOOTER */
+footer { padding: 2.5rem 0; border-top: 1px solid var(--border); }
+.footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.footer-logo { font-family: var(--font-display); font-size: 1.2rem; letter-spacing: 0.05em; }
+.footer-logo span { color: var(--red); }
+.footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+.footer-links a { font-family: var(--font-cond); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dimmer); transition: color 0.2s; }
+.footer-links a:hover { color: var(--red); }
+.footer-copy { font-size: 0.78rem; color: var(--text-dimmer); }
+</style>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){
+c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "ws11p9jp3h");
+</script>
+</head>
 <body>
+<nav>
+<a href="index.html" class="nav-logo">THROTTLE<span>X</span></a>
+<div class="nav-links">
+<a href="index.html#video">Video</a>
+<a href="index.html#reviews">Reviews</a>
+<a href="index.html#modes">Modes</a>
+<a href="index.html#features">Features</a>
+<a href="index.html#pricing">Pricing</a>
+<a href="blog.html">Blog</a>
+<a href="index.html#contact">Contact</a>
+<a href="https://play.google.com/store/apps/details?id=com.alloy.throttlex" target="_blank" class="nav-cta">Get the App</a>
+</div>
+</nav>
 
-  <nav>
-    <a href="index.html" class="nav-logo">THROTTLE<span>X</span></a>
-    <div class="nav-links">
-      <a href="index.html#video">Video</a>
-      <a href="index.html#reviews">Reviews</a>
-      <a href="index.html#modes">Modes</a>
-      <a href="index.html#features">Features</a>
-      <a href="index.html#pricing">Pricing</a>
-      <a href="blog.html">Blog</a>
-      <a href="index.html#contact">Contact</a>
-      <a href="https://play.google.com/store/apps/details?id=com.alloy.throttlex" target="_blank" class="nav-cta">Get the App</a>
-    </div>
-  </nav>
+<section class="blog-hero">
+<div class="container">
+<span class="hero-tag">ThrottleX // Knowledge Base</span>
+<h1>RIDE SMARTER.<br>DATA DOESN'T LIE.</h1>
+<p>Guides, breakdowns, and performance insights for riders who want more than just miles. Written by a solo rider who built the tools himself.</p>
+</div>
+</section>
 
-  <section class="blog-hero">
-    <div class="container">
-      <span class="hero-tag">ThrottleX // Knowledge Base</span>
-      <h1>RIDE SMARTER.<br>DATA DOESN'T LIE.</h1>
-      <p>Guides, breakdowns, and performance insights for riders who want more than just miles. Written by a solo rider who built the tools himself.</p>
-    </div>
-  </section>
+<section class="posts-section">
+<div class="container">
+<div class="posts-grid">
 
-  <section class="posts-section">
-    <div class="container">
-      <div class="posts-grid">
+<a href="blog/why-your-phone-is-a-serious-motorcycle-data-logger.html" class="post-card">
+<span class="post-card-tag">// Technology</span>
+<h2>Why Your Phone Is Now a Serious Motorcycle Data Logger</h2>
+<p>Modern smartphone IMU sensors are more accurate than most riders realize. Here is the science behind why your phone can now do what dedicated data loggers used to cost thousands to do.</p>
+<div class="post-card-footer">
+<span class="post-date">June 23, 2026</span>
+<span class="post-read">Read More →</span>
+</div>
+</a>
 
-        <a href="blog/what-is-motorcycle-telemetry.html" class="post-card">
-          <span class="post-card-tag">// Fundamentals</span>
-          <h2>What Is Motorcycle Telemetry and Why Does It Matter?</h2>
-          <p>MotoGP teams have used telemetry for decades to shave tenths off lap times. Now that same technology lives in your pocket. Here's what it is, how it works, and why every serious rider should care.</p>
-          <div class="post-card-footer">
-            <span class="post-date">April 27, 2026</span>
-            <span class="post-read">Read More →</span>
-          </div>
-        </a>
+<a href="blog/how-to-use-ride-data-to-set-goals-between-sessions.html" class="post-card">
+<span class="post-card-tag">// Data and Telemetry</span>
+<h2>How to Use Ride Data to Set Goals Between Sessions</h2>
+<p>Most riders finish a session with a feeling. The ones who improve fastest finish with a number and a plan. Here is how to turn your telemetry data into specific, measurable goals for the next ride.</p>
+<div class="post-card-footer">
+<span class="post-date">June 17, 2026</span>
+<span class="post-read">Read More →</span>
+</div>
+</a>
 
-        <a href="blog/what-is-lean-angle-on-a-motorcycle.html" class="post-card">
-          <span class="post-card-tag">// Fundamentals</span>
-          <h2>What Is Lean Angle on a Motorcycle and Why Does It Matter?</h2>
-          <p>Every time you tip into a corner, your bike leans. That angle measured in degrees is one of the most important numbers in motorcycling. Here is what it means and why tracking it makes you faster and safer.</p>
-          <div class="post-card-footer">
-            <span class="post-date">May 4, 2026</span>
-            <span class="post-read">Read More →</span>
-          </div>
-        </a>
+<a href="blog/street-riding-vs-track-riding-what-is-actually-different.html" class="post-card">
+<span class="post-card-tag">// Riding Skills</span>
+<h2>Street Riding vs Track Riding: What Is Actually Different?</h2>
+<p>Street and track riding look similar from the outside but require completely different mindsets, lines, braking approaches, and ways of using data. Here is an honest breakdown of what actually changes.</p>
+<div class="post-card-footer">
+<span class="post-date">June 17, 2026</span>
+<span class="post-read">Read More →</span>
+</div>
+</a>
 
-        <a href="blog/how-to-prepare-for-your-first-motorcycle-track-day.html" class="post-card">
-          <span class="post-card-tag">// Track Days</span>
-          <h2>How to Prepare for Your First Motorcycle Track Day</h2>
-          <p>Your first track day changes how you ride forever. But walking in unprepared can cost you the whole day. Here is everything you need to know about bike prep, gear, what to expect, and how to get the most out of your session.</p>
-          <div class="post-card-footer">
-            <span class="post-date">May 8, 2026</span>
-            <span class="post-read">Read More →</span>
-          </div>
-        </a>
+<a href="blog/motorcycle-track-day-preparation-packing-your-gear.html" class="post-card">
+<span class="post-card-tag">// Track Days · Partner Content</span>
+<h2>Motorcycle Track Day Preparation: Packing Your Gear</h2>
+<p>Packing for a track day is not the same as packing for a weekend ride. The gear list is longer, the stakes are higher, and forgetting one item can bring a session to a halt. Here is everything you need.</p>
+<div class="post-card-footer">
+<span class="post-date">June 16, 2026</span>
+<span class="post-read">Read More →</span>
+</div>
+</a>
 
-        <a href="blog/understanding-g-force-data-on-a-motorcycle.html" class="post-card">
-          <span class="post-card-tag">// Data &amp; Telemetry</span>
-          <h2>Understanding G-Force Data on a Motorcycle</h2>
-          <p>G-force data tells you exactly how hard your motorcycle is working in every corner, brake zone, and acceleration point. Here is what the numbers mean and how to use them to ride better.</p>
-          <div class="post-card-footer">
-            <span class="post-date">May 16, 2026</span>
-            <span class="post-read">Read More →</span>
-          </div>
-        </a>
+<a href="blog/best-motorcycle-luggage-for-track-day-enthusiasts.html" class="post-card">
+<span class="post-card-tag">// Gear and Setup · Partner Content</span>
+<h2>Best Motorcycle Luggage for Track Day Enthusiasts</h2>
+<p>Getting to the track with all your gear without compromising your bike's handling is a real challenge. A complete guide to saddlebags, tail bags, backpacks, and tank bags for track day riders.</p>
+<div class="post-card-footer">
+<span class="post-date">June 16, 2026</span>
+<span class="post-read">Read More →</span>
+</div>
+</a>
 
-        <a href="blog/how-to-improve-your-cornering-on-a-motorcycle.html" class="post-card">
-          <span class="post-card-tag">// Riding Skills</span>
-          <h2>How to Improve Your Cornering on a Motorcycle</h2>
-          <p>Cornering is the most technical skill in motorcycling. Here is a complete breakdown of what actually makes riders faster and safer through corners and how to develop those skills deliberately.</p>
-          <div class="post-card-footer">
-            <span class="post-date">May 21, 2026</span>
-            <span class="post-read">Read More →</span>
-          </div>
-        </a>
+<a href="blog/how-to-improve-your-left-and-right-cornering-symmetry.html" class="post-card">
+<span class="post-card-tag">// Riding Skills</span>
+<h2>How to Improve Your Left and Right Cornering Symmetry</h2>
+<p>Almost every rider leans deeper on one side than the other. Here is why cornering asymmetry happens, what it actually costs you, and how to close the gap deliberately using real data.</p>
+<div class="post-card-footer">
+<span class="post-date">June 3, 2026</span>
+<span class="post-read">Read More →</span>
+</div>
+</a>
 
-        <a href="blog/how-to-transform-a-cruiser-motorcycle-for-a-cross-country-tour.html" class="post-card">
-          <span class="post-card-tag">// Touring · Partner Content</span>
-          <h2>How to Transform a Cruiser Motorcycle for a Cross-Country Tour</h2>
-          <p>A stock cruiser is built for style and short rides. With the right seat, bars, fairing, and luggage setup it becomes a capable week-long touring machine. Here is how to build it out right.</p>
-          <div class="post-card-footer">
-            <span class="post-date">May 22, 2026</span>
-            <span class="post-read">Read More →</span>
-          </div>
-        </a>
+<a href="blog/how-to-read-your-motorcycle-telemetry-data-after-a-ride.html" class="post-card">
+<span class="post-card-tag">// Data and Telemetry</span>
+<h2>How to Read Your Motorcycle Telemetry Data After a Ride</h2>
+<p>Collecting data is only half the equation. Here is a systematic approach to reading your ride data after a session so what you see on screen actually translates into something you work on next time out.</p>
+<div class="post-card-footer">
+<span class="post-date">June 3, 2026</span>
+<span class="post-read">Read More →</span>
+</div>
+</a>
 
-        <a href="blog/best-motorcycle-telemetry-apps-for-android-2026.html" class="post-card">
-          <span class="post-card-tag">// App Comparisons</span>
-          <h2>Best Motorcycle Telemetry Apps for Android in 2026</h2>
-          <p>An honest comparison of RaceChrono Pro, MyRide by Yamaha, TrackAddict, and ThrottleX. Features, pricing, and who each app is actually built for including where ThrottleX falls short.</p>
-          <div class="post-card-footer">
-            <span class="post-date">May 27, 2026</span>
-            <span class="post-read">Read More →</span>
-          </div>
-        </a>
+<a href="blog/motorcycle-tire-compound-explained.html" class="post-card">
+<span class="post-card-tag">// Gear and Setup</span>
+<h2>Motorcycle Tire Compound Explained</h2>
+<p>Tire compound determines how much grip your tire generates, how quickly it reaches operating temperature, and how it behaves at the limit. Here is what it actually means and how your tire choice affects your telemetry data.</p>
+<div class="post-card-footer">
+<span class="post-date">May 31, 2026</span>
+<span class="post-read">Read More →</span>
+</div>
+</a>
 
-        <a href="blog/what-is-a-traction-circle-and-why-does-it-matter.html" class="post-card">
-          <span class="post-card-tag">// Data and Telemetry</span>
-          <h2>What Is a Traction Circle and Why Does It Matter?</h2>
-          <p>The traction circle is one of the most important concepts in motorsport and one of the least understood by everyday riders. Here is what it is, how it works, and why it changes how you think about riding.</p>
-          <div class="post-card-footer">
-            <span class="post-date">May 27, 2026</span>
-            <span class="post-read">Read More →</span>
-          </div>
-        </a>
+<a href="blog/what-is-trail-braking-and-how-do-you-learn-it.html" class="post-card">
+<span class="post-card-tag">// Riding Skills</span>
+<h2>What Is Trail Braking and How Do You Learn It?</h2>
+<p>Trail braking is one of the most discussed and least understood skills in motorcycle riding. Here is exactly what it is, why it works, what it feels like done correctly, and how to develop it safely and deliberately.</p>
+<div class="post-card-footer">
+<span class="post-date">May 31, 2026</span>
+<span class="post-read">Read More →</span>
+</div>
+</a>
 
-        <a href="blog/how-to-mount-your-phone-on-a-motorcycle-for-telemetry.html" class="post-card">
-          <span class="post-card-tag">// Setup and Gear</span>
-          <h2>How to Mount Your Phone on a Motorcycle for Telemetry</h2>
-          <p>Your mount is the foundation of accurate telemetry data. Here is everything you need to know about mounting your phone correctly, why it matters for data quality, and why RAM Mounts are the gold standard.</p>
-          <div class="post-card-footer">
-            <span class="post-date">May 28, 2026</span>
-            <span class="post-read">Read More →</span>
-          </div>
-        </a>
+<a href="blog/how-to-mount-your-phone-on-a-motorcycle-for-telemetry.html" class="post-card">
+<span class="post-card-tag">// Setup and Gear</span>
+<h2>How to Mount Your Phone on a Motorcycle for Telemetry</h2>
+<p>Your mount is the foundation of accurate telemetry data. Here is everything you need to know about mounting your phone correctly, why it matters for data quality, and why RAM Mounts are the gold standard.</p>
+<div class="post-card-footer">
+<span class="post-date">May 28, 2026</span>
+<span class="post-read">Read More →</span>
+</div>
+</a>
 
-        <a href="blog/what-is-trail-braking-and-how-do-you-learn-it.html" class="post-card">
-          <span class="post-card-tag">// Riding Skills</span>
-          <h2>What Is Trail Braking and How Do You Learn It?</h2>
-          <p>Trail braking is one of the most discussed and least understood skills in motorcycle riding. Here is exactly what it is, why it works, what it feels like done correctly, and how to develop it safely and deliberately.</p>
-          <div class="post-card-footer">
-            <span class="post-date">May 31, 2026</span>
-            <span class="post-read">Read More →</span>
-          </div>
-        </a>
+<a href="blog/what-is-a-traction-circle-and-why-does-it-matter.html" class="post-card">
+<span class="post-card-tag">// Data and Telemetry</span>
+<h2>What Is a Traction Circle and Why Does It Matter?</h2>
+<p>The traction circle is one of the most important concepts in motorsport and one of the least understood by everyday riders. Here is what it is, how it works, and why it changes how you think about riding.</p>
+<div class="post-card-footer">
+<span class="post-date">May 27, 2026</span>
+<span class="post-read">Read More →</span>
+</div>
+</a>
 
-        <a href="blog/motorcycle-tire-compound-explained.html" class="post-card">
-          <span class="post-card-tag">// Gear and Setup</span>
-          <h2>Motorcycle Tire Compound Explained</h2>
-          <p>Tire compound determines how much grip your tire generates, how quickly it reaches operating temperature, and how it behaves at the limit. Here is what it actually means and how your tire choice affects your telemetry data.</p>
-          <div class="post-card-footer">
-            <span class="post-date">May 31, 2026</span>
-            <span class="post-read">Read More →</span>
-          </div>
-        </a>
+<a href="blog/best-motorcycle-telemetry-apps-for-android-2026.html" class="post-card">
+<span class="post-card-tag">// App Comparisons</span>
+<h2>Best Motorcycle Telemetry Apps for Android in 2026</h2>
+<p>An honest comparison of RaceChrono Pro, MyRide by Yamaha, TrackAddict, and ThrottleX. Features, pricing, and who each app is actually built for including where ThrottleX falls short.</p>
+<div class="post-card-footer">
+<span class="post-date">May 27, 2026</span>
+<span class="post-read">Read More →</span>
+</div>
+</a>
 
-        <a href="blog/how-to-read-your-motorcycle-telemetry-data-after-a-ride.html" class="post-card">
-          <span class="post-card-tag">// Data and Telemetry</span>
-          <h2>How to Read Your Motorcycle Telemetry Data After a Ride</h2>
-          <p>Collecting data is only half the equation. Here is a systematic approach to reading your ride data after a session so what you see on screen actually translates into something you work on next time out.</p>
-          <div class="post-card-footer">
-            <span class="post-date">June 3, 2026</span>
-            <span class="post-read">Read More →</span>
-          </div>
-        </a>
+<a href="blog/how-to-transform-a-cruiser-motorcycle-for-a-cross-country-tour.html" class="post-card">
+<span class="post-card-tag">// Touring · Partner Content</span>
+<h2>How to Transform a Cruiser Motorcycle for a Cross-Country Tour</h2>
+<p>A stock cruiser is built for style and short rides. With the right seat, bars, fairing, and luggage setup it becomes a capable week-long touring machine. Here is how to build it out right.</p>
+<div class="post-card-footer">
+<span class="post-date">May 22, 2026</span>
+<span class="post-read">Read More →</span>
+</div>
+</a>
 
-        <a href="blog/how-to-improve-your-left-and-right-cornering-symmetry.html" class="post-card">
-          <span class="post-card-tag">// Riding Skills</span>
-          <h2>How to Improve Your Left and Right Cornering Symmetry</h2>
-          <p>Almost every rider leans deeper on one side than the other. Here is why cornering asymmetry happens, what it actually costs you, and how to close the gap deliberately using real data.</p>
-          <div class="post-card-footer">
-            <span class="post-date">June 3, 2026</span>
-            <span class="post-read">Read More →</span>
-          </div>
-        </a>
+<a href="blog/how-to-improve-your-cornering-on-a-motorcycle.html" class="post-card">
+<span class="post-card-tag">// Riding Skills</span>
+<h2>How to Improve Your Cornering on a Motorcycle</h2>
+<p>Cornering is the most technical skill in motorcycling. Here is a complete breakdown of what actually makes riders faster and safer through corners and how to develop those skills deliberately.</p>
+<div class="post-card-footer">
+<span class="post-date">May 21, 2026</span>
+<span class="post-read">Read More →</span>
+</div>
+</a>
 
-        <a href="blog/best-motorcycle-luggage-for-track-day-enthusiasts.html" class="post-card">
-          <span class="post-card-tag">// Gear and Setup · Partner Content</span>
-          <h2>Best Motorcycle Luggage for Track Day Enthusiasts</h2>
-          <p>Getting to the track with all your gear without compromising your bike's handling is a real challenge. A complete guide to saddlebags, tail bags, backpacks, and tank bags for track day riders.</p>
-          <div class="post-card-footer">
-            <span class="post-date">June 16, 2026</span>
-            <span class="post-read">Read More →</span>
-          </div>
-        </a>
+<a href="blog/understanding-g-force-data-on-a-motorcycle.html" class="post-card">
+<span class="post-card-tag">// Data &amp; Telemetry</span>
+<h2>Understanding G-Force Data on a Motorcycle</h2>
+<p>G-force data tells you exactly how hard your motorcycle is working in every corner, brake zone, and acceleration point. Here is what the numbers mean and how to use them to ride better.</p>
+<div class="post-card-footer">
+<span class="post-date">May 16, 2026</span>
+<span class="post-read">Read More →</span>
+</div>
+</a>
 
-        <a href="blog/motorcycle-track-day-preparation-packing-your-gear.html" class="post-card">
-          <span class="post-card-tag">// Track Days · Partner Content</span>
-          <h2>Motorcycle Track Day Preparation: Packing Your Gear</h2>
-          <p>Packing for a track day is not the same as packing for a weekend ride. The gear list is longer, the stakes are higher, and forgetting one item can bring a session to a halt. Here is everything you need.</p>
-          <div class="post-card-footer">
-            <span class="post-date">June 16, 2026</span>
-            <span class="post-read">Read More →</span>
-          </div>
-        </a>
+<a href="blog/how-to-prepare-for-your-first-motorcycle-track-day.html" class="post-card">
+<span class="post-card-tag">// Track Days</span>
+<h2>How to Prepare for Your First Motorcycle Track Day</h2>
+<p>Your first track day changes how you ride forever. But walking in unprepared can cost you the whole day. Here is everything you need to know about bike prep, gear, what to expect, and how to get the most out of your session.</p>
+<div class="post-card-footer">
+<span class="post-date">May 8, 2026</span>
+<span class="post-read">Read More →</span>
+</div>
+</a>
 
-        <a href="blog/street-riding-vs-track-riding-what-is-actually-different.html" class="post-card">
-          <span class="post-card-tag">// Riding Skills</span>
-          <h2>Street Riding vs Track Riding: What Is Actually Different?</h2>
-          <p>Street and track riding look similar from the outside but require completely different mindsets, lines, braking approaches, and ways of using data. Here is an honest breakdown of what actually changes.</p>
-          <div class="post-card-footer">
-            <span class="post-date">June 17, 2026</span>
-            <span class="post-read">Read More →</span>
-          </div>
-        </a>
+<a href="blog/what-is-lean-angle-on-a-motorcycle.html" class="post-card">
+<span class="post-card-tag">// Fundamentals</span>
+<h2>What Is Lean Angle on a Motorcycle and Why Does It Matter?</h2>
+<p>Every time you tip into a corner, your bike leans. That angle measured in degrees is one of the most important numbers in motorcycling. Here is what it means and why tracking it makes you faster and safer.</p>
+<div class="post-card-footer">
+<span class="post-date">May 4, 2026</span>
+<span class="post-read">Read More →</span>
+</div>
+</a>
 
-        <a href="blog/how-to-use-ride-data-to-set-goals-between-sessions.html" class="post-card">
-          <span class="post-card-tag">// Data and Telemetry</span>
-          <h2>How to Use Ride Data to Set Goals Between Sessions</h2>
-          <p>Most riders finish a session with a feeling. The ones who improve fastest finish with a number and a plan. Here is how to turn your telemetry data into specific, measurable goals for the next ride.</p>
-          <div class="post-card-footer">
-            <span class="post-date">June 17, 2026</span>
-            <span class="post-read">Read More →</span>
-          </div>
-        </a>
+<a href="blog/what-is-motorcycle-telemetry.html" class="post-card">
+<span class="post-card-tag">// Fundamentals</span>
+<h2>What Is Motorcycle Telemetry and Why Does It Matter?</h2>
+<p>MotoGP teams have used telemetry for decades to shave tenths off lap times. Now that same technology lives in your pocket. Here's what it is, how it works, and why every serious rider should care.</p>
+<div class="post-card-footer">
+<span class="post-date">April 27, 2026</span>
+<span class="post-read">Read More →</span>
+</div>
+</a>
 
-      </div>
-    </div>
-  </section>
+</div>
+</div>
+</section>
 
-  <footer>
-    <div class="container">
-      <div class="footer-inner">
-        <div class="footer-logo">THROTTLE<span>X</span></div>
-        <div class="footer-links">
-          <a href="index.html#features">Features</a>
-          <a href="index.html#pricing">Pricing</a>
-          <a href="blog.html">Blog</a>
-          <a href="privacy.html">Privacy Policy</a>
-        </div>
-        <div class="footer-copy">© 2026 ThrottleX · Hand-coded by a Solo Rider.</div>
-      </div>
-    </div>
-  </footer>
+<footer>
+<div class="container">
+<div class="footer-inner">
+<div class="footer-logo">THROTTLE<span>X</span></div>
+<div class="footer-links">
+<a href="index.html#features">Features</a>
+<a href="index.html#pricing">Pricing</a>
+<a href="blog.html">Blog</a>
+<a href="privacy.html">Privacy Policy</a>
+</div>
+<div class="footer-copy">© 2026 ThrottleX · Hand-coded by a Solo Rider.</div>
+</div>
+</div>
+</footer>
 
 </body>
 </html>

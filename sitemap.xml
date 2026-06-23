@@ -1,126 +1,129 @@
----
-layout: none
----
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://throttlexapp.com/</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://throttlexapp.com/blog.html</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://throttlexapp.com/blog/what-is-motorcycle-telemetry.html</loc>
-    <lastmod>2026-05-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://throttlexapp.com/blog/what-is-lean-angle-on-a-motorcycle.html</loc>
-    <lastmod>2026-05-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://throttlexapp.com/blog/how-to-prepare-for-your-first-motorcycle-track-day.html</loc>
-    <lastmod>2026-05-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://throttlexapp.com/blog/understanding-g-force-data-on-a-motorcycle.html</loc>
-    <lastmod>2026-05-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://throttlexapp.com/blog/how-to-improve-your-cornering-on-a-motorcycle.html</loc>
-    <lastmod>2026-05-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://throttlexapp.com/blog/how-to-transform-a-cruiser-motorcycle-for-a-cross-country-tour.html</loc>
-    <lastmod>2026-05-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://throttlexapp.com/blog/best-motorcycle-telemetry-apps-for-android-2026.html</loc>
-    <lastmod>2026-05-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://throttlexapp.com/blog/what-is-a-traction-circle-and-why-does-it-matter.html</loc>
-    <lastmod>2026-05-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://throttlexapp.com/blog/how-to-mount-your-phone-on-a-motorcycle-for-telemetry.html</loc>
-    <lastmod>2026-05-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://throttlexapp.com/blog/what-is-trail-braking-and-how-do-you-learn-it.html</loc>
-    <lastmod>2026-05-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://throttlexapp.com/blog/motorcycle-tire-compound-explained.html</loc>
-    <lastmod>2026-05-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://throttlexapp.com/blog/how-to-read-your-motorcycle-telemetry-data-after-a-ride.html</loc>
-    <lastmod>2026-06-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://throttlexapp.com/blog/how-to-improve-your-left-and-right-cornering-symmetry.html</loc>
-    <lastmod>2026-06-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://throttlexapp.com/blog/best-motorcycle-luggage-for-track-day-enthusiasts.html</loc>
-    <lastmod>2026-06-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://throttlexapp.com/blog/motorcycle-track-day-preparation-packing-your-gear.html</loc>
-    <lastmod>2026-06-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://throttlexapp.com/blog/street-riding-vs-track-riding-what-is-actually-different.html</loc>
-    <lastmod>2026-06-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://throttlexapp.com/blog/how-to-use-ride-data-to-set-goals-between-sessions.html</loc>
-    <lastmod>2026-06-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://throttlexapp.com/privacy.html</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
-  </url>
+<url>
+<loc>https://throttlexapp.com/</loc>
+<lastmod>2026-06-23</lastmod>
+<changefreq>weekly</changefreq>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://throttlexapp.com/blog.html</loc>
+<lastmod>2026-06-23</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://throttlexapp.com/blog/why-your-phone-is-a-serious-motorcycle-data-logger.html</loc>
+<lastmod>2026-06-23</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://throttlexapp.com/blog/how-to-use-ride-data-to-set-goals-between-sessions.html</loc>
+<lastmod>2026-06-17</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://throttlexapp.com/blog/street-riding-vs-track-riding-what-is-actually-different.html</loc>
+<lastmod>2026-06-17</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://throttlexapp.com/blog/best-motorcycle-luggage-for-track-day-enthusiasts.html</loc>
+<lastmod>2026-06-16</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://throttlexapp.com/blog/motorcycle-track-day-preparation-packing-your-gear.html</loc>
+<lastmod>2026-06-16</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://throttlexapp.com/blog/how-to-improve-your-left-and-right-cornering-symmetry.html</loc>
+<lastmod>2026-06-03</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://throttlexapp.com/blog/how-to-read-your-motorcycle-telemetry-data-after-a-ride.html</loc>
+<lastmod>2026-06-03</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://throttlexapp.com/blog/motorcycle-tire-compound-explained.html</loc>
+<lastmod>2026-05-31</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://throttlexapp.com/blog/what-is-trail-braking-and-how-do-you-learn-it.html</loc>
+<lastmod>2026-05-31</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://throttlexapp.com/blog/how-to-mount-your-phone-on-a-motorcycle-for-telemetry.html</loc>
+<lastmod>2026-05-28</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://throttlexapp.com/blog/what-is-a-traction-circle-and-why-does-it-matter.html</loc>
+<lastmod>2026-05-27</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://throttlexapp.com/blog/best-motorcycle-telemetry-apps-for-android-2026.html</loc>
+<lastmod>2026-05-27</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://throttlexapp.com/blog/how-to-transform-a-cruiser-motorcycle-for-a-cross-country-tour.html</loc>
+<lastmod>2026-05-22</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://throttlexapp.com/blog/how-to-improve-your-cornering-on-a-motorcycle.html</loc>
+<lastmod>2026-05-21</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://throttlexapp.com/blog/understanding-g-force-data-on-a-motorcycle.html</loc>
+<lastmod>2026-05-16</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://throttlexapp.com/blog/how-to-prepare-for-your-first-motorcycle-track-day.html</loc>
+<lastmod>2026-05-08</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://throttlexapp.com/blog/what-is-lean-angle-on-a-motorcycle.html</loc>
+<lastmod>2026-05-04</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://throttlexapp.com/blog/what-is-motorcycle-telemetry.html</loc>
+<lastmod>2026-05-04</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://throttlexapp.com/privacy.html</loc>
+<lastmod>2026-04-27</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.3</priority>
+</url>
 </urlset>
