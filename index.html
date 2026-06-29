@@ -63,7 +63,7 @@
   {
     "@context": "https://schema.org",
     "@type": "VideoObject",
-    "name": "Real Motorcycle Telemetry — Live Lean Angle and G-Force Data | ThrottleX App",
+    "name": "Real Motorcycle Telemetry Live Lean Angle and G-Force Data | ThrottleX App",
     "description": "Live lean angle and G-force telemetry data captured on Elder Hill Road in the Texas Hill Country using the ThrottleX motorcycle telemetry app for Android.",
     "thumbnailUrl": "https://i.ytimg.com/vi/vTubq93eGOc/hqdefault.jpg",
     "uploadDate": "2026-03-01T00:00:00+00:00",
@@ -82,7 +82,7 @@
   <link rel="apple-touch-icon" href="images/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="image" href="images/screen-road.webp" />
+  <link rel="preload" as="image" href="images/ui-arc-gauge.webp" />
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;600&family=Barlow+Condensed:wght@400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;600&family=Barlow+Condensed:wght@400;500;700&display=swap" /></noscript>
 
@@ -199,6 +199,71 @@
       border-radius: 12px;
       box-shadow: 0 8px 32px rgba(0,0,0,0.5);
     }
+
+    /* UI LAYOUT TEASER STRIP */
+    .ui-teaser-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .ui-teaser-card {
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+    .ui-teaser-card:hover { border-color: var(--border-red); }
+    .ui-teaser-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+    }
+    .ui-teaser-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #7a7a88;
+      padding: 0.75rem 1rem;
+      background: #121215;
+    }
+    .ui-teaser-more {
+      text-align: center;
+      margin-top: 1.5rem;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #e8001e;
+    }
+    @media(max-width:700px){
+      .ui-teaser-strip { grid-template-columns: 1fr; }
+    }
+
+    /* PRICING VISUAL */
+    .pricing-visual {
+      margin-top: 4rem;
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .pricing-visual img {
+      width: 100%;
+      display: block;
+    }
+    .pricing-visual-caption {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #4a4a55;
+      padding: 0.75rem 1.25rem;
+      background: #121215;
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.07);
+    }
   </style>
 </head>
 <body>
@@ -270,14 +335,14 @@
         </div>
         <div class="stat-divider"></div>
         <div class="stat">
-          <span class="stat-num">1</span>
-          <span class="stat-label">Solo Rider Built It</span>
+          <span class="stat-num">7</span>
+          <span class="stat-label">Pro Dashboard Layouts</span>
         </div>
       </div>
     </div>
     <div class="hero-screen">
       <div class="landscape-frame">
-        <img src="images/screen-road.webp" alt="ThrottleX Road Mode Dashboard" class="landscape-img" fetchpriority="high" style="width:100%;height:auto;" />
+        <img src="images/ui-arc-gauge.webp" alt="ThrottleX Arc Gauge Dashboard Layout" class="landscape-img" fetchpriority="high" style="width:100%;height:auto;" />
         <div class="frame-shine"></div>
       </div>
     </div>
@@ -326,7 +391,6 @@
         </div>
       </div>
       <div class="reviews-grid">
-
         <div class="review-card">
           <div class="review-stars">★★★★★</div>
           <p class="review-text">"This is a genius app and the execution is amazing. Dev is on top of updates. If you ride a motorcycle and especially track, this is for you. Even if just road riding, you need this app."</p>
@@ -335,7 +399,6 @@
             <span class="review-device">Samsung Galaxy S21 5G</span>
           </div>
         </div>
-
         <div class="review-card">
           <div class="review-stars">★★★★★</div>
           <p class="review-text">"This app is amazing. The lean angle numbers are dead on target. For me the best feature is being able to download a recorded ride in a PDF and look at my numbers. Or compare 2 rides. Awesome work man."</p>
@@ -344,7 +407,6 @@
             <span class="review-device">Samsung Galaxy S10</span>
           </div>
         </div>
-
         <div class="review-card">
           <div class="review-stars">★★★★★</div>
           <p class="review-text">"Great app for the track and great dev. Chris is putting a lot of love into this app and responds to feedback. Thanks for making an awesome app!"</p>
@@ -353,7 +415,6 @@
             <span class="review-device">Samsung Galaxy S21 5G</span>
           </div>
         </div>
-
         <div class="review-card">
           <div class="review-stars">★★★★★</div>
           <p class="review-text">"App was really informative and helped improve my riding experience. I feel like a better rider already."</p>
@@ -362,7 +423,6 @@
             <span class="review-device">Samsung Galaxy S21 5G</span>
           </div>
         </div>
-
         <div class="review-card">
           <div class="review-stars">★★★★★</div>
           <p class="review-text">"The app has been really good at tracking times and the developer is very responsive. Great app."</p>
@@ -371,7 +431,6 @@
             <span class="review-device">Samsung Galaxy S26 Ultra</span>
           </div>
         </div>
-
         <div class="review-card">
           <div class="review-stars">★★★★★</div>
           <p class="review-text">"Excellent tool, helped improve my cornering."</p>
@@ -380,7 +439,6 @@
             <span class="review-device">Samsung Galaxy A16 5G</span>
           </div>
         </div>
-
         <div class="review-card">
           <div class="review-stars">★★★★★</div>
           <p class="review-text">"I like the interface design. It's simple and intuitive. It has many configuration options; I like being able to track maintenance based on mileage. The telemetry is good quality and collects a lot of data."</p>
@@ -389,7 +447,6 @@
             <span class="review-device">Samsung Galaxy S22 Ultra · Translated from Spanish</span>
           </div>
         </div>
-
         <div class="review-card">
           <div class="review-stars">★★★★★</div>
           <p class="review-text">"Very nice app. The developer is an experienced rider who really cares about making this app work flawlessly. This is just what I want in an app that charges a one time fee. Yup, no subscription!"</p>
@@ -398,7 +455,6 @@
             <span class="review-device">Google Play</span>
           </div>
         </div>
-
       </div>
       <div class="reviews-cta">
         <a href="https://play.google.com/store/apps/details?id=com.alloy.throttlex" target="_blank" rel="noopener" class="btn-ghost" onclick="gtag('event', 'play_store_click', {'event_category': 'conversion', 'event_label': 'Reviews Button'})">Leave a Review on Google Play →</a>
@@ -412,19 +468,19 @@
       <div class="section-header">
         <div class="section-eyebrow">Ride Modes</div>
         <h2 class="section-title">ONE APP.<br/><span>EVERY CONDITION.</span></h2>
-        <p class="section-desc">Four ride modes, each with its own distinct color theme. Sensors run at full precision in every mode — the modes change the look of the UI, not the data.</p>
+        <p class="section-desc">Four ride modes, each with its own distinct color theme. Sensors run at full precision in every mode. The modes change the look of the UI, not the data.</p>
       </div>
       <div class="modes-tabs">
-        <button class="mode-tab active" onclick="switchMode(this, 'images/screen-road.webp', 'Road Mode', 'The default look — clean white readouts on a dark background. Sensors run at full precision regardless of which mode you\'re in. Modes only change the color of the UI.', ['White accent color theme','Analog + digital speedo toggle','Color-coded lean bar (green → yellow → red)','Full sensor precision at all times'])">
+        <button class="mode-tab active" onclick="switchMode(this, 'images/screen-road.webp', 'Road Mode', 'The default look. Clean white readouts on a dark background. Sensors run at full precision regardless of which mode you are in. Modes only change the color of the UI.', ['White accent color theme','Analog + digital speedo toggle','Color-coded lean bar (green to yellow to red)','Full sensor precision at all times'])">
           <span class="mode-dot white"></span> Road
         </button>
-        <button class="mode-tab" onclick="switchMode(this, 'images/screen-track.webp', 'Track Mode', 'Red-themed UI for track days. Same full telemetry as every other mode — sensors never get turned down. Just a look that matches the intensity of circuit riding.', ['Red accent color theme','Same sensor precision as all modes','Full lean and G readouts','Peak capture every session'])">
+        <button class="mode-tab" onclick="switchMode(this, 'images/screen-track.webp', 'Track Mode', 'Red-themed UI for track days. Same full telemetry as every other mode. Sensors never get turned down. Just a look that matches the intensity of circuit riding.', ['Red accent color theme','Same sensor precision as all modes','Full lean and G readouts','Peak capture every session'])">
           <span class="mode-dot red"></span> Track
         </button>
-        <button class="mode-tab" onclick="switchMode(this, 'images/screen-rain.webp', 'Rain Mode', 'Cyan/teal color scheme. Easy on the eyes in overcast and wet conditions. Telemetry is identical to every other mode — sensors are always running at full precision.', ['Cyan accent color theme','Full sensor precision at all times','Lean bar and G-force live','Easy on eyes in low-light conditions'])">
+        <button class="mode-tab" onclick="switchMode(this, 'images/screen-rain.webp', 'Rain Mode', 'Cyan/teal color scheme. Easy on the eyes in overcast and wet conditions. Telemetry is identical to every other mode. Sensors are always running at full precision.', ['Cyan accent color theme','Full sensor precision at all times','Lean bar and G-force live','Easy on eyes in low-light conditions'])">
           <span class="mode-dot cyan"></span> Rain
         </button>
-        <button class="mode-tab" onclick="switchMode(this, 'images/screen-night.webp', 'Night Mode', 'Pure red-on-black display to preserve your night vision. All telemetry stays live and fully accurate — the only thing Night Mode changes is the color of the UI.', ['Red-on-black color theme','Night vision preservation','All telemetry live and accurate','Sensors at full precision'])">
+        <button class="mode-tab" onclick="switchMode(this, 'images/screen-night.webp', 'Night Mode', 'Pure red-on-black display to preserve your night vision. All telemetry stays live and fully accurate. The only thing Night Mode changes is the color of the UI.', ['Red-on-black color theme','Night vision preservation','All telemetry live and accurate','Sensors at full precision'])">
           <span class="mode-dot darkred"></span> Night
         </button>
       </div>
@@ -438,10 +494,31 @@
           <ul class="mode-highlights" id="modeHighlights">
             <li>Analog + digital speedo toggle</li>
             <li>GPS accuracy indicator</li>
-            <li>Color-coded lean bar (green → yellow → red)</li>
+            <li>Color-coded lean bar (green to yellow to red)</li>
             <li>Peak lean angle capture</li>
           </ul>
         </div>
+      </div>
+
+      <!-- PRO LAYOUT TEASER -->
+      <div style="margin-top:4rem;padding-top:4rem;border-top:1px solid var(--border);">
+        <div class="section-eyebrow" style="margin-bottom:0.5rem;">Pro Dashboard Layouts</div>
+        <p style="font-size:0.95rem;color:var(--text-dim);max-width:560px;line-height:1.7;margin-bottom:0;">ThrottleX Pro includes 7 additional dashboard layouts on top of the 4 ride modes above. Every layout. Same full-precision sensor data. Completely different look.</p>
+        <div class="ui-teaser-strip">
+          <div class="ui-teaser-card">
+            <img src="images/ui-neon-strip.webp" alt="ThrottleX Neon Strip Dashboard" loading="lazy" />
+            <div class="ui-teaser-label">Neon Strip</div>
+          </div>
+          <div class="ui-teaser-card">
+            <img src="images/ui-classic-speedometer.webp" alt="ThrottleX Classic Speedometer Dashboard" loading="lazy" />
+            <div class="ui-teaser-label">Classic Speedometer</div>
+          </div>
+          <div class="ui-teaser-card">
+            <img src="images/ui-minimal-ghost.webp" alt="ThrottleX Minimal Ghost Dashboard" loading="lazy" />
+            <div class="ui-teaser-label">Minimal Ghost</div>
+          </div>
+        </div>
+        <p class="ui-teaser-more"><a href="#ui-showcase">See all 7 layouts below ↓</a></p>
       </div>
     </div>
   </section>
@@ -477,6 +554,14 @@
           </div>
           <div class="showcase-screens showcase-screens--landscape">
             <img src="images/screen-road.webp" alt="ThrottleX Live Dashboard Road Mode" loading="lazy" />
+          </div>
+        </div>
+        <!-- SYMMETRY VIEW teaser below dashboard -->
+        <div style="margin-top:3rem;padding-top:3rem;border-top:1px solid var(--border);">
+          <div class="showcase-eyebrow" style="margin-bottom:0.5rem;">Pro Layout: Symmetry View</div>
+          <p style="font-size:0.9rem;color:var(--text-dim);max-width:600px;line-height:1.7;margin-bottom:1.5rem;">Prefer to see left and right lean side by side while you ride? The Symmetry View layout puts both peaks, traction efficiency, and flick rate on screen at the same time.</p>
+          <div class="showcase-screens showcase-screens--landscape">
+            <img src="images/ui-symmetry-view.webp" alt="ThrottleX Symmetry View Pro Dashboard Layout" loading="lazy" />
           </div>
         </div>
       </div>
@@ -621,6 +706,14 @@
             <img src="images/screen-periodicstatus.webp" alt="ThrottleX Periodic Status Updates" loading="lazy" />
           </div>
         </div>
+        <!-- TRACK LAP TIMER layout teaser -->
+        <div style="margin-top:3rem;padding-top:3rem;border-top:1px solid var(--border);">
+          <div class="showcase-eyebrow" style="margin-bottom:0.5rem;">Pro Layout: Track Lap Timer</div>
+          <p style="font-size:0.9rem;color:var(--text-dim);max-width:600px;line-height:1.7;margin-bottom:1.5rem;">If you spend your sessions chasing lap times, the Track Lap Timer layout puts the timer front and center at the top with speed, lean, and G-force all visible at once.</p>
+          <div class="showcase-screens showcase-screens--landscape">
+            <img src="images/ui-track-lap-timer.webp" alt="ThrottleX Track Lap Timer Pro Dashboard Layout" loading="lazy" />
+          </div>
+        </div>
       </div>
     </div>
 
@@ -671,17 +764,17 @@
             </div>
           </div>
           <div class="showcase-sensor-card">
-            <img src="images/screen-voicecoach2.webp" alt="ThrottleX Max Lean Threshold" loading="lazy" />
+            <img src="images/ui-minimal-ghost.webp" alt="ThrottleX Minimal Ghost Dashboard Layout" loading="lazy" />
             <div class="showcase-sensor-info">
-              <h4>Max Lean Threshold</h4>
-              <p>Set your personal red line for cornering. This is the trigger point for the Voice Coach alert. Most sport tires perform optimally between 45 and 55 degrees. Adjust based on your rubber and your confidence level.</p>
+              <h4>Minimal Ghost Layout</h4>
+              <p>Maximum speed, minimum clutter. One massive number on pure black with lean, trip, and time below. For riders who want nothing between them and the road.</p>
             </div>
           </div>
           <div class="showcase-sensor-card">
-            <img src="images/screen-crashdetection.webp" alt="ThrottleX G-G Traction Diagram" loading="lazy" />
+            <img src="images/ui-apex-hunter.webp" alt="ThrottleX Apex Hunter Dashboard Layout" loading="lazy" />
             <div class="showcase-sensor-info">
-              <h4>G-G Traction Diagram</h4>
-              <p>A professional racing tool that visualizes the relationship between cornering forces and longitudinal forces. Shows how close you are to the outer limit of your tire's traction budget in real time.</p>
+              <h4>Apex Hunter Layout</h4>
+              <p>Live G-G friction circle with a moving dot tracking your real-time traction budget. Braking G, lateral G, lap timer, and speed all at once. The data rider's dashboard.</p>
             </div>
           </div>
         </div>
@@ -721,7 +814,7 @@
           <div class="showcase-text">
             <div class="showcase-eyebrow">Bike and Tire Profile</div>
             <h3 class="showcase-title">Calibrated for your machine.</h3>
-            <p>ThrottleX is not a one-size-fits-all data logger. The Bike Profile tells the app what kind of machine it is on — Sport, Cruiser, or Touring — and adjusts the sensor fusion physics accordingly. Select your actual tire from the library and the traction model auto-calibrates to your rubber's specific grip profile.</p>
+            <p>ThrottleX is not a one-size-fits-all data logger. The Bike Profile tells the app what kind of machine it is on. Sport, Cruiser, or Touring. It adjusts the sensor fusion physics accordingly. Select your actual tire from the library and the traction model auto-calibrates to your rubber's specific grip profile.</p>
             <ul class="showcase-list">
               <li>Bike Geometry: Sport, Cruiser, or Touring sensor fusion</li>
               <li>Traction Model: Conservative, Standard, or Performance grip window</li>
@@ -745,7 +838,7 @@
   <section class="tagline-break">
     <div class="container">
       <blockquote>"Hand-coded by a Solo Rider."</blockquote>
-      <p>ThrottleX v4.23 — built by one rider who wanted better tools and decided to build them himself.</p>
+      <p>ThrottleX v4.29 — built by one rider who wanted better tools and decided to build them himself.</p>
     </div>
   </section>
 
@@ -755,43 +848,35 @@
       <div class="section-eyebrow" style="text-align:center;margin-bottom:1rem;">Follow the Ride</div>
       <h2 class="section-title" style="text-align:center;margin-bottom:2.5rem;">STAY IN<br/><span>THE PACK.</span></h2>
       <div class="social-links">
-
-        <!-- TikTok -->
         <a href="https://www.tiktok.com/@throttlexapp" target="_blank" rel="noopener" class="social-icon-link" aria-label="TikTok">
           <svg viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
             <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/>
           </svg>
           <span>TikTok</span>
         </a>
-
-        <!-- YouTube -->
         <a href="https://www.youtube.com/@ThrottleXApp/videos" target="_blank" rel="noopener" class="social-icon-link" aria-label="YouTube">
           <svg viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
             <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
           </svg>
           <span>YouTube</span>
         </a>
-
-        <!-- Instagram -->
         <a href="https://www.instagram.com/throttlexapp" target="_blank" rel="noopener" class="social-icon-link" aria-label="Instagram">
           <svg viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
             <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
           </svg>
           <span>Instagram</span>
         </a>
-
       </div>
     </div>
   </section>
-
 
   <!-- UI SHOWCASE -->
   <section class="ui-showcase" id="ui-showcase">
     <div class="container">
       <div class="section-header">
         <div class="section-eyebrow">Dashboard Layouts</div>
-        <h2 class="section-title">7 NEW WAYS<br/><span>TO RIDE.</span></h2>
-        <p class="section-desc">7 new dashboard layouts are coming to ThrottleX Pro and will be included in your $9.99 one-time purchase. No extra cost. No subscriptions. Every layout will show the same full-precision sensor data in a completely different visual style. Stay tuned.</p>
+        <h2 class="section-title">7 WAYS<br/><span>TO RIDE.</span></h2>
+        <p class="section-desc">ThrottleX Pro includes 7 additional dashboard layouts, all included in your $9.99 one-time purchase. No extra cost. No subscriptions. Every layout shows the same full-precision sensor data in a completely different visual style.</p>
       </div>
       <div class="ui-grid">
 
@@ -867,7 +952,7 @@
 
       </div>
       <div class="ui-cta">
-        <p>All 7 layouts coming to ThrottleX Pro. One-time $9.99. No subscriptions.</p>
+        <p>All 7 layouts included in ThrottleX Pro. One-time $9.99. No subscriptions.</p>
         <a href="https://play.google.com/store/apps/details?id=com.alloy.throttlex" target="_blank" rel="noopener" class="btn-primary" onclick="gtag('event', 'play_store_click', {'event_category': 'conversion', 'event_label': 'UI Showcase Button'})">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.4.22.85.24 1.27.05l13.1-7.56-2.9-2.9-11.47 10.41zm-1.12-20.7C2.03 3.4 2 3.72 2 4.06v15.88c0 .34.03.67.06.98l.02.1L11.2 12l-9.12-9.02-.02.08zM20.1 9.65l-2.55-1.47-3.18 3.18 3.18 3.18 2.58-1.49c.74-.43.74-1.97-.03-2.4zM4.45.19C4.03 0 3.58.02 3.18.24L14.7 11.76l2.9-2.9L4.45.19z"/></svg>
           Get ThrottleX Pro
@@ -927,6 +1012,7 @@
             <li><span class="check">✓</span> Advanced coaching analytics, Flick Rate, and Entry Bite</li>
             <li><span class="check">✓</span> Live Friction Circle and Lean Distribution Histogram</li>
             <li><span class="check">✓</span> Bike Profile and Tire Picker</li>
+            <li><span class="check">✓</span> 7 Pro Dashboard Layouts included</li>
             <li><span class="check red">✗</span> No monthly fees. Not ever.</li>
           </ul>
           <a href="https://play.google.com/store/apps/details?id=com.alloy.throttlex" class="btn-primary btn-full" target="_blank" rel="noopener" onclick="gtag('event', 'play_store_click', {'event_category': 'conversion', 'event_label': 'Pro Tier Button'})">
@@ -936,6 +1022,13 @@
         </div>
 
       </div>
+
+      <!-- PRICING VISUAL -->
+      <div class="pricing-visual">
+        <img src="images/ui-apex-hunter.webp" alt="ThrottleX Apex Hunter Pro Dashboard Layout" loading="lazy" />
+        <div class="pricing-visual-caption">Apex Hunter · One of 7 Pro layouts included in your $9.99 purchase</div>
+      </div>
+
     </div>
   </section>
 
@@ -961,7 +1054,7 @@
         </div>
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)">Is it just for track days?<span class="faq-arrow">+</span></button>
-          <div class="faq-a">Not at all. ThrottleX works anywhere you ride — canyon runs, backroads, commutes, or the track. The four ride modes (Road, Track, Rain, Night) only change the color of the UI. They don't affect sensors or data in any way. Sensors run at full precision in every mode, all the time.</div>
+          <div class="faq-a">Not at all. ThrottleX works anywhere you ride. Canyon runs, backroads, commutes, or the track. The four ride modes (Road, Track, Rain, Night) only change the color of the UI. They don't affect sensors or data in any way. Sensors run at full precision in every mode, all the time.</div>
         </div>
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)">Does it work with my bike?<span class="faq-arrow">+</span></button>
