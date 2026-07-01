@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Why Most Riders Brake Too Early and Too Hard | ThrottleX Blog</title>
+  <meta name="description" content="Early heavy braking is the single most common performance habit holding street and track riders back. Here is why it happens, what it costs you, and how to fix it with data." />
+  <meta name="author" content="ThrottleX" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://throttlexapp.com/blog/why-most-riders-brake-too-early-and-too-hard.html" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://throttlexapp.com/blog/why-most-riders-brake-too-early-and-too-hard.html" />
+  <meta property="og:title" content="Why Most Riders Brake Too Early and Too Hard" />
+  <meta property="og:description" content="Early heavy braking is the single most common performance habit holding street and track riders back. Here is why it happens, what it costs you, and how to fix it with data." />
+  <meta property="og:image" content="https://throttlexapp.com/images/og-image.jpg" />
+  <meta property="og:site_name" content="ThrottleX" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Why Most Riders Brake Too Early and Too Hard" />
+  <meta name="twitter:description" content="Early heavy braking is the single most common performance habit holding street and track riders back. Here is why it happens, what it costs you, and how to fix it with data." />
+  <meta name="twitter:image" content="https://throttlexapp.com/images/og-image.jpg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Why Most Riders Brake Too Early and Too Hard",
+    "description": "Early heavy braking is the single most common performance habit holding street and track riders back. Here is why it happens, what it costs you, and how to fix it with data.",
+    "author": { "@type": "Person", "name": "ThrottleX" },
+    "publisher": { "@type": "Organization", "name": "ThrottleX", "url": "https://throttlexapp.com" },
+    "datePublished": "2026-07-01",
+    "url": "https://throttlexapp.com/blog/why-most-riders-brake-too-early-and-too-hard.html"
+  }
+  </script>
+
+  <link rel="icon" type="image/png" href="../images/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;600&family=Barlow+Condensed:wght@400;500;700&display=swap" />
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.addEventListener('load', function() {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-8PRHNYKLWZ';
+      s.onload = function() { gtag('js', new Date()); gtag('config', 'G-8PRHNYKLWZ'); };
+      document.head.appendChild(s);
+    });
+  </script>
+
+  <style>
+    :root {
+      --red: #e8001e;
+      --black: #050507;
+      --dark: #0d0d10;
+      --dark2: #121215;
+      --dark3: #1a1a1f;
+      --border: rgba(255,255,255,0.07);
+      --border-red: rgba(232,0,30,0.3);
+      --text: #e8e8ec;
+      --text-dim: #7a7a88;
+      --text-dimmer: #4a4a55;
+      --white: #ffffff;
+      --font-display: 'Bebas Neue', sans-serif;
+      --font-cond: 'Barlow Condensed', sans-serif;
+      --font-body: 'Barlow', sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--black); color: var(--text); font-family: var(--font-body); font-weight: 300; line-height: 1.6; overflow-x: hidden; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(5,5,7,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-family: var(--font-display); font-size: 1.6rem; color: var(--white); }
+    .nav-logo span { color: var(--red); }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-family: var(--font-cond); font-weight: 500; font-size: 0.9rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta { background: var(--red) !important; color: #fff !important; padding: 0.5rem 1.2rem; clip-path: polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,8px 100%,0 calc(100% - 8px)); }
+    @media(max-width:768px){ .nav-links { display: none; } }
+
+    .article-hero { padding: 120px 0 60px; background: var(--dark); border-bottom: 1px solid var(--border); }
+    .article-hero .container { max-width: 860px; }
+    .article-tag { font-family: var(--font-cond); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--red); margin-bottom: 1.25rem; display: block; }
+    .article-title { font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 4rem); color: var(--white); line-height: 0.95; margin-bottom: 1.5rem; }
+    .article-meta { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; font-family: var(--font-cond); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dimmer); }
+
+    .article-body { padding: 5rem 0; }
+    .article-layout { display: grid; grid-template-columns: 1fr 300px; gap: 4rem; max-width: 1100px; margin: 0 auto; padding: 0 2rem; align-items: start; }
+
+    .article-content h2 { font-family: var(--font-display); font-size: 2rem; color: var(--white); line-height: 1; margin: 3rem 0 1rem; }
+    .article-content h3 { font-family: var(--font-cond); font-size: 1.1rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); margin: 2rem 0 0.75rem; }
+    .article-content p { font-size: 1rem; color: var(--text-dim); line-height: 1.85; margin-bottom: 1.5rem; }
+    .article-content p strong { color: var(--white); font-weight: 600; }
+    .article-content ul { list-style: none; margin: 0 0 1.5rem; padding: 0; display: flex; flex-direction: column; gap: 0.6rem; }
+    .article-content ul li { font-size: 0.95rem; color: var(--text-dim); line-height: 1.6; display: flex; align-items: flex-start; gap: 0.6rem; }
+    .article-content ul li::before { content: '✓'; color: var(--red); font-weight: 700; flex-shrink: 0; margin-top: 0.05rem; }
+
+    .callout { background: var(--dark2); border-left: 3px solid var(--red); padding: 1.5rem 1.75rem; margin: 2.5rem 0; }
+    .callout-label { font-family: var(--font-cond); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--red); margin-bottom: 0.6rem; display: block; }
+    .callout p { font-size: 0.92rem; color: var(--text-dim); margin: 0; line-height: 1.7; }
+
+    .stat-block { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; background: var(--border); margin: 2.5rem 0; }
+    .stat-item { background: var(--dark2); padding: 1.5rem; display: flex; flex-direction: column; gap: 0.4rem; }
+    .stat-value { font-family: var(--font-display); font-size: 2rem; color: var(--white); line-height: 1; }
+    .stat-label { font-family: var(--font-cond); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dimmer); line-height: 1.4; }
+
+    .article-divider { width: 40px; height: 2px; background: var(--red); margin: 3rem 0; }
+
+    .article-sidebar { position: sticky; top: 84px; }
+    .sidebar-card { background: var(--dark2); border: 1px solid var(--border); padding: 1.5rem; margin-bottom: 1.5rem; }
+    .sidebar-card h4 { font-family: var(--font-cond); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 1rem; }
+    .sidebar-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+    .sidebar-card ul li a { font-size: 0.88rem; color: var(--text-dim); line-height: 1.5; transition: color 0.2s; }
+    .sidebar-card ul li a:hover { color: var(--white); }
+    .sidebar-cta { background: var(--dark3); border: 1px solid var(--border-red); padding: 1.5rem; margin-bottom: 1.5rem; }
+    .sidebar-cta p { font-size: 0.88rem; color: var(--text-dim); line-height: 1.6; margin-bottom: 1.25rem; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--red); color: #fff; font-family: var(--font-cond); font-weight: 700; font-size: 0.9rem; letter-spacing: 0.05em; padding: 0.75rem 1.25rem; border: none; cursor: pointer; width: 100%; justify-content: center; clip-path: polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px)); transition: background 0.2s; }
+    .btn-primary:hover { background: #ff0020; }
+
+    .related-section { padding: 5rem 0; background: var(--dark); border-top: 1px solid var(--border); }
+    .section-label { font-family: var(--font-cond); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--red); display: block; margin-bottom: 0.75rem; }
+    .related-section h2 { font-family: var(--font-display); font-size: 2.5rem; color: var(--white); margin-bottom: 2.5rem; line-height: 1; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; background: var(--border); }
+    .related-card { background: var(--dark2); padding: 1.75rem; display: flex; flex-direction: column; gap: 0.6rem; transition: background 0.2s; }
+    .related-card:hover { background: var(--dark3); }
+    .related-tag { font-family: var(--font-cond); font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); }
+    .related-card h3 { font-family: var(--font-cond); font-weight: 700; font-size: 1rem; color: var(--white); line-height: 1.3; }
+    .related-card p { font-size: 0.85rem; color: var(--text-dim); line-height: 1.6; }
+    .related-read { font-family: var(--font-cond); font-size: 0.8rem; letter-spacing: 0.08em; color: var(--text-dimmer); margin-top: auto; padding-top: 0.5rem; }
+
+    .footer { padding: 2.5rem 0; background: var(--black); border-top: 1px solid var(--border); }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+    .footer-logo { font-family: var(--font-display); font-size: 1.3rem; color: var(--text-dimmer); }
+    .footer-logo span { color: var(--red); }
+    .footer-links { display: flex; gap: 2rem; flex-wrap: wrap; }
+    .footer-links a { font-family: var(--font-cond); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dimmer); transition: color 0.2s; }
+    .footer-links a:hover { color: var(--text-dim); }
+    .footer-copy { font-size: 0.8rem; color: var(--text-dimmer); }
+
+    @media(max-width:900px){
+      .article-layout { grid-template-columns: 1fr; }
+      .article-sidebar { position: static; }
+      .stat-block { grid-template-columns: 1fr; }
+      .related-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">THROTTLE<span>X</span></a>
+      <ul class="nav-links">
+        <li><a href="../index.html#features">Features</a></li>
+        <li><a href="../index.html#pricing">Pricing</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="https://play.google.com/store/apps/details?id=com.alloy.throttlex" class="nav-cta" target="_blank" rel="noopener">Get the App</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="article-hero">
+    <div class="container">
+      <span class="article-tag">// Riding Skills</span>
+      <h1 class="article-title">WHY MOST RIDERS BRAKE TOO EARLY AND TOO HARD</h1>
+      <div class="article-meta">
+        <span>July 1, 2026</span>
+        <span>8 min read</span>
+        <span>ThrottleX</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="article-layout">
+
+      <article class="article-content">
+
+        <p>If you ask a group of riders what they could improve most, a large percentage will say cornering speed. They want to carry more pace through corners, hit better lines, feel more confident mid-corner. What most of them do not realize is that the answer to all three problems is almost always in the brake zone, not the corner itself.</p>
+
+        <p>Early, heavy braking is the single most common performance habit holding riders back at every level. It compounds into every other phase of the corner. It limits your entry speed, degrades your line options, and keeps you in a perpetual cycle of arriving too slow and then adding throttle too aggressively trying to make up for it. Understanding why it happens is the first step to fixing it.</p>
+
+        <div class="article-divider"></div>
+
+        <h2>WHERE THE HABIT COMES FROM</h2>
+
+        <p>The instinct to brake early and hard is not a flaw. It is a survival response that served you well when you first started riding. When you do not yet know what the bike can do, braking early gives you a margin of error. If you misjudge the corner, you have time to brake more, adjust your speed, and recover. The habit forms because it works well enough to keep you safe while your skills are developing.</p>
+
+        <p>The problem is that the habit calcifies. Riders who learned on the street often carry years of conservative brake zones into environments where those margins are no longer necessary. On a track with a known surface, known corner radii, and no oncoming traffic, the reasons to brake that early no longer exist. But the nervous system does not know that. It has been rewarded for early braking hundreds of times and it continues to fire that pattern automatically.</p>
+
+        <p>There is also a perception issue. Speed feels faster than it is, especially at corner entry. A rider approaching a corner at 60 mph who has always braked at the 200 meter board will feel like they are arriving very fast at the 150 meter board even if the physics say the bike is perfectly capable of stopping in time. The feeling of risk is not calibrated to the actual risk. It is calibrated to habit.</p>
+
+        <div class="article-divider"></div>
+
+        <h2>WHAT EARLY BRAKING ACTUALLY COSTS YOU</h2>
+
+        <p>The most obvious cost is entry speed. If you complete your braking 20 meters before the corner, you coast those 20 meters at a speed lower than necessary. You arrive at turn-in slower than the corner requires. That sounds like it should feel safe and controlled, but it actually creates a different problem: you now have excess capacity that your brain tries to fill by adding throttle earlier than is ideal, which loads the rear tire before the bike is fully committed to its line and lean angle.</p>
+
+        <p>Heavy braking also destabilizes the chassis. Hard initial brake pressure dives the front forks aggressively, compresses the front suspension, and shifts the bike's weight balance dramatically forward. When you release that brake pressure before the corner, the suspension rebounds and the chassis pitches back. That pitch is a disturbance at the exact moment you are trying to initiate a precise steering input. The bike is oscillating while you are asking it to turn. The result is imprecise turn-in and a less controlled line through the first third of the corner.</p>
+
+        <div class="callout">
+          <span class="callout-label">// What the Physics Says</span>
+          <p>A modern sport bike under maximum braking can generate between 0.9 and 1.1G of deceleration force. Most riders use somewhere between 40 and 60 percent of that capacity in normal braking zones. The bike has significantly more stopping power available than most riders ever use, which means the braking zone can be shorter, later, and still well within the machine's capability.</p>
+        </div>
+
+        <p>The third cost is line quality. When you brake too early and arrive slow, you tend to turn in early trying to get on the gas sooner. Early turn-in leads to an early apex, which runs you wide on exit. Running wide on exit means either accepting a compromised line or making a steering correction while leaned over, which is exactly the kind of input you want to avoid. One mistake in the brake zone cascades through the entire corner.</p>
+
+        <div class="article-divider"></div>
+
+        <h2>THE DIFFERENCE BETWEEN EARLY AND HARD</h2>
+
+        <p>These are two separate problems that often appear together but do not have to.</p>
+
+        <p><strong>Braking too early</strong> means you start slowing down further from the corner than necessary. You complete your speed reduction with excess distance to spare before turn-in. The fix is moving your brake marker later, progressively, while keeping the same brake force. Your G-force trace will show a deceleration spike that ends well before turn-in with a flat coast section in between.</p>
+
+        <p><strong>Braking too hard</strong> means your initial brake pressure is excessive relative to what is needed. You grab the lever rather than squeezing it, which produces a spike of deceleration force that unsettles the chassis and then requires you to back off before the bike has fully settled. Your G-force trace will show a sharp initial spike followed by a taper, rather than a firm progressive build to a sustained peak.</p>
+
+        <p>Many riders do both simultaneously. They brake early and they brake hard, then release early and coast to the corner. The ideal braking event looks different: a progressive squeeze to a firm sustained peak, held for the duration of the braking zone, then a smooth linear release that carries into the first phase of lean. That is a completely different shape on a G-force trace and a completely different feeling on the bike.</p>
+
+        <div class="article-divider"></div>
+
+        <h2>HOW TO FIX IT</h2>
+
+        <p>The correction process has to be deliberate. You cannot fix a deeply ingrained habit by simply deciding to brake later. The nervous system needs evidence that later braking is safe before it will allow you to do it consistently.</p>
+
+        <h3>Move the marker in small increments</h3>
+
+        <p>Pick one corner at a familiar road or track. Identify your current brake point. Move it five meters later and use that point for several laps or passes until it feels normal. Then move it five more meters. Do not try to jump 30 meters at once. Small increments let the nervous system adapt without triggering panic responses.</p>
+
+        <h3>Work on initial pressure application</h3>
+
+        <p>Focus on the first 10 percent of brake lever travel. Most riders grab that initial bite too hard. The front tire needs a moment to load under braking before it can generate maximum grip. Squeezing progressively in the first half-second rather than snatching the lever lets the suspension compress in a controlled way and puts more of your available grip to work rather than fighting the chassis disturbance.</p>
+
+        <h3>Use your data to see what is actually happening</h3>
+
+        <p>Feel alone is a poor diagnostic tool for braking because what feels late often is not. Your G-force data after a session tells a clearer story. A clean braking event shows a firm sustained deceleration peak without spikes, timed to end as lean angle begins to build. If your trace shows your deceleration dropping to zero well before your lean angle starts rising, that gap is your coasting zone and it is where your lost time lives.</p>
+
+        <ul>
+          <li>Look for the gap between end of braking and start of lean in your G-force trace</li>
+          <li>A gap of more than a second at most corners means your brake point has room to move later</li>
+          <li>Spiky initial deceleration followed by early release indicates grabbing rather than squeezing</li>
+          <li>Compare your peak deceleration G to what the bike is capable of to see how much capacity you are leaving unused</li>
+        </ul>
+
+        <div class="article-divider"></div>
+
+        <h2>ON THE STREET VERSUS THE TRACK</h2>
+
+        <p>The advice above applies differently depending on where you ride.</p>
+
+        <p>On the street, braking early has real value because the environment has genuine unknowns. Gravel at an apex, a car crossing the center line, a decreasing radius you did not expect. Riding with a margin is not a flaw on public roads. It is appropriate risk management. The goal on the street is not to eliminate the margin but to understand it. Knowing that you are braking 30 meters earlier than the corner requires gives you useful information about your skill level and your bike's capability. That awareness is valuable even if you never choose to use it all.</p>
+
+        <p>On a closed circuit the calculus changes. The surface is known, the corners are repeatable, and the environment is controlled. Carrying a 30 meter margin into every corner on a track is leaving a large amount of potential improvement on the table. Track days exist precisely because they are the environment where it is appropriate to explore the bike's limits and your own. Progressive, deliberate reduction of your brake zones is one of the highest-value things you can work on during a track session.</p>
+
+        <div class="callout">
+          <span class="callout-label">// A Note on Confidence</span>
+          <p>The feeling that you are braking late enough when you are not is one of the trickiest aspects of developing as a rider. Your reference point for what feels late is calibrated to your history. The best riders describe the sensation of proper late braking as feeling almost uncomfortably late the first few times. That discomfort is the gap between habit and capability. It is exactly where improvement lives.</p>
+        </div>
+
+        <div class="article-divider"></div>
+
+        <h2>THE BIGGER PICTURE</h2>
+
+        <p>Braking is not just about stopping. It is the first input of every corner sequence and it determines the quality of everything that follows. Riders who develop clean, late, progressive braking find that their mid-corner confidence improves almost automatically because they are arriving at turn-in with better chassis stability, a more accurate sense of their entry speed, and more options for line selection.</p>
+
+        <p>The G-force trace after a session does not lie. It shows you exactly where your braking happens, how hard it is, and how it relates to every other phase of the corner. If you have never looked at your braking data alongside your lean angle data in the same session, you are missing one of the clearest pictures available of where your time and performance are going.</p>
+
+        <p>Brake later. Squeeze instead of grab. Let the data show you where the margin actually is. That is where the improvement is hiding.</p>
+
+      </article>
+
+      <aside class="article-sidebar">
+        <div class="sidebar-cta">
+          <h4 style="font-family:var(--font-display);font-size:1.4rem;color:var(--white);margin-bottom:0.75rem;line-height:1;">SEE YOUR BRAKING DATA.</h4>
+          <p>ThrottleX captures your G-force trace on every ride so you can see exactly what your braking looks like. $9.99 one-time. No subscriptions.</p>
+          <a href="https://play.google.com/store/apps/details?id=com.alloy.throttlex" class="btn-primary" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.4.22.85.24 1.27.05l13.1-7.56-2.9-2.9-11.47 10.41zm-1.12-20.7C2.03 3.4 2 3.72 2 4.06v15.88c0 .34.03.67.06.98l.02.1L11.2 12l-9.12-9.02-.02.08zM20.1 9.65l-2.55-1.47-3.18 3.18 3.18 3.18 2.58-1.49c.74-.43.74-1.97-.03-2.4zM4.45.19C4.03 0 3.58.02 3.18.24L14.7 11.76l2.9-2.9L4.45.19z"/></svg>
+            Get ThrottleX Free
+          </a>
+        </div>
+
+        <div class="sidebar-card">
+          <h4>// Related Reading</h4>
+          <ul>
+            <li><a href="what-is-a-traction-circle-and-why-does-it-matter.html">What Is a Traction Circle and Why Does It Matter?</a></li>
+            <li><a href="what-is-trail-braking-and-how-do-you-learn-it.html">What Is Trail Braking and How Do You Learn It?</a></li>
+            <li><a href="understanding-g-force-data-on-a-motorcycle.html">Understanding G-Force Data on a Motorcycle</a></li>
+            <li><a href="how-to-improve-your-cornering-on-a-motorcycle.html">How to Improve Your Cornering on a Motorcycle</a></li>
+          </ul>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+  <section class="related-section">
+    <div class="container">
+      <span class="section-label">// Keep Reading</span>
+      <h2>MORE FROM THE BLOG</h2>
+      <div class="related-grid">
+        <a href="what-is-trail-braking-and-how-do-you-learn-it.html" class="related-card">
+          <span class="related-tag">// Riding Skills</span>
+          <h3>What Is Trail Braking and How Do You Learn It?</h3>
+          <p>Trail braking is the logical next step after fixing your brake zone. Here is what it is, why it works, and how to develop it safely.</p>
+          <span class="related-read">Read More →</span>
+        </a>
+        <a href="what-is-a-traction-circle-and-why-does-it-matter.html" class="related-card">
+          <span class="related-tag">// Data and Telemetry</span>
+          <h3>What Is a Traction Circle and Why Does It Matter?</h3>
+          <p>The physics of braking, cornering, and acceleration all live on the same diagram. Here is how to read it.</p>
+          <span class="related-read">Read More →</span>
+        </a>
+        <a href="what-happens-to-your-tires-when-you-push-past-their-limits.html" class="related-card">
+          <span class="related-tag">// Riding Skills</span>
+          <h3>What Happens to Your Tires When You Push Past Their Limits</h3>
+          <p>Understanding what happens at the contact patch when grip runs out makes you a smarter and faster rider.</p>
+          <span class="related-read">Read More →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">THROTTLE<span>X</span></div>
+        <div class="footer-links">
+          <a href="../index.html#features">Features</a>
+          <a href="../index.html#pricing">Pricing</a>
+          <a href="../blog.html">Blog</a>
+          <a href="../privacy.html">Privacy Policy</a>
+        </div>
+        <div class="footer-copy">© 2026 ThrottleX · Hand-coded by a Solo Rider.</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
