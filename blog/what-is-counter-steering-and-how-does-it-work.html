@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>What Is Counter-Steering and How Does It Work | ThrottleX Blog</title>
+  <meta name="description" content="Counter-steering is the fundamental physics behind how every motorcycle corners at speed. Here is exactly what it is, why it works, and how to use it deliberately to become a faster and more confident rider." />
+  <meta name="author" content="ThrottleX" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://throttlexapp.com/blog/what-is-counter-steering-and-how-does-it-work.html" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://throttlexapp.com/blog/what-is-counter-steering-and-how-does-it-work.html" />
+  <meta property="og:title" content="What Is Counter-Steering and How Does It Work" />
+  <meta property="og:description" content="Counter-steering is the fundamental physics behind how every motorcycle corners at speed. Here is exactly what it is, why it works, and how to use it deliberately to become a faster and more confident rider." />
+  <meta property="og:image" content="https://throttlexapp.com/images/og-image.jpg" />
+  <meta property="og:site_name" content="ThrottleX" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="What Is Counter-Steering and How Does It Work" />
+  <meta name="twitter:description" content="Counter-steering is the fundamental physics behind how every motorcycle corners at speed. Here is exactly what it is, why it works, and how to use it deliberately to become a faster and more confident rider." />
+  <meta name="twitter:image" content="https://throttlexapp.com/images/og-image.jpg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "What Is Counter-Steering and How Does It Work",
+    "description": "Counter-steering is the fundamental physics behind how every motorcycle corners at speed. Here is exactly what it is, why it works, and how to use it deliberately to become a faster and more confident rider.",
+    "author": { "@type": "Person", "name": "ThrottleX" },
+    "publisher": { "@type": "Organization", "name": "ThrottleX", "url": "https://throttlexapp.com" },
+    "datePublished": "2026-07-07",
+    "url": "https://throttlexapp.com/blog/what-is-counter-steering-and-how-does-it-work.html"
+  }
+  </script>
+
+  <link rel="icon" type="image/png" href="../images/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;600&family=Barlow+Condensed:wght@400;500;700&display=swap" />
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.addEventListener('load', function() {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-8PRHNYKLWZ';
+      s.onload = function() { gtag('js', new Date()); gtag('config', 'G-8PRHNYKLWZ'); };
+      document.head.appendChild(s);
+    });
+  </script>
+
+  <style>
+    :root {
+      --red: #e8001e;
+      --black: #050507;
+      --dark: #0d0d10;
+      --dark2: #121215;
+      --dark3: #1a1a1f;
+      --border: rgba(255,255,255,0.07);
+      --border-red: rgba(232,0,30,0.3);
+      --text: #e8e8ec;
+      --text-dim: #7a7a88;
+      --text-dimmer: #4a4a55;
+      --white: #ffffff;
+      --font-display: 'Bebas Neue', sans-serif;
+      --font-cond: 'Barlow Condensed', sans-serif;
+      --font-body: 'Barlow', sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--black); color: var(--text); font-family: var(--font-body); font-weight: 300; line-height: 1.6; overflow-x: hidden; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(5,5,7,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-family: var(--font-display); font-size: 1.6rem; color: var(--white); }
+    .nav-logo span { color: var(--red); }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-family: var(--font-cond); font-weight: 500; font-size: 0.9rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta { background: var(--red) !important; color: #fff !important; padding: 0.5rem 1.2rem; clip-path: polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,8px 100%,0 calc(100% - 8px)); }
+    @media(max-width:768px){ .nav-links { display: none; } }
+
+    .article-hero { padding: 120px 0 60px; background: var(--dark); border-bottom: 1px solid var(--border); }
+    .article-hero .container { max-width: 860px; }
+    .article-tag { font-family: var(--font-cond); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--red); margin-bottom: 1.25rem; display: block; }
+    .article-title { font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 4rem); color: var(--white); line-height: 0.95; margin-bottom: 1.5rem; }
+    .article-meta { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; font-family: var(--font-cond); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dimmer); }
+
+    .article-body { padding: 5rem 0; }
+    .article-layout { display: grid; grid-template-columns: 1fr 300px; gap: 4rem; max-width: 1100px; margin: 0 auto; padding: 0 2rem; align-items: start; }
+
+    .article-content h2 { font-family: var(--font-display); font-size: 2rem; color: var(--white); line-height: 1; margin: 3rem 0 1rem; }
+    .article-content h3 { font-family: var(--font-cond); font-size: 1.1rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); margin: 2rem 0 0.75rem; }
+    .article-content p { font-size: 1rem; color: var(--text-dim); line-height: 1.85; margin-bottom: 1.5rem; }
+    .article-content p strong { color: var(--white); font-weight: 600; }
+    .article-content ul { list-style: none; margin: 0 0 1.5rem; padding: 0; display: flex; flex-direction: column; gap: 0.6rem; }
+    .article-content ul li { font-size: 0.95rem; color: var(--text-dim); line-height: 1.6; display: flex; align-items: flex-start; gap: 0.6rem; }
+    .article-content ul li::before { content: '✓'; color: var(--red); font-weight: 700; flex-shrink: 0; margin-top: 0.05rem; }
+
+    .callout { background: var(--dark2); border-left: 3px solid var(--red); padding: 1.5rem 1.75rem; margin: 2.5rem 0; }
+    .callout-label { font-family: var(--font-cond); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--red); margin-bottom: 0.6rem; display: block; }
+    .callout p { font-size: 0.92rem; color: var(--text-dim); margin: 0; line-height: 1.7; }
+
+    .stat-block { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5px; background: var(--border); margin: 2.5rem 0; }
+    .stat-item { background: var(--dark2); padding: 1.5rem; display: flex; flex-direction: column; gap: 0.4rem; }
+    .stat-value { font-family: var(--font-display); font-size: 2rem; color: var(--white); line-height: 1; }
+    .stat-label { font-family: var(--font-cond); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dimmer); line-height: 1.4; }
+
+    .article-divider { width: 40px; height: 2px; background: var(--red); margin: 3rem 0; }
+
+    .article-sidebar { position: sticky; top: 84px; }
+    .sidebar-card { background: var(--dark2); border: 1px solid var(--border); padding: 1.5rem; margin-bottom: 1.5rem; }
+    .sidebar-card h4 { font-family: var(--font-cond); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 1rem; }
+    .sidebar-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+    .sidebar-card ul li a { font-size: 0.88rem; color: var(--text-dim); line-height: 1.5; transition: color 0.2s; }
+    .sidebar-card ul li a:hover { color: var(--white); }
+    .sidebar-cta { background: var(--dark3); border: 1px solid var(--border-red); padding: 1.5rem; margin-bottom: 1.5rem; }
+    .sidebar-cta p { font-size: 0.88rem; color: var(--text-dim); line-height: 1.6; margin-bottom: 1.25rem; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--red); color: #fff; font-family: var(--font-cond); font-weight: 700; font-size: 0.9rem; letter-spacing: 0.05em; padding: 0.75rem 1.25rem; border: none; cursor: pointer; width: 100%; justify-content: center; clip-path: polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px)); transition: background 0.2s; }
+    .btn-primary:hover { background: #ff0020; }
+
+    .related-section { padding: 5rem 0; background: var(--dark); border-top: 1px solid var(--border); }
+    .section-label { font-family: var(--font-cond); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--red); display: block; margin-bottom: 0.75rem; }
+    .related-section h2 { font-family: var(--font-display); font-size: 2.5rem; color: var(--white); margin-bottom: 2.5rem; line-height: 1; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; background: var(--border); }
+    .related-card { background: var(--dark2); padding: 1.75rem; display: flex; flex-direction: column; gap: 0.6rem; transition: background 0.2s; }
+    .related-card:hover { background: var(--dark3); }
+    .related-tag { font-family: var(--font-cond); font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); }
+    .related-card h3 { font-family: var(--font-cond); font-weight: 700; font-size: 1rem; color: var(--white); line-height: 1.3; }
+    .related-card p { font-size: 0.85rem; color: var(--text-dim); line-height: 1.6; }
+    .related-read { font-family: var(--font-cond); font-size: 0.8rem; letter-spacing: 0.08em; color: var(--text-dimmer); margin-top: auto; padding-top: 0.5rem; }
+
+    .footer { padding: 2.5rem 0; background: var(--black); border-top: 1px solid var(--border); }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+    .footer-logo { font-family: var(--font-display); font-size: 1.3rem; color: var(--text-dimmer); }
+    .footer-logo span { color: var(--red); }
+    .footer-links { display: flex; gap: 2rem; flex-wrap: wrap; }
+    .footer-links a { font-family: var(--font-cond); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dimmer); transition: color 0.2s; }
+    .footer-links a:hover { color: var(--text-dim); }
+    .footer-copy { font-size: 0.8rem; color: var(--text-dimmer); }
+
+    @media(max-width:900px){
+      .article-layout { grid-template-columns: 1fr; }
+      .article-sidebar { position: static; }
+      .stat-block { grid-template-columns: 1fr; }
+      .related-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">THROTTLE<span>X</span></a>
+      <ul class="nav-links">
+        <li><a href="../index.html#features">Features</a></li>
+        <li><a href="../index.html#pricing">Pricing</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="https://play.google.com/store/apps/details?id=com.alloy.throttlex" class="nav-cta" target="_blank" rel="noopener">Get the App</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="article-hero">
+    <div class="container">
+      <span class="article-tag">// Motorcycle Fundamentals</span>
+      <h1 class="article-title">WHAT IS COUNTER-STEERING AND HOW DOES IT WORK</h1>
+      <div class="article-meta">
+        <span>July 7, 2026</span>
+        <span>8 min read</span>
+        <span>ThrottleX</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="article-layout">
+
+      <article class="article-content">
+
+        <p>Counter-steering is the single most important technique in motorcycling and also the most misunderstood. Every rider who has ever taken a corner above walking pace has used it, whether they knew it or not. Understanding it consciously, knowing what is actually happening when you push on the handlebar and why, transforms how you ride. It gives you a deliberate tool for initiating corners precisely, quickly, and confidently instead of relying on vague instinct that may or may not fire correctly under pressure.</p>
+
+        <p>Here is the complete picture of what counter-steering is, the physics behind why it works, and how to develop it as a conscious skill.</p>
+
+        <div class="article-divider"></div>
+
+        <h2>THE BASIC DEFINITION</h2>
+
+        <p>Counter-steering is the technique of pressing forward on the handlebar on the side you want to turn toward in order to initiate a lean and begin a corner. To go left, you press forward on the left bar. To go right, you press forward on the right bar. The press is brief and deliberate, applied at the moment you want the bike to begin leaning into the turn.</p>
+
+        <p>The reason it is called counter-steering is because the initial steering input is in the opposite direction to the turn. Pressing the left bar forward steers the front wheel briefly to the right. That rightward deflection of the front wheel is what causes the bike to fall left and begin cornering left. You are steering the wheel one way to make the bike go the other way. Counter to the direction of travel. Counter-steering.</p>
+
+        <div class="callout">
+          <span class="callout-label">// The Speed Threshold</span>
+          <p>Counter-steering takes effect above roughly 12 to 15 mph. Below that speed, the gyroscopic forces acting on the wheels are not strong enough and the bike steers more like a bicycle, where you turn the bars in the direction you want to go. Above that threshold, counter-steering is the only effective way to initiate a lean. Every corner you have ever taken at road speed has involved counter-steering whether you were aware of it or not.</p>
+        </div>
+
+        <div class="article-divider"></div>
+
+        <h2>THE PHYSICS BEHIND IT</h2>
+
+        <p>To understand why counter-steering works, you need to understand two forces that act on a spinning wheel: gyroscopic precession and the geometry of the contact patch.</p>
+
+        <h3>Gyroscopic precession</h3>
+
+        <p>A spinning wheel behaves like a gyroscope. When you apply a force to a gyroscope, it does not move in the direction of that force. It moves 90 degrees away from it, in the direction the wheel is spinning. This is called precession.</p>
+
+        <p>When your motorcycle front wheel is spinning forward and you press the left handlebar forward, you are applying a force that tries to steer the wheel to the right. The gyroscopic response to that force is a rotation 90 degrees away in the direction of spin, which causes the front of the bike to lean to the left. The wheel does briefly deflect right, but the gyroscopic precession simultaneously initiates a leftward lean. The two effects happen almost instantaneously together.</p>
+
+        <h3>Contact patch geometry</h3>
+
+        <p>There is also a simpler geometric explanation that works alongside the gyroscopic one. When the front wheel briefly steers right, the contact patch moves right while the center of mass of the bike continues moving forward and slightly left. The bike is now leaning left because its weight is no longer directly over the contact patch. Gravity and momentum do the rest, pulling the bike into a lean and initiating the arc of the corner.</p>
+
+        <p>Both mechanisms work together. The gyroscopic effect and the geometry of the contact patch moving out from under the bike's center of mass both contribute to the lean initiation. The result is that a brief, deliberate press on the inside handlebar produces a fast, precise lean initiation that no other steering input can match at speed.</p>
+
+        <div class="stat-block">
+          <div class="stat-item">
+            <span class="stat-value">Push Left</span>
+            <span class="stat-label">Front wheel deflects right, bike leans left, bike turns left</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">Push Right</span>
+            <span class="stat-label">Front wheel deflects left, bike leans right, bike turns right</span>
+          </div>
+        </div>
+
+        <div class="article-divider"></div>
+
+        <h2>WHY MOST RIDERS DO NOT KNOW THEY ARE DOING IT</h2>
+
+        <p>The reason counter-steering feels invisible to most riders is that the human nervous system is remarkably good at finding efficient movement patterns without conscious instruction. When you learned to ride, your body figured out that pressing the inside bar initiated the lean it wanted. It learned this through repetition and feedback, not through understanding. The technique became automatic and therefore invisible.</p>
+
+        <p>This is actually a sign of good motor learning. The problem is that automatic skills are harder to access deliberately under pressure, harder to refine, and harder to apply in new situations. A rider who corners using instinct alone will struggle when they need to change direction quickly, when they arrive at a corner too fast, or when they need to tighten their line mid-corner. A rider who understands and can consciously apply counter-steering has a tool they can reach for in exactly those moments.</p>
+
+        <p>There is also a perceptual illusion at work. Because the front wheel briefly deflects in the opposite direction before the bike leans, and because that deflection happens very fast, most riders perceive themselves as simply leaning the bike without any specific handlebar input. The input is real and essential but it happens faster than conscious awareness can track it at normal road speeds.</p>
+
+        <div class="article-divider"></div>
+
+        <h2>HOW TO FEEL IT FOR THE FIRST TIME</h2>
+
+        <p>The classic exercise for making counter-steering conscious is simple and should be done on a straight, clear road at moderate speed. While riding in a straight line at around 30 to 40 mph, press forward firmly on the left handlebar with your left palm. The bike will immediately begin leaning and arcing left. Then press the right bar to bring it back upright and arc right. Do this several times until the cause and effect relationship is unmistakable.</p>
+
+        <p>The first time most riders do this deliberately they are surprised by how responsive and immediate the lean initiation is. The bike reacts to the press much faster than it reacts to body weight shifts or any other input. That speed and precision is the whole point. Counter-steering is the fastest and most direct way to change the lean angle of a motorcycle at speed.</p>
+
+        <div class="callout">
+          <span class="callout-label">// What It Should Feel Like</span>
+          <p>A well-executed counter-steer feels like a brief, firm push forward on the inside grip at the moment of turn-in, followed immediately by the bike tipping into the lean. The push is not a sustained pressure. It is a deliberate input that initiates the lean and then eases as the bike settles into the corner. Think of it as the trigger, not the sustainer. You initiate the lean with counter-steering and then manage the arc with body position and throttle.</p>
+        </div>
+
+        <div class="article-divider"></div>
+
+        <h2>HOW IT CHANGES YOUR CORNERING</h2>
+
+        <p>Once counter-steering becomes a conscious tool rather than an automatic habit, several things change about how you ride.</p>
+
+        <h3>Turn-in becomes faster and more precise</h3>
+
+        <p>Riders who rely on body weight shifting to initiate lean spend more time and distance getting the bike onto its line. The body shift communicates to the bike gradually. A deliberate counter-steer press communicates immediately. The bike tips in faster, which means you can turn in later, carry more speed to the corner entry, and still get the bike pointed correctly before the apex. Later turn-in with a faster lean rate is a significant performance and safety improvement.</p>
+
+        <h3>Mid-corner corrections become available</h3>
+
+        <p>One of the most valuable applications of conscious counter-steering is mid-corner line correction. If you arrive at a corner and realize partway through that you are going to run wide, the instinctive response for many riders is to brake, which loads the front tire at the worst possible moment and often makes the situation worse. The correct response is to press the inside bar more firmly, which increases lean angle and tightens the arc. This only works if counter-steering is a conscious skill you can access under pressure.</p>
+
+        <h3>Emergency direction changes become possible</h3>
+
+        <p>Swerving to avoid an obstacle at speed requires fast lean initiation in one direction followed immediately by fast lean initiation in the other direction. This is only possible through deliberate counter-steering. Riders who have not developed this skill consciously often freeze or respond too slowly when a sudden direction change is required. The technique that saves you in that situation is the same one you use in every corner, just applied with urgency.</p>
+
+        <ul>
+          <li>Press the inside bar to initiate lean and begin the corner</li>
+          <li>The press is brief and firm, not a sustained push throughout the corner</li>
+          <li>More press means more lean angle and a tighter arc</li>
+          <li>The technique works at any road speed above 15 mph</li>
+          <li>Mid-corner press increases lean and tightens your line when needed</li>
+          <li>Releasing inside bar pressure or pressing the outside bar reduces lean angle</li>
+        </ul>
+
+        <div class="article-divider"></div>
+
+        <h2>COUNTER-STEERING AND YOUR DATA</h2>
+
+        <p>Counter-steering shows up indirectly in your telemetry data in a useful way. The speed of lean initiation at corner entry, how quickly your lean angle builds from upright to your peak cornering angle, is a reflection of how decisively you are applying counter-steering input. Riders who are hesitant or unconscious about their turn-in show a slow, gradual lean angle increase at entry. Riders with deliberate, confident counter-steering show a faster, steeper lean angle build at the same point in the corner.</p>
+
+        <p>If your session data shows that your lean angle builds slowly at corner entry and you are consistently arriving at your apex later than planned or running slightly wide, the technique to address is almost always turn-in decisiveness, which means more deliberate counter-steering. The fix is not to brake later or carry more speed. It is to commit to the lean faster when you get to your turn-in point.</p>
+
+        <p>Understanding counter-steering is not an advanced concept reserved for track riders. It is the foundation of motorcycle control at speed. Every rider who corners above 15 mph is doing it. The difference between knowing and not knowing is whether you can use it as a tool or whether you are simply hoping the instinct fires correctly every time.</p>
+
+        <p>It always fires correctly until the one time it matters most. Make it a skill, not a habit.</p>
+
+      </article>
+
+      <aside class="article-sidebar">
+        <div class="sidebar-cta">
+          <h4 style="font-family:var(--font-display);font-size:1.4rem;color:var(--white);margin-bottom:0.75rem;line-height:1;">SEE YOUR LEAN DATA.</h4>
+          <p>ThrottleX captures your lean angle in real time on every ride so you can see exactly how your counter-steering inputs translate into corner performance. $9.99 one-time.</p>
+          <a href="https://play.google.com/store/apps/details?id=com.alloy.throttlex" class="btn-primary" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.4.22.85.24 1.27.05l13.1-7.56-2.9-2.9-11.47 10.41zm-1.12-20.7C2.03 3.4 2 3.72 2 4.06v15.88c0 .34.03.67.06.98l.02.1L11.2 12l-9.12-9.02-.02.08zM20.1 9.65l-2.55-1.47-3.18 3.18 3.18 3.18 2.58-1.49c.74-.43.74-1.97-.03-2.4zM4.45.19C4.03 0 3.58.02 3.18.24L14.7 11.76l2.9-2.9L4.45.19z"/></svg>
+            Get ThrottleX Free
+          </a>
+        </div>
+
+        <div class="sidebar-card">
+          <h4>// Related Reading</h4>
+          <ul>
+            <li><a href="what-is-lean-angle-on-a-motorcycle.html">What Is Lean Angle on a Motorcycle and Why Does It Matter?</a></li>
+            <li><a href="how-to-improve-your-cornering-on-a-motorcycle.html">How to Improve Your Cornering on a Motorcycle</a></li>
+            <li><a href="what-is-trail-braking-and-how-do-you-learn-it.html">What Is Trail Braking and How Do You Learn It?</a></li>
+            <li><a href="the-right-way-to-look-through-a-corner-on-a-motorcycle.html">The Right Way to Look Through a Corner</a></li>
+          </ul>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+  <section class="related-section">
+    <div class="container">
+      <span class="section-label">// Keep Reading</span>
+      <h2>MORE FROM THE BLOG</h2>
+      <div class="related-grid">
+        <a href="the-right-way-to-look-through-a-corner-on-a-motorcycle.html" class="related-card">
+          <span class="related-tag">// Riding Skills</span>
+          <h3>The Right Way to Look Through a Corner on a Motorcycle</h3>
+          <p>Where you look is where you go. Here is how to use your vision to ride smoother, faster, and more confidently through every corner.</p>
+          <span class="related-read">Read More →</span>
+        </a>
+        <a href="what-is-lean-angle-on-a-motorcycle.html" class="related-card">
+          <span class="related-tag">// Fundamentals</span>
+          <h3>What Is Lean Angle on a Motorcycle and Why Does It Matter?</h3>
+          <p>Lean angle is the most direct measurement of how hard you are cornering. Here is what it means and why tracking it makes you faster and safer.</p>
+          <span class="related-read">Read More →</span>
+        </a>
+        <a href="how-to-improve-your-cornering-on-a-motorcycle.html" class="related-card">
+          <span class="related-tag">// Riding Skills</span>
+          <h3>How to Improve Your Cornering on a Motorcycle</h3>
+          <p>Cornering is the most technical skill in motorcycling. Here is a complete breakdown of what actually makes riders faster and safer through corners.</p>
+          <span class="related-read">Read More →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">THROTTLE<span>X</span></div>
+        <div class="footer-links">
+          <a href="../index.html#features">Features</a>
+          <a href="../index.html#pricing">Pricing</a>
+          <a href="../blog.html">Blog</a>
+          <a href="../privacy.html">Privacy Policy</a>
+        </div>
+        <div class="footer-copy">© 2026 ThrottleX · Hand-coded by a Solo Rider.</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
