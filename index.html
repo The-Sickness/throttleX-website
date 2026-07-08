@@ -186,6 +186,69 @@
     .footer-social a:hover { color: #e8001e; }
     .footer-social svg { width: 18px; height: 18px; display: block; }
 
+    /* iOS WAITLIST */
+    .ios-waitlist {
+      padding: 5rem 0;
+      background: var(--dark);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .ios-waitlist-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+    .ios-waitlist-text { max-width: 520px; }
+    .ios-waitlist-heading {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: 0.75rem;
+    }
+    .ios-waitlist-heading span { color: var(--text-dimmer); }
+    .ios-waitlist-body {
+      font-size: 0.95rem;
+      color: var(--text-dim);
+      line-height: 1.7;
+      margin: 0;
+    }
+    .ios-waitlist-action {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+    .ios-notify-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: var(--text);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.85rem 1.75rem;
+      border: 1px solid rgba(255,255,255,0.15);
+      transition: border-color 0.2s, color 0.2s;
+      white-space: nowrap;
+    }
+    .ios-notify-btn:hover { border-color: rgba(255,255,255,0.35); color: var(--white); }
+    .ios-notify-sub {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-dimmer);
+    }
+    @media(max-width:768px){
+      .ios-waitlist-inner { flex-direction: column; }
+      .ios-notify-btn { width: 100%; justify-content: center; }
+    }
+
     /* CRASH DETECTION DOUBLE SCREEN */
     .feature-row-screen--crash {
       display: flex;
@@ -1029,6 +1092,26 @@
         <div class="pricing-visual-caption">Apex Hunter · One of 7 Pro layouts included in your $9.99 purchase</div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- iOS WAITLIST -->
+  <section class="ios-waitlist">
+    <div class="container">
+      <div class="ios-waitlist-inner">
+        <div class="ios-waitlist-text">
+          <div class="section-eyebrow">// Coming Soon</div>
+          <h2 class="ios-waitlist-heading">ANDROID ONLY<br/><span>FOR NOW.</span></h2>
+          <p class="ios-waitlist-body">iOS is on the radar. If you want to know the moment ThrottleX hits the App Store, drop your email and we will let you know first.</p>
+        </div>
+        <div class="ios-waitlist-action">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdeX8MvTmsl6aoJc0LqfrGiFz6XhX4z13K0aH3o4TifJ6G6mA/viewform?usp=publish-editor" target="_blank" rel="noopener" class="ios-notify-btn" onclick="gtag('event', 'ios_waitlist_click', {'event_category': 'conversion', 'event_label': 'iOS Waitlist'})">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.134 2 5 5.134 5 9v4l-2 2v1h18v-1l-2-2V9c0-3.866-3.134-7-7-7zm0 20a2 2 0 0 0 2-2H10a2 2 0 0 0 2 2z"/></svg>
+            Notify me when iOS launches
+          </a>
+          <span class="ios-notify-sub">No spam. One email when it ships.</span>
+        </div>
+      </div>
     </div>
   </section>
 
