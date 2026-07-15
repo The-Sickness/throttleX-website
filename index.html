@@ -683,6 +683,183 @@
       </div>
     </div>
 
+
+    <!-- SENSORS: STANDALONE SECTION -->
+    </section>
+
+  <!-- SENSOR TECHNOLOGY -->
+  <section style="background:var(--black);padding:0;" id="sensors">
+
+    <!-- SECTION HEADER -->
+    <div style="padding:7rem 0 4rem;border-top:1px solid var(--border);background:var(--black);">
+      <div class="container">
+        <div class="section-eyebrow">Sensor Technology</div>
+        <h2 class="section-title">THE DATA IS REAL.<br/><span>HERE IS WHY.</span></h2>
+        <p class="section-desc" style="max-width:700px;">Most apps call themselves telemetry. ThrottleX actually is. The difference is in the hardware it reads, the signal processing stack it runs on top of that hardware, and the diagnostic tools it gives you to verify everything is working before you twist the throttle. Here is the full picture.</p>
+      </div>
+    </div>
+
+    <!-- CREDIBILITY STATEMENT -->
+    <div style="background:var(--dark);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:4rem 0;">
+      <div class="container">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;">
+          <div>
+            <div class="showcase-eyebrow">The Hardware</div>
+            <h3 class="showcase-title" style="font-size:clamp(1.6rem,3vw,2.4rem);margin-bottom:1rem;">Your phone contains a legitimate inertial measurement unit.</h3>
+            <p style="font-size:0.95rem;color:var(--text-dim);line-height:1.8;margin-bottom:1rem;">The IMU inside a modern Android phone is not a toy sensor. It is a 6-axis inertial measurement unit combining a 3-axis accelerometer and a 3-axis gyroscope on a single chip. The same class of sensor technology is used in automotive stability control systems, drone flight controllers, and aerospace navigation equipment.</p>
+            <p style="font-size:0.95rem;color:var(--text-dim);line-height:1.8;">ThrottleX reads all six axes simultaneously at the highest rate your hardware supports, fuses them through a custom sensor fusion pipeline, and delivers lean angle and G-force data with a precision that no dedicated motorcycle GPS unit at any price point currently matches.</p>
+          </div>
+          <div>
+            <div class="showcase-eyebrow">The Skeptic Question</div>
+            <h3 class="showcase-title" style="font-size:clamp(1.6rem,3vw,2.4rem);margin-bottom:1rem;">Is a phone app actually accurate enough to trust?</h3>
+            <p style="font-size:0.95rem;color:var(--text-dim);line-height:1.8;margin-bottom:1rem;">Peer-reviewed research comparing modern smartphone accelerometers to a Vicon MX motion capture system, the gold standard in motion measurement, found no statistically significant difference in accuracy. The hardware is capable.</p>
+            <p style="font-size:0.95rem;color:var(--text-dim);line-height:1.8;">What separates a legitimate telemetry app from a gimmick is not the hardware. It is whether the software knows how to handle engine vibration, sensor noise, inconsistent OS polling rates, and the physics of a leaned two-wheeled vehicle. ThrottleX was built specifically to handle all of it.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 1000Hz FEATURE ROW -->
+    <div style="padding:7rem 0;border-bottom:1px solid var(--border);background:var(--black);">
+      <div class="container">
+        <div class="showcase-row">
+          <div class="showcase-text">
+            <div class="showcase-eyebrow">IMU Sample Rate</div>
+            <h3 class="showcase-title">Up to 1000Hz.<br/><span>On supported hardware.</span></h3>
+            <p style="font-size:0.95rem;color:var(--text-dim);line-height:1.8;margin-bottom:1.5rem;">ThrottleX v5.0.4 introduced raw 6-axis IMU fusion at up to 1000Hz on compatible devices. Previous versions ran at 50Hz. That is a 20x improvement in sensor update rate on the right hardware. Here is what that means for your specific phone:</p>
+            <div style="display:flex;flex-direction:column;gap:0;border:1px solid var(--border);margin-bottom:1.5rem;">
+              <div style="display:grid;grid-template-columns:140px 1fr;border-bottom:1px solid var(--border);">
+                <div style="padding:1rem 1.25rem;border-right:1px solid var(--border);background:var(--dark2);">
+                  <div style="font-family:var(--font-display);font-size:1.1rem;color:var(--text-dimmer);line-height:1;">Budget</div>
+                  <div style="font-family:var(--font-cond);font-size:0.7rem;letter-spacing:0.1em;color:var(--text-dimmer);margin-top:0.2rem;">Unknown IMU chips</div>
+                </div>
+                <div style="padding:1rem 1.25rem;background:var(--dark2);">
+                  <div style="font-family:var(--font-display);font-size:1.3rem;color:var(--text-dim);line-height:1;">100 to 200Hz</div>
+                  <div style="font-size:0.8rem;color:var(--text-dimmer);margin-top:0.3rem;">Physical limit of the chip regardless of what software requests</div>
+                </div>
+              </div>
+              <div style="display:grid;grid-template-columns:140px 1fr;border-bottom:1px solid var(--border);">
+                <div style="padding:1rem 1.25rem;border-right:1px solid var(--border);background:var(--dark3);">
+                  <div style="font-family:var(--font-display);font-size:1.1rem;color:var(--text-dim);line-height:1;">Mid-Range</div>
+                  <div style="font-family:var(--font-cond);font-size:0.7rem;letter-spacing:0.1em;color:var(--text-dimmer);margin-top:0.2rem;">Bosch or TDK InvenSense</div>
+                </div>
+                <div style="padding:1rem 1.25rem;background:var(--dark3);">
+                  <div style="font-family:var(--font-display);font-size:1.3rem;color:var(--text-dim);line-height:1;">200 to 400Hz</div>
+                  <div style="font-size:0.8rem;color:var(--text-dimmer);margin-top:0.3rem;">Dramatically better than the old 50Hz. Smooth lean angle and responsive G-force.</div>
+                </div>
+              </div>
+              <div style="display:grid;grid-template-columns:140px 1fr;">
+                <div style="padding:1rem 1.25rem;border-right:1px solid var(--border-red);background:var(--dark3);">
+                  <div style="font-family:var(--font-display);font-size:1.1rem;color:var(--white);line-height:1;">Flagship</div>
+                  <div style="font-family:var(--font-cond);font-size:0.7rem;letter-spacing:0.1em;color:var(--red);margin-top:0.2rem;">Snapdragon 8 Gen 2 or newer</div>
+                </div>
+                <div style="padding:1rem 1.25rem;background:var(--dark3);border:1px solid var(--border-red);border-left:none;">
+                  <div style="font-family:var(--font-display);font-size:1.3rem;color:var(--red);line-height:1;">Up to 1000Hz</div>
+                  <div style="font-size:0.8rem;color:var(--text-dim);margin-top:0.3rem;">Galaxy S24 and S25, Pixel 8 and 9, OnePlus 12 and 13. Confirmed.</div>
+                </div>
+              </div>
+            </div>
+            <p style="font-size:0.85rem;color:var(--text-dimmer);line-height:1.7;">Android 12 or newer is recommended for consistent high-frequency delivery. The Telemetry Health screen shows your actual IMU rate in real time so you always know exactly what your hardware is delivering.</p>
+          </div>
+          <div class="showcase-screens showcase-screens--portrait">
+            <img src="images/screen-sensor-health.webp" alt="ThrottleX Telemetry Health showing 1000Hz IMU performance and 100 health score" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- KALMAN FILTER -->
+    <div style="padding:7rem 0;border-bottom:1px solid var(--border);background:var(--dark);">
+      <div class="container">
+        <div class="showcase-row showcase-row--flip">
+          <div class="showcase-text">
+            <div class="showcase-eyebrow">Signal Processing</div>
+            <h3 class="showcase-title">The Kalman filter.<br/><span>What it actually does.</span></h3>
+            <p style="font-size:0.95rem;color:var(--text-dim);line-height:1.8;margin-bottom:1.25rem;">A motorcycle engine produces vibration at 80 to 200Hz depending on RPM. Without filtering, that vibration hits the phone's IMU and corrupts the lean angle signal. The raw output looks like the bike is vibrating 20 degrees left and right in a straight line. That is not data. That is noise.</p>
+            <p style="font-size:0.95rem;color:var(--text-dim);line-height:1.8;margin-bottom:1.25rem;">ThrottleX runs a custom Kalman filter on the raw sensor stream. A Kalman filter is a recursive algorithm that maintains a physics-based model of how the system should behave and uses that model to separate real signal from noise. It is the same class of algorithm used in aircraft navigation and autonomous vehicle guidance.</p>
+            <p style="font-size:0.95rem;color:var(--text-dim);line-height:1.8;margin-bottom:1.5rem;">In practice it means your lean angle display shows what the bike is actually doing, not what the engine vibration looks like. The G-force trace responds to real cornering forces, not road buzz. The result is data you can trust and act on.</p>
+            <ul class="showcase-list">
+              <li>Removes engine vibration from the sensor stream before processing</li>
+              <li>Maintains a physics model of motorcycle motion for reference</li>
+              <li>Runs continuously at the full sensor sample rate</li>
+              <li>Adapts in real time as riding conditions change</li>
+              <li>Same algorithm class used in aerospace navigation systems</li>
+            </ul>
+          </div>
+          <div class="showcase-screens showcase-screens--landscape">
+            <img src="images/screen-road.webp" alt="ThrottleX Road Mode Dashboard showing clean filtered lean angle data" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SENSOR TOOLS GRID -->
+    <div style="padding:7rem 0;border-bottom:1px solid var(--border);background:var(--black);">
+      <div class="container">
+        <div class="showcase-eyebrow" style="text-align:center;">Sensor Tools</div>
+        <h3 class="showcase-title" style="text-align:center;margin-bottom:0.75rem;">Four tools to understand and verify your data.</h3>
+        <p style="text-align:center;max-width:620px;margin:0 auto 3rem;font-size:0.95rem;color:var(--text-dim);line-height:1.7;">ThrottleX does not ask you to trust a number on a screen. It gives you the tools to verify what the sensors are measuring and calibrate them to your specific bike and mount position.</p>
+        <div class="showcase-sensors-grid">
+          <div class="showcase-sensor-card">
+            <img src="images/screen-sensor-health.webp" alt="ThrottleX Telemetry Health Diagnostics" loading="lazy" />
+            <div class="showcase-sensor-info">
+              <h4>Telemetry Health</h4>
+              <p>A real-time diagnostic score from 0 to 100 showing your IMU update rate, sensor accuracy classification, and GPS quality. Know exactly what your hardware is delivering before you start riding. If something is wrong, this screen tells you before your data does.</p>
+            </div>
+          </div>
+          <div class="showcase-sensor-card">
+            <img src="images/screen-calibration.webp" alt="ThrottleX Sensor Calibration" loading="lazy" />
+            <div class="showcase-sensor-info">
+              <h4>Lean Angle Calibration</h4>
+              <p>No two phone mounts are identical. ThrottleX zeros the lean angle sensor to your specific mounting position so the displayed angle matches what the bike is actually doing. Sit upright, hold to calibrate, done. Auto-calibrate detects when the bike is stationary and prompts you automatically.</p>
+            </div>
+          </div>
+          <div class="showcase-sensor-card">
+            <img src="images/screen-leandistribution.webp" alt="ThrottleX Lean Distribution Histogram" loading="lazy" />
+            <div class="showcase-sensor-info">
+              <h4>Lean Distribution Histogram</h4>
+              <p>A real-time statistical breakdown of where you are spending your lean angle budget. Updated continuously through the session. Shows what percentage of ride time you spent at each lean angle bracket and instantly reveals which side you are holding back on. This is not a post-ride analysis. It is live.</p>
+            </div>
+          </div>
+          <div class="showcase-sensor-card">
+            <img src="images/screen-crashdetection.webp" alt="ThrottleX G-G Traction Diagram" loading="lazy" />
+            <div class="showcase-sensor-info">
+              <h4>G-G Traction Diagram</h4>
+              <p>A live friction circle that plots your lateral and longitudinal G-force simultaneously. Shows exactly how close you are to the outer boundary of your tire's traction budget in real time. The same visualization used in professional motorsport data analysis, running on your phone, included in your $9.99 purchase.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SPEC STRIP -->
+    <div style="background:var(--dark);border-bottom:1px solid var(--border);padding:4rem 0;">
+      <div class="container">
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.5px;background:var(--border);">
+          <div style="background:var(--dark2);padding:2rem 1.5rem;">
+            <div style="font-family:var(--font-display);font-size:2.5rem;color:var(--white);line-height:1;margin-bottom:0.4rem;">1000<span style="font-size:1.4rem;">Hz</span></div>
+            <div style="font-family:var(--font-cond);font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-dimmer);line-height:1.4;">Max IMU sample rate on supported flagship hardware</div>
+          </div>
+          <div style="background:var(--dark2);padding:2rem 1.5rem;">
+            <div style="font-family:var(--font-display);font-size:2.5rem;color:var(--white);line-height:1;margin-bottom:0.4rem;">6-Axis</div>
+            <div style="font-family:var(--font-cond);font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-dimmer);line-height:1.4;">Full accelerometer and gyroscope fusion across all axes</div>
+          </div>
+          <div style="background:var(--dark2);padding:2rem 1.5rem;">
+            <div style="font-family:var(--font-display);font-size:2.5rem;color:var(--white);line-height:1;margin-bottom:0.4rem;">±0.5°</div>
+            <div style="font-family:var(--font-cond);font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-dimmer);line-height:1.4;">Lean angle accuracy with solid mount and calibration</div>
+          </div>
+          <div style="background:var(--dark2);padding:2rem 1.5rem;">
+            <div style="font-family:var(--font-display);font-size:2.5rem;color:var(--white);line-height:1;margin-bottom:0.4rem;">Kalman</div>
+            <div style="font-family:var(--font-cond);font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-dimmer);line-height:1.4;">Custom filter removes engine vibration from every sensor reading</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- RESUME FEATURES SHOWCASE -->
+  <section class="showcase" style="padding:0;">
+
+
     <!-- 3. RIDE HISTORY -->
     <div class="showcase-section" id="feat-history">
       <div class="container">
@@ -824,44 +1001,6 @@
     </div>
 
     <!-- 8. SENSORS AND ANALYTICS -->
-    <div class="showcase-section" id="feat-sensors">
-      <div class="container">
-        <div class="showcase-eyebrow" style="text-align:center;">Sensors and Analytics</div>
-        <h3 class="showcase-title" style="text-align:center;margin-bottom:0.75rem;">Professional tools. Phone-based precision.</h3>
-        <p style="text-align:center;max-width:600px;margin:0 auto 3rem;font-size:0.95rem;color:var(--text-dim);line-height:1.7;">ThrottleX uses a custom Kalman filter to remove engine vibration noise from the sensor stream. Then it gives you four dedicated tools to understand and calibrate exactly what you are measuring.</p>
-        <div class="showcase-sensors-grid">
-          <div class="showcase-sensor-card">
-            <img src="images/screen-calibration.webp" alt="ThrottleX Sensor Calibration" loading="lazy" />
-            <div class="showcase-sensor-info">
-              <h4>Sensor Calibration</h4>
-              <p>Sit upright on the bike and hold to calibrate. ThrottleX zeros the lean angle sensor to your specific phone mount position. Auto-calibrate detects when the bike is stopped and ready.</p>
-            </div>
-          </div>
-          <div class="showcase-sensor-card">
-            <img src="images/screen-leandistribution.webp" alt="ThrottleX Lean Distribution" loading="lazy" />
-            <div class="showcase-sensor-info">
-              <h4>Lean Distribution Histogram</h4>
-              <p>A real-time statistical breakdown of your cornering habits. Tracks the percentage of ride time spent at each lean angle bracket. Identifies which side you favor and helps you aim for symmetry.</p>
-            </div>
-          </div>
-          <div class="showcase-sensor-card">
-            <img src="images/screen-sensor-health.webp" alt="ThrottleX Telemetry Health Diagnostics showing 1000Hz IMU performance" loading="lazy" />
-            <div class="showcase-sensor-info">
-              <h4>Telemetry Health</h4>
-              <p>Real-time diagnostics showing your IMU performance, sensor accuracy, and GPS quality. Flagship phones with Snapdragon 8 Gen 2 or newer can hit 1000Hz. Most phones deliver 200 to 500Hz. All of it faster than any competitor.</p>
-            </div>
-          </div>
-          <div class="showcase-sensor-card">
-            <img src="images/ui-apex-hunter.webp" alt="ThrottleX Apex Hunter Dashboard Layout" loading="lazy" />
-            <div class="showcase-sensor-info">
-              <h4>Apex Hunter Layout</h4>
-              <p>Live G-G friction circle with a moving dot tracking your real-time traction budget. Braking G, lateral G, lap timer, and speed all at once. The data rider's dashboard.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!-- 9. GARAGE -->
     <div class="showcase-section showcase-section--alt" id="feat-garage">
       <div class="container">
