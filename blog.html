@@ -39,6 +39,17 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem
 .nav-links a:hover { color: #fff; }
 .nav-cta { background: var(--red); color: #fff !important; padding: 0.5rem 1.25rem; font-weight: 700; }
 .nav-cta:hover { background: #c0001a !important; }
+.nav-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+.nav-hamburger span { display: block; width: 24px; height: 2px; background: #e8e8ec; }
+.nav-mobile { display: none; flex-direction: column; padding: 1rem 2rem 1.5rem; gap: 1rem; border-top: 1px solid rgba(255,255,255,0.07); background: rgba(5,5,7,0.97); position: fixed; top: 64px; left: 0; right: 0; z-index: 99; }
+.nav-mobile a { font-family: var(--font-cond); font-size: 1.1rem; letter-spacing: 0.1em; text-transform: uppercase; color: #7a7a88; }
+.nav-mobile.open { display: flex; }
+html { overflow-x: hidden; max-width: 100%; }
+@media(max-width:768px){
+  .nav-links { display: none; }
+  .nav-hamburger { display: flex; }
+  .posts-grid { grid-template-columns: 1fr !important; }
+}
 /* HERO */
 .blog-hero { padding: 10rem 0 5rem; border-bottom: 1px solid var(--border); position: relative; overflow: hidden; }
 .blog-hero::before { content: 'BLOG'; position: absolute; right: -2rem; top: 50%; transform: translateY(-50%); font-family: var(--font-display); font-size: 20rem; color: rgba(255,255,255,0.015); line-height: 1; pointer-events: none; }
@@ -89,7 +100,20 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
 <a href="index.html#contact">Contact</a>
 <a href="https://play.google.com/store/apps/details?id=com.alloy.throttlex" target="_blank" class="nav-cta">Get the App</a>
 </div>
+<button class="nav-hamburger" id="hamburger" aria-label="Menu" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
+<span></span><span></span><span></span>
+</button>
 </nav>
+<div class="nav-mobile" id="mobileMenu">
+<a href="index.html#video" onclick="document.getElementById('mobileMenu').classList.remove('open')">Video</a>
+<a href="index.html#reviews" onclick="document.getElementById('mobileMenu').classList.remove('open')">Reviews</a>
+<a href="index.html#modes" onclick="document.getElementById('mobileMenu').classList.remove('open')">Modes</a>
+<a href="index.html#features" onclick="document.getElementById('mobileMenu').classList.remove('open')">Features</a>
+<a href="index.html#pricing" onclick="document.getElementById('mobileMenu').classList.remove('open')">Pricing</a>
+<a href="blog.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">Blog</a>
+<a href="index.html#contact" onclick="document.getElementById('mobileMenu').classList.remove('open')">Contact</a>
+<a href="https://play.google.com/store/apps/details?id=com.alloy.throttlex" target="_blank">Get the App</a>
+</div>
 
 <section class="blog-hero">
 <div class="container">
