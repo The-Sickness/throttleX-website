@@ -83,7 +83,13 @@
     .nav-links a { font-family: var(--font-cond); font-weight: 500; font-size: 0.9rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); transition: color 0.2s; }
     .nav-links a:hover { color: var(--white); }
     .nav-cta { background: var(--red) !important; color: #fff !important; padding: 0.5rem 1.2rem; clip-path: polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,8px 100%,0 calc(100% - 8px)); }
-    @media(max-width:768px){ .nav-links { display: none; } }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav-hamburger span { display: block; width: 24px; height: 2px; background: #e8e8ec; }
+    .nav-mobile-blog { display: none; flex-direction: column; padding: 1rem 2rem 1.5rem; gap: 1rem; border-top: 1px solid rgba(255,255,255,0.07); background: rgba(5,5,7,0.97); position: fixed; top: 64px; left: 0; right: 0; z-index: 99; }
+    .nav-mobile-blog a { font-family: var(--font-cond); font-size: 1.1rem; letter-spacing: 0.1em; text-transform: uppercase; color: #7a7a88; }
+    .nav-mobile-blog.open { display: flex; }
+    html { overflow-x: hidden; max-width: 100%; }
+    @media(max-width:768px){ .nav-links { display: none; } .nav-hamburger { display: flex; } }
 
     .article-hero { padding: 120px 0 60px; background: var(--dark); border-bottom: 1px solid var(--border); }
     .article-hero .container { max-width: 860px; }
@@ -163,8 +169,17 @@
         <li><a href="../blog.html">Blog</a></li>
         <li><a href="https://play.google.com/store/apps/details?id=com.alloy.throttlex" class="nav-cta" target="_blank" rel="noopener">Get the App</a></li>
       </ul>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu" onclick="document.getElementById('blogMobileMenu').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
+  <div class="nav-mobile-blog" id="blogMobileMenu">
+    <a href="../index.html#features" onclick="document.getElementById('blogMobileMenu').classList.remove('open')">Features</a>
+    <a href="../index.html#pricing" onclick="document.getElementById('blogMobileMenu').classList.remove('open')">Pricing</a>
+    <a href="../blog.html" onclick="document.getElementById('blogMobileMenu').classList.remove('open')">Blog</a>
+    <a href="https://play.google.com/store/apps/details?id=com.alloy.throttlex" target="_blank" rel="noopener">Get the App</a>
+  </div>
 
   <section class="article-hero">
     <div class="container">
