@@ -267,6 +267,16 @@
       .ios-notify-btn { width: 100%; justify-content: center; }
     }
 
+    /* GLOBAL MOBILE OVERFLOW FIX */
+    @media(max-width:768px){
+      .sensor-hardware-table { grid-template-columns: 1fr !important; }
+      .sensor-spec-strip { grid-template-columns: 1fr 1fr !important; }
+      .credibility-grid { grid-template-columns: 1fr !important; }
+      [style*="grid-template-columns: repeat(4"] { grid-template-columns: 1fr 1fr !important; }
+      [style*="grid-template-columns: 1fr 1fr"] { grid-template-columns: 1fr !important; }
+      [style*="grid-template-columns: 140px"] { grid-template-columns: 90px 1fr !important; }
+    }
+
     /* CRASH DETECTION DOUBLE SCREEN */
     .feature-row-screen--crash {
       display: flex;
@@ -347,7 +357,7 @@
     }
   </style>
 </head>
-<body>
+<body style="overflow-x:hidden;">
 
   <!-- NAV -->
   <nav class="nav" id="nav">
