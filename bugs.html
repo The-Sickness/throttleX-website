@@ -206,7 +206,7 @@
           </div>
           <div class="form-group">
             <label>Status</label>
-            <select id="new-status">
+            <select id="new-status" onchange="onStatusChange()">
               <option value="investigating">Investigating</option>
               <option value="progress">In Progress</option>
               <option value="fixed">Fixed</option>
@@ -355,9 +355,11 @@
       document.getElementById('admin-panel').style.display = 'none';
     }
 
-    document.getElementById('new-status').addEventListener('change', function() {
-      document.getElementById('fix-ver-row').style.display = (this.value === 'fixed' || this.value === 'closed') ? 'block' : 'none';
-    });
+    function onStatusChange() {
+      const el = document.getElementById('fix-ver-row');
+      const val = document.getElementById('new-status').value;
+      if (el) el.style.display = (val === 'fixed' || val === 'closed') ? 'block' : 'none';
+    }
 
     function showMsg(panel, text, type) {
       const id = panel === 'login' ? 'admin-msg-login' : 'admin-msg';
@@ -376,8 +378,9 @@
       const fix_version = document.getElementById('new-fix-ver').value.trim();
       if (!title || !description) { showMsg('admin', 'Title and description are required.', 'error'); return; }
       const now = new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-      const { error } = await db.from('bugs').insert([{ title, description, version, status, fix_version, reported_date: now }]);
-      if (error) { showMsg('admin', 'Error: ' + error.message, 'error'); return; }
+      const { data, error } = await db.from('bugs').insert([{ title, description, version, status, fix_version, reported_date: now }]).select();
+      console.log('Insert result:', data, error);
+      if (error) { showMsg('admin', 'Error: ' + error.message, 'error'); console.error('Supabase error:', error); return; }
       showMsg('admin', 'Bug report added.', 'success');
       document.getElementById('new-title').value = '';
       document.getElementById('new-desc').value = '';
