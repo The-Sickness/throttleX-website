@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What Is Flick Rate and Why Does It Matter? | ThrottleX Blog</title>
+  <meta name="description" content="Flick Rate measures how fast you transition from upright to full lean. It is one of the most revealing metrics in motorcycle telemetry and one that almost no riders track. Here is what it tells you." />
+  <meta name="keywords" content="flick rate motorcycle, motorcycle turn in speed, lean transition speed motorcycle, motorcycle flick rate telemetry, what is flick rate, motorcycle corner entry speed, ThrottleX flick rate" />
+  <link rel="canonical" href="https://throttlexapp.com/blog/what-is-flick-rate-and-why-does-it-matter.html" />
+
+  <meta property="og:title" content="What Is Flick Rate and Why Does It Matter?" />
+  <meta property="og:description" content="Flick Rate measures how fast you transition from upright to full lean. It is one of the most revealing metrics in motorcycle telemetry." />
+  <meta property="og:url" content="https://throttlexapp.com/blog/what-is-flick-rate-and-why-does-it-matter.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://throttlexapp.com/images/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="What Is Flick Rate and Why Does It Matter?" />
+  <meta name="twitter:description" content="Flick Rate measures how fast you transition from upright to full lean. Here is what it tells you about your riding." />
+  <meta name="twitter:image" content="https://throttlexapp.com/images/og-image.jpg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What Is Flick Rate and Why Does It Matter?",
+    "description": "Flick Rate measures how fast you transition from upright to full lean. It is one of the most revealing metrics in motorcycle telemetry and one that almost no riders track.",
+    "author": { "@type": "Organization", "name": "ThrottleX" },
+    "publisher": { "@type": "Organization", "name": "ThrottleX", "url": "https://throttlexapp.com" },
+    "datePublished": "2026-07-28",
+    "url": "https://throttlexapp.com/blog/what-is-flick-rate-and-why-does-it-matter.html"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="../images/favicon.png" />
+
+  <script type="text/javascript">
+    window.addEventListener('load', function() {
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "ws11p9jp3h");
+    });
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.addEventListener('load', function() {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-8PRHNYKLWZ';
+      s.onload = function() { gtag('js', new Date()); gtag('config', 'G-8PRHNYKLWZ'); };
+      document.head.appendChild(s);
+    });
+  </script>
+
+  <style>
+    :root {
+      --red: #e8001e; --red-glow: rgba(232,0,30,0.15);
+      --black: #050507; --dark: #0d0d10; --dark2: #121215; --dark3: #1a1a1f;
+      --border: rgba(255,255,255,0.07); --border-red: rgba(232,0,30,0.3);
+      --text: #e8e8ec; --text-dim: #7a7a88; --text-dimmer: #4a4a55;
+      --font-display: 'Bebas Neue', sans-serif;
+      --font-cond: 'Barlow Condensed', sans-serif;
+      --font-body: 'Barlow', sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--black); color: var(--text); font-family: var(--font-body); font-weight: 300; line-height: 1.6; overflow-x: hidden; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; background: rgba(5,5,7,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-logo { font-family: var(--font-display); font-size: 1.6rem; color: #fff; }
+    .nav-logo span { color: var(--red); }
+    .nav-links { display: flex; gap: 2rem; align-items: center; }
+    .nav-links a { font-family: var(--font-cond); font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim); transition: color 0.2s; }
+    .nav-links a:hover { color: #fff; }
+    .nav-cta { background: var(--red); color: #fff !important; padding: 0.5rem 1.25rem; font-weight: 700; }
+    @media(max-width:900px){ .nav-links { display: none; } }
+    .article-header { padding: 9rem 0 4rem; border-bottom: 1px solid var(--border); }
+    .breadcrumb { font-family: var(--font-cond); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-dimmer); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .breadcrumb a:hover { color: var(--red); }
+    .article-tag { font-family: var(--font-cond); font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--red); display: block; margin-bottom: 1rem; }
+    .article-header h1 { font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 5rem); line-height: 0.95; color: #fff; margin-bottom: 1.5rem; max-width: 820px; }
+    .article-meta { display: flex; gap: 2rem; flex-wrap: wrap; }
+    .meta-item { font-family: var(--font-cond); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dimmer); }
+    .meta-item strong { color: var(--text-dim); }
+    .article-body { display: grid; grid-template-columns: 1fr 320px; gap: 5rem; padding: 5rem 0; align-items: start; }
+    article h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.8rem); color: #fff; margin: 3rem 0 1.25rem; line-height: 1; }
+    article h3 { font-family: var(--font-cond); font-size: 1.1rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); margin: 2rem 0 0.75rem; }
+    article p { font-size: 0.97rem; color: var(--text-dim); line-height: 1.85; margin-bottom: 1.25rem; }
+    article strong { color: var(--text); font-weight: 600; }
+    article ul { list-style: none; margin: 0.5rem 0 1.5rem; display: flex; flex-direction: column; gap: 0.6rem; }
+    article ul li { font-size: 0.95rem; color: var(--text-dim); line-height: 1.6; display: flex; align-items: flex-start; gap: 0.6rem; }
+    article ul li::before { content: '//'; color: var(--red); font-family: var(--font-cond); font-size: 0.75rem; margin-top: 0.2rem; flex-shrink: 0; }
+    .callout { background: var(--dark2); border-left: 3px solid var(--red); padding: 1.5rem 1.75rem; margin: 2rem 0; }
+    .callout-label { font-family: var(--font-cond); font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--red); display: block; margin-bottom: 0.75rem; }
+    .callout p { margin-bottom: 0; font-size: 0.95rem; }
+    .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; background: var(--border); margin: 2rem 0; }
+    .stat-box { background: var(--dark2); padding: 1.5rem; text-align: center; }
+    .stat-box .num { font-family: var(--font-display); font-size: 2.2rem; color: var(--red); line-height: 1; display: block; }
+    .stat-box .label { font-family: var(--font-cond); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-dimmer); margin-top: 0.4rem; display: block; }
+    .article-sidebar { position: sticky; top: 6rem; }
+    .sidebar-card { background: var(--dark2); border: 1px solid var(--border); padding: 1.75rem; margin-bottom: 1.5rem; }
+    .sidebar-card h4 { font-family: var(--font-cond); font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 1rem; }
+    .sidebar-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .sidebar-card ul li a { font-size: 0.85rem; color: var(--text-dim); display: flex; align-items: flex-start; gap: 0.5rem; line-height: 1.4; transition: color 0.2s; }
+    .sidebar-card ul li a::before { content: '//'; color: var(--red); font-family: var(--font-cond); font-size: 0.7rem; margin-top: 0.15rem; flex-shrink: 0; }
+    .sidebar-card ul li a:hover { color: #fff; }
+    .sidebar-cta { background: var(--dark2); border: 1px solid var(--border-red); padding: 1.75rem; text-align: center; margin-bottom: 1.5rem; }
+    .sidebar-cta h4 { font-family: var(--font-display); font-size: 1.4rem; color: #fff; margin-bottom: 0.75rem; }
+    .sidebar-cta p { font-size: 0.85rem; color: var(--text-dim); margin-bottom: 1.25rem; line-height: 1.6; }
+    .sidebar-cta a { display: block; background: var(--red); color: #fff; font-family: var(--font-cond); font-weight: 700; font-size: 0.9rem; letter-spacing: 0.08em; padding: 0.85rem; transition: background 0.2s; }
+    .sidebar-cta a:hover { background: #c0001a; }
+    .related-section { padding: 5rem 0; border-top: 1px solid var(--border); }
+    .section-label { font-family: var(--font-cond); font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--red); margin-bottom: 0.75rem; display: block; }
+    .related-section h2 { font-family: var(--font-display); font-size: 2.5rem; color: #fff; margin-bottom: 2.5rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+    .related-card { background: var(--dark2); border: 1px solid var(--border); padding: 1.75rem; transition: border-color 0.2s; display: block; }
+    .related-card:hover { border-color: var(--border-red); }
+    .related-card-tag { font-family: var(--font-cond); font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 0.6rem; display: block; }
+    .related-card h3 { font-family: var(--font-cond); font-weight: 700; font-size: 1.1rem; color: #fff; margin-bottom: 0.5rem; line-height: 1.3; }
+    .related-card p { font-size: 0.85rem; color: var(--text-dim); line-height: 1.6; }
+    footer { padding: 2.5rem 0; border-top: 1px solid var(--border); }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-logo { font-family: var(--font-display); font-size: 1.2rem; }
+    .footer-logo span { color: var(--red); }
+    .footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    .footer-links a { font-family: var(--font-cond); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dimmer); transition: color 0.2s; }
+    .footer-links a:hover { color: var(--red); }
+    .footer-copy { font-size: 0.78rem; color: var(--text-dimmer); }
+    @media(max-width:900px){ .article-body { grid-template-columns: 1fr; gap: 3rem; } .article-sidebar { position: static; } .stat-row { grid-template-columns: 1fr 1fr; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="../index.html" class="nav-logo">THROTTLE<span>X</span></a>
+    <div class="nav-links">
+      <a href="../index.html#video">Video</a>
+      <a href="../index.html#features">Features</a>
+      <a href="../index.html#pricing">Pricing</a>
+      <a href="../blog.html">Blog</a>
+      <a href="../bugs.html">Bug Tracker</a>
+      <a href="https://play.google.com/store/apps/details?id=com.alloy.throttlex" target="_blank" class="nav-cta">Get the App</a>
+    </div>
+  </nav>
+
+  <header class="article-header">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <span>//</span>
+        <a href="../blog.html">Blog</a>
+        <span>//</span>
+        <span>Data and Telemetry</span>
+      </div>
+      <span class="article-tag">// Data and Telemetry</span>
+      <h1>What Is Flick Rate and Why Does It Matter?</h1>
+      <div class="article-meta">
+        <span class="meta-item">By <strong>ThrottleX Team</strong></span>
+        <span class="meta-item">Published <strong>July 28, 2026</strong></span>
+        <span class="meta-item">Read time <strong>8 min</strong></span>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="article-body">
+      <article>
+
+        <p>Every rider has a feel for how they enter corners. Some riders tip in fast and decisively. Others ease into the lean gradually, testing the grip before committing. That difference in turn-in speed has a name, a number, and a meaning that goes deeper than most riders realize. It is called Flick Rate and it is one of the most revealing metrics in motorcycle telemetry.</p>
+
+        <p>Most riders have never heard of it. That is because almost no app measures it. ThrottleX does. Here is what it is, how it is calculated, what it tells you, and why it matters more than lean angle alone for understanding your riding development.</p>
+
+        <h2 id="what-is-flick-rate">WHAT IS FLICK RATE?</h2>
+
+        <p>Flick Rate is the speed of your lean angle transition measured in degrees per second. Specifically it measures how quickly your bike moves from its upright position into the initial lean phase of a corner entry. A Flick Rate of 40 degrees per second means the bike is transitioning from vertical to 40 degrees of lean in one second. A Flick Rate of 20 degrees per second means the same transition takes twice as long.</p>
+
+        <p>ThrottleX calculates this separately for left and right corners, which is where the metric gets genuinely interesting. Most riders have a meaningfully different Flick Rate on each side of the bike, and that difference reveals something about their confidence and technique that lean angle data alone cannot show.</p>
+
+        <div class="callout">
+          <span class="callout-label">// The Key Point</span>
+          <p>Flick Rate measures the decisiveness of your turn-in. It is not just how far you lean but how quickly you commit to the lean. Two riders can reach the same peak lean angle in the same corner at the same speed but arrive there with very different Flick Rates. The difference is technique and confidence, not pace.</p>
+        </div>
+
+        <h2 id="what-it-reveals">WHAT FLICK RATE ACTUALLY REVEALS</h2>
+
+        <h3>Confidence, not just speed</h3>
+        <p>A rider who trusts the grip will initiate the lean decisively. The turn-in is a single committed movement that tips the bike quickly to the required angle. A rider who is uncertain about the grip, the corner radius, or their own position will hesitate at the turn-in point. They may reach the same lean angle eventually but they get there slowly, testing the water rather than committing to it.</p>
+
+        <p>This hesitation almost always goes unnoticed by feel alone. The rider thinks they are cornering well because they end up at a reasonable lean angle. The data tells a different story. A low Flick Rate is the data signature of a rider who is not trusting the process even when the outcome looks acceptable.</p>
+
+        <h3>Left and right asymmetry</h3>
+        <p>This is where Flick Rate becomes particularly useful. A rider might show similar peak lean angles on both sides but a Flick Rate that is 30 to 40 percent lower on their weak side. The lean angle data suggests relatively symmetrical riding. The Flick Rate data reveals that on the weak side the rider is hesitating significantly before committing, arriving at the same angle via a longer, slower, less confident path.</p>
+
+        <p>Addressing that hesitation is a different job than addressing a lean angle deficit. If a rider simply does not lean deep enough on their weak side, the focus is on building confidence to go further. If a rider reaches the same lean angle but takes twice as long to get there, the focus is on the decisiveness of the initial turn-in movement, not on the lean angle itself.</p>
+
+        <div class="stat-row">
+          <div class="stat-box">
+            <span class="num">44°/s</span>
+            <span class="label">Strong Side Flick Rate</span>
+          </div>
+          <div class="stat-box">
+            <span class="num">29°/s</span>
+            <span class="label">Weak Side Flick Rate</span>
+          </div>
+          <div class="stat-box">
+            <span class="num">34%</span>
+            <span class="label">Asymmetry Gap</span>
+          </div>
+        </div>
+
+        <h3>Tire profile interaction</h3>
+        <p>Flick Rate is also affected by your tire choice, which is why ThrottleX calibrates the metric based on the tire you select in the Tire Picker. A sharply profiled sport tire like the Pirelli Supercorsa will naturally produce a higher Flick Rate for the same rider input than a rounded touring tire, because the contact patch geometry assists the lean transition. ThrottleX accounts for this so that your Flick Rate scores are meaningful comparisons even if you switch between tire types between sessions.</p>
+
+        <h2 id="how-it-connects">HOW FLICK RATE CONNECTS TO OTHER METRICS</h2>
+
+        <h3>Flick Rate and lean angle together</h3>
+        <p>The most useful analysis combines Flick Rate with lean angle. Four combinations tell four different stories:</p>
+
+        <ul>
+          <li><strong>High Flick Rate, high lean angle.</strong> Decisive turn-in and deep commitment. This is the target combination for track riding and confident street riding on familiar roads.</li>
+          <li><strong>High Flick Rate, low lean angle.</strong> Fast turn-in but conservative lean depth. The rider is committing quickly but not exploring the available grip. The decisiveness is there but the range of motion is not.</li>
+          <li><strong>Low Flick Rate, high lean angle.</strong> Slow turn-in but eventually reaching good lean depth. The rider is getting there but via a hesitant, testing approach rather than a committed one. This is common in developing riders who have learned to lean deeper but have not yet internalized the trust required to do it decisively.</li>
+          <li><strong>Low Flick Rate, low lean angle.</strong> Conservative across the board. Plenty of development available in both dimensions.</li>
+        </ul>
+
+        <h3>Flick Rate and smoothness</h3>
+        <p>A very high Flick Rate combined with a low smoothness score can indicate abrupt, jerky turn-in rather than decisive committed lean. The goal is not maximum Flick Rate at any cost. It is a Flick Rate that reflects confident, deliberate commitment to the lean with a single clean steering input rather than a violent flick followed by corrections. The smoothness score catches the difference.</p>
+
+        <h3>Flick Rate and Entry Bite</h3>
+        <p>Entry Bite measures the G-load carried into the initial lean phase. A rider with a high Flick Rate and a meaningful Entry Bite score is doing something close to trail braking correctly, committing to the lean quickly while still managing some braking force through the turn-in. That combination is the technical signature of a skilled corner entry. Watching both metrics develop together over time shows real technique progression in a way that feel alone cannot document.</p>
+
+        <h2 id="how-to-improve">HOW TO IMPROVE YOUR FLICK RATE</h2>
+
+        <h3>On your weak side specifically</h3>
+        <p>The most common use for Flick Rate data is identifying and closing the gap between your strong and weak side turn-in speed. If your right side Flick Rate is significantly lower than your left, the technical focus is on the initiation of the turn-in movement on right-hand corners rather than on lean angle depth.</p>
+
+        <p>The practical approach is to make the turn-in a deliberate, single movement rather than a gradual easing into the lean. Look through the corner early. At your turn-in point, weight the outside peg, push the inside bar, and commit to the lean in one motion rather than testing slowly. The grip will be there. Trust is the limiting factor, not the tire.</p>
+
+        <h3>Use the Voice Coach as a trigger</h3>
+        <p>ThrottleX's Voice Coach alerts you through your Bluetooth headset when you reach your defined lean threshold. Setting that threshold to trigger slightly earlier than your current weak-side average gives you an auditory confirmation that you reached the target. Hearing the coach fire on the weak side reinforces the behavior faster than reviewing data after the session alone.</p>
+
+        <h3>Track days are the fastest way to build it</h3>
+        <p>Flick Rate develops fastest in a controlled environment where you can repeat the same corner dozens of times. Each lap of a track session on a specific corner gives you another repetition of the turn-in movement. By the end of a day the pattern starts to embed. Your Flick Rate data across the day will show you whether it is actually moving or whether you are going through the motions without real change happening.</p>
+
+        <div class="callout">
+          <span class="callout-label">// Track Your Flick Rate</span>
+          <p>ThrottleX Pro measures Flick Rate separately for left and right corners after every session. Compare your sides, track the gap closing over time, and watch the metric respond as your technique develops. One-time $9.99 on Google Play with a free trial of 3 days or 3 sessions.</p>
+        </div>
+
+        <h2 id="bottom-line">THE BOTTOM LINE</h2>
+
+        <p>Flick Rate is the metric that reveals confidence. Lean angle tells you how far you went. Flick Rate tells you how you got there. A rider who reaches 40 degrees of lean in a single committed movement is doing something fundamentally different from a rider who arrives at 40 degrees after a two-second testing process, even though the peak number looks the same.</p>
+
+        <p>Track it on both sides. Watch the gap. Work on the weaker side's turn-in decisiveness rather than just its lean angle depth. That is the development conversation Flick Rate makes possible and it is one that no other metric in the app can start on its own.</p>
+
+      </article>
+
+      <aside class="article-sidebar">
+        <div class="sidebar-card">
+          <h4>// In This Article</h4>
+          <ul>
+            <li><a href="#what-is-flick-rate">What Is Flick Rate?</a></li>
+            <li><a href="#what-it-reveals">What It Actually Reveals</a></li>
+            <li><a href="#how-it-connects">How It Connects to Other Metrics</a></li>
+            <li><a href="#how-to-improve">How to Improve Your Flick Rate</a></li>
+            <li><a href="#bottom-line">The Bottom Line</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-cta">
+          <h4>TRACK YOUR FLICK RATE.</h4>
+          <p>ThrottleX measures Flick Rate for both sides after every session. See your turn-in decisiveness in data.</p>
+          <a href="https://play.google.com/store/apps/details?id=com.alloy.throttlex" target="_blank">GET THROTTLEX · $9.99</a>
+        </div>
+        <div class="sidebar-card">
+          <h4>// More From The Blog</h4>
+          <ul>
+            <li><a href="how-to-improve-your-left-and-right-cornering-symmetry.html">How to Improve Cornering Symmetry</a></li>
+            <li><a href="what-is-trail-braking-and-how-do-you-learn-it.html">What Is Trail Braking?</a></li>
+            <li><a href="how-to-read-your-motorcycle-telemetry-data-after-a-ride.html">How to Read Your Telemetry Data</a></li>
+            <li><a href="does-lean-angle-actually-make-you-faster.html">Does Lean Angle Make You Faster?</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <section class="related-section">
+    <div class="container">
+      <span class="section-label">// Keep Reading</span>
+      <h2>MORE FROM THE BLOG</h2>
+      <div class="related-grid">
+        <a href="how-to-improve-your-left-and-right-cornering-symmetry.html" class="related-card">
+          <span class="related-card-tag">// Riding Skills</span>
+          <h3>How to Improve Your Left and Right Cornering Symmetry</h3>
+          <p>Almost every rider leans deeper on one side than the other. Here is why it happens and how to close the gap deliberately using data.</p>
+        </a>
+        <a href="does-lean-angle-actually-make-you-faster.html" class="related-card">
+          <span class="related-card-tag">// Data and Telemetry</span>
+          <h3>Does Lean Angle Actually Make You Faster?</h3>
+          <p>Most riders assume more lean angle equals more speed. The reality is more nuanced and more interesting.</p>
+        </a>
+        <a href="how-to-read-your-motorcycle-telemetry-data-after-a-ride.html" class="related-card">
+          <span class="related-card-tag">// Data and Telemetry</span>
+          <h3>How to Read Your Motorcycle Telemetry Data After a Ride</h3>
+          <p>Collecting data is only half the equation. Here is how to actually read and interpret your ride data so it leads to real improvement.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">THROTTLE<span>X</span></div>
+        <div class="footer-links">
+          <a href="../index.html#features">Features</a>
+          <a href="../index.html#pricing">Pricing</a>
+          <a href="../blog.html">Blog</a>
+          <a href="../privacy.html">Privacy Policy</a>
+        </div>
+        <div class="footer-copy">© 2026 ThrottleX · Hand-coded by a Solo Rider.</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
