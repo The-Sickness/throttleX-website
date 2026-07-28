@@ -35,7 +35,12 @@
     .nav-links a { font-family: var(--font-cond); font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim); transition: color 0.2s; }
     .nav-links a:hover { color: #fff; }
     .nav-cta { background: var(--red); color: #fff !important; padding: 0.5rem 1.25rem; font-weight: 700; }
-    @media(max-width:768px){ .nav-links { display: none; } }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--text); }
+    .nav-mobile { display: none; flex-direction: column; padding: 1rem 2rem 1.5rem; gap: 1rem; border-top: 1px solid var(--border); background: rgba(5,5,7,0.97); }
+    .nav-mobile a { font-family: var(--font-cond); font-size: 1.1rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); }
+    .nav-mobile.open { display: flex; }
+    @media(max-width:768px){ .nav-links { display: none; } .nav-hamburger { display: flex; } }
     .page-header { padding: 8rem 0 3rem; border-bottom: 1px solid var(--border); }
     .page-tag { font-family: var(--font-cond); font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--red); display: block; margin-bottom: 1rem; }
     .page-header h1 { font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 4rem); line-height: 0.95; color: #fff; margin-bottom: 1rem; }
@@ -118,7 +123,18 @@
       <a href="index.html#contact">Contact</a>
       <a href="https://play.google.com/store/apps/details?id=com.alloy.throttlex" target="_blank" class="nav-cta">Get the App</a>
     </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
+  <div class="nav-mobile" id="mobileMenu">
+    <a href="index.html#features" onclick="closeMobile()">Features</a>
+    <a href="index.html#pricing" onclick="closeMobile()">Pricing</a>
+    <a href="blog.html" onclick="closeMobile()">Blog</a>
+    <a href="bugs.html" onclick="closeMobile()">Bug Tracker</a>
+    <a href="index.html#contact" onclick="closeMobile()">Contact</a>
+    <a href="https://play.google.com/store/apps/details?id=com.alloy.throttlex" target="_blank" onclick="closeMobile()">Get the App</a>
+  </div>
 
   <header class="page-header">
     <div class="container">
@@ -416,6 +432,11 @@
     db.auth.onAuthStateChange((event, session) => {
       if (session && adminVisible) showAdminContent(session.user.email);
     });
+
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+    function closeMobile() { mobileMenu.classList.remove('open'); }
 
     loadBugs();
   </script>
