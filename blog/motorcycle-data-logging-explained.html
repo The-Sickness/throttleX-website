@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Motorcycle Data Logging Explained | ThrottleX Blog</title>
+  <meta name="description" content="Motorcycle data logging captures what your bike is doing in real time and stores it for analysis later. Here is a complete plain-English explanation of how it works, what gets logged, and what you can do with it." />
+  <meta name="keywords" content="motorcycle data logging explained, what is motorcycle data logging, motorcycle telemetry logging, motorcycle sensor data, how does motorcycle data logging work, motorcycle black box, motorcycle session logging" />
+  <link rel="canonical" href="https://throttlexapp.com/blog/motorcycle-data-logging-explained.html" />
+
+  <meta property="og:title" content="Motorcycle Data Logging Explained" />
+  <meta property="og:description" content="Motorcycle data logging captures what your bike is doing in real time and stores it for analysis later. Here is a complete plain-English explanation of how it works." />
+  <meta property="og:url" content="https://throttlexapp.com/blog/motorcycle-data-logging-explained.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://throttlexapp.com/images/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Motorcycle Data Logging Explained" />
+  <meta name="twitter:description" content="Motorcycle data logging captures what your bike is doing in real time. Here is a plain-English explanation of how it works and what you can do with it." />
+  <meta name="twitter:image" content="https://throttlexapp.com/images/og-image.jpg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Motorcycle Data Logging Explained",
+    "description": "Motorcycle data logging captures what your bike is doing in real time and stores it for analysis later. Here is a complete plain-English explanation of how it works, what gets logged, and what you can do with it.",
+    "author": { "@type": "Organization", "name": "ThrottleX" },
+    "publisher": { "@type": "Organization", "name": "ThrottleX", "url": "https://throttlexapp.com" },
+    "datePublished": "2026-08-05",
+    "url": "https://throttlexapp.com/blog/motorcycle-data-logging-explained.html"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="../images/favicon.png" />
+
+  <script type="text/javascript">
+    window.addEventListener('load', function() {
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "ws11p9jp3h");
+    });
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.addEventListener('load', function() {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-8PRHNYKLWZ';
+      s.onload = function() { gtag('js', new Date()); gtag('config', 'G-8PRHNYKLWZ'); };
+      document.head.appendChild(s);
+    });
+  </script>
+
+  <style>
+    :root {
+      --red: #e8001e; --red-glow: rgba(232,0,30,0.15);
+      --black: #050507; --dark: #0d0d10; --dark2: #121215; --dark3: #1a1a1f;
+      --border: rgba(255,255,255,0.07); --border-red: rgba(232,0,30,0.3);
+      --text: #e8e8ec; --text-dim: #7a7a88; --text-dimmer: #4a4a55;
+      --font-display: 'Bebas Neue', sans-serif;
+      --font-cond: 'Barlow Condensed', sans-serif;
+      --font-body: 'Barlow', sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--black); color: var(--text); font-family: var(--font-body); font-weight: 300; line-height: 1.6; overflow-x: hidden; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; background: rgba(5,5,7,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-logo { font-family: var(--font-display); font-size: 1.6rem; color: #fff; }
+    .nav-logo span { color: var(--red); }
+    .nav-links { display: flex; gap: 2rem; align-items: center; }
+    .nav-links a { font-family: var(--font-cond); font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim); transition: color 0.2s; }
+    .nav-links a:hover { color: #fff; }
+    .nav-cta { background: var(--red); color: #fff !important; padding: 0.5rem 1.25rem; font-weight: 700; }
+    @media(max-width:900px){ .nav-links { display: none; } }
+    .article-header { padding: 9rem 0 4rem; border-bottom: 1px solid var(--border); }
+    .breadcrumb { font-family: var(--font-cond); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-dimmer); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .breadcrumb a:hover { color: var(--red); }
+    .article-tag { font-family: var(--font-cond); font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--red); display: block; margin-bottom: 1rem; }
+    .article-header h1 { font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 5rem); line-height: 0.95; color: #fff; margin-bottom: 1.5rem; max-width: 820px; }
+    .article-meta { display: flex; gap: 2rem; flex-wrap: wrap; }
+    .meta-item { font-family: var(--font-cond); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dimmer); }
+    .meta-item strong { color: var(--text-dim); }
+    .article-body { display: grid; grid-template-columns: 1fr 320px; gap: 5rem; padding: 5rem 0; align-items: start; }
+    article h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.8rem); color: #fff; margin: 3rem 0 1.25rem; line-height: 1; }
+    article h3 { font-family: var(--font-cond); font-size: 1.1rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); margin: 2rem 0 0.75rem; }
+    article p { font-size: 0.97rem; color: var(--text-dim); line-height: 1.85; margin-bottom: 1.25rem; }
+    article strong { color: var(--text); font-weight: 600; }
+    article ul { list-style: none; margin: 0.5rem 0 1.5rem; display: flex; flex-direction: column; gap: 0.6rem; }
+    article ul li { font-size: 0.95rem; color: var(--text-dim); line-height: 1.6; display: flex; align-items: flex-start; gap: 0.6rem; }
+    article ul li::before { content: '//'; color: var(--red); font-family: var(--font-cond); font-size: 0.75rem; margin-top: 0.2rem; flex-shrink: 0; }
+    .callout { background: var(--dark2); border-left: 3px solid var(--red); padding: 1.5rem 1.75rem; margin: 2rem 0; }
+    .callout-label { font-family: var(--font-cond); font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--red); display: block; margin-bottom: 0.75rem; }
+    .callout p { margin-bottom: 0; font-size: 0.95rem; }
+    .data-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5px; background: var(--border); margin: 2rem 0; }
+    .data-cell { background: var(--dark2); padding: 1.25rem 1.5rem; }
+    .data-cell-label { font-family: var(--font-cond); font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); display: block; margin-bottom: 0.4rem; }
+    .data-cell-title { font-family: var(--font-cond); font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 0.4rem; }
+    .data-cell-desc { font-size: 0.83rem; color: var(--text-dim); line-height: 1.6; }
+    .article-sidebar { position: sticky; top: 6rem; }
+    .sidebar-card { background: var(--dark2); border: 1px solid var(--border); padding: 1.75rem; margin-bottom: 1.5rem; }
+    .sidebar-card h4 { font-family: var(--font-cond); font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 1rem; }
+    .sidebar-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .sidebar-card ul li a { font-size: 0.85rem; color: var(--text-dim); display: flex; align-items: flex-start; gap: 0.5rem; line-height: 1.4; transition: color 0.2s; }
+    .sidebar-card ul li a::before { content: '//'; color: var(--red); font-family: var(--font-cond); font-size: 0.7rem; margin-top: 0.15rem; flex-shrink: 0; }
+    .sidebar-card ul li a:hover { color: #fff; }
+    .sidebar-cta { background: var(--dark2); border: 1px solid var(--border-red); padding: 1.75rem; text-align: center; margin-bottom: 1.5rem; }
+    .sidebar-cta h4 { font-family: var(--font-display); font-size: 1.4rem; color: #fff; margin-bottom: 0.75rem; }
+    .sidebar-cta p { font-size: 0.85rem; color: var(--text-dim); margin-bottom: 1.25rem; line-height: 1.6; }
+    .sidebar-cta a { display: block; background: var(--red); color: #fff; font-family: var(--font-cond); font-weight: 700; font-size: 0.9rem; letter-spacing: 0.08em; padding: 0.85rem; transition: background 0.2s; }
+    .sidebar-cta a:hover { background: #c0001a; }
+    .related-section { padding: 5rem 0; border-top: 1px solid var(--border); }
+    .section-label { font-family: var(--font-cond); font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--red); margin-bottom: 0.75rem; display: block; }
+    .related-section h2 { font-family: var(--font-display); font-size: 2.5rem; color: #fff; margin-bottom: 2.5rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+    .related-card { background: var(--dark2); border: 1px solid var(--border); padding: 1.75rem; transition: border-color 0.2s; display: block; }
+    .related-card:hover { border-color: var(--border-red); }
+    .related-card-tag { font-family: var(--font-cond); font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 0.6rem; display: block; }
+    .related-card h3 { font-family: var(--font-cond); font-weight: 700; font-size: 1.1rem; color: #fff; margin-bottom: 0.5rem; line-height: 1.3; }
+    .related-card p { font-size: 0.85rem; color: var(--text-dim); line-height: 1.6; }
+    footer { padding: 2.5rem 0; border-top: 1px solid var(--border); }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-logo { font-family: var(--font-display); font-size: 1.2rem; }
+    .footer-logo span { color: var(--red); }
+    .footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    .footer-links a { font-family: var(--font-cond); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dimmer); transition: color 0.2s; }
+    .footer-links a:hover { color: var(--red); }
+    .footer-copy { font-size: 0.78rem; color: var(--text-dimmer); }
+    @media(max-width:900px){ .article-body { grid-template-columns: 1fr; gap: 3rem; } .article-sidebar { position: static; } .data-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="../index.html" class="nav-logo">THROTTLE<span>X</span></a>
+    <div class="nav-links">
+      <a href="../index.html#features">Features</a>
+      <a href="../index.html#pricing">Pricing</a>
+      <a href="../blog.html">Blog</a>
+      <a href="../bugs.html">Bug Tracker</a>
+      <a href="https://play.google.com/store/apps/details?id=com.alloy.throttlex" target="_blank" class="nav-cta">Get the App</a>
+    </div>
+  </nav>
+
+  <header class="article-header">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <span>//</span>
+        <a href="../blog.html">Blog</a>
+        <span>//</span>
+        <span>Data and Telemetry</span>
+      </div>
+      <span class="article-tag">// Data and Telemetry</span>
+      <h1>Motorcycle Data Logging Explained</h1>
+      <div class="article-meta">
+        <span class="meta-item">By <strong>ThrottleX Team</strong></span>
+        <span class="meta-item">Published <strong>August 5, 2026</strong></span>
+        <span class="meta-item">Read time <strong>9 min</strong></span>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="article-body">
+      <article>
+
+        <p>Data logging on a motorcycle means capturing sensor readings continuously during a ride and storing them for analysis afterward. Every lap, every corner, every braking zone and acceleration point produces data. When that data is stored and reviewed it stops being a feeling and becomes a record. Something you can compare, analyze, and learn from in a way that memory alone cannot support.</p>
+
+        <p>This article explains what motorcycle data logging is, how it works at a technical level, what kinds of data get captured, what the data actually tells you, and how modern apps like ThrottleX make professional-grade data logging accessible without dedicated hardware.</p>
+
+        <h2 id="what-data-logging-is">WHAT DATA LOGGING ACTUALLY IS</h2>
+
+        <p>Data logging is the continuous recording of sensor measurements over time. In a professional motorsport context a data logging system might record dozens or hundreds of channels simultaneously: throttle position, brake pressure, suspension travel, wheel speed, engine RPM, gear position, lateral G, longitudinal G, yaw rate, and GPS position, all captured many times per second and stored to a device that can be downloaded and analyzed after the session.</p>
+
+        <p>For a rider using a smartphone-based telemetry app the channel count is smaller because the sensors available are those built into the phone rather than those wired into the bike. But the fundamental concept is identical. Sensors produce readings. Those readings are captured at a regular interval. The captured readings are stored with timestamps. After the session the stored data can be reviewed, graphed, and compared.</p>
+
+        <p>The key distinction between live telemetry and data logging is time. Live telemetry shows you what is happening now. Data logging stores what happened so you can study it later. A good telemetry app does both simultaneously, displaying live data on the dashboard while writing the session log in the background.</p>
+
+        <h2 id="what-gets-logged">WHAT GETS LOGGED</h2>
+
+        <p>The sensors in a modern Android smartphone are surprisingly capable for motorcycle telemetry purposes. ThrottleX captures the following data streams during every session:</p>
+
+        <div class="data-grid">
+          <div class="data-cell">
+            <span class="data-cell-label">// IMU</span>
+            <div class="data-cell-title">Lean Angle</div>
+            <div class="data-cell-desc">Calculated from the gyroscope and accelerometer using a Kalman filter. Logged in degrees with decimal precision for every sample throughout the session.</div>
+          </div>
+          <div class="data-cell">
+            <span class="data-cell-label">// IMU</span>
+            <div class="data-cell-title">G-Force</div>
+            <div class="data-cell-desc">Lateral and longitudinal acceleration in G units. Lateral G measures cornering force. Longitudinal G measures braking and acceleration force. Both logged continuously.</div>
+          </div>
+          <div class="data-cell">
+            <span class="data-cell-label">// GPS</span>
+            <div class="data-cell-title">Speed and Position</div>
+            <div class="data-cell-desc">GPS speed in meters per second, latitude, longitude, altitude, and GPS accuracy estimate. Position data enables the route map and KML heatmap export.</div>
+          </div>
+          <div class="data-cell">
+            <span class="data-cell-label">// Derived</span>
+            <div class="data-cell-title">Flick Rate</div>
+            <div class="data-cell-desc">Calculated from the lean angle time series. Measures the rate of lean angle change at corner entry in degrees per second, separately for left and right corners.</div>
+          </div>
+          <div class="data-cell">
+            <span class="data-cell-label">// Derived</span>
+            <div class="data-cell-title">Traction Efficiency</div>
+            <div class="data-cell-desc">The vector sum of lateral and longitudinal G compared against the theoretical limit of the selected tire profile. Expressed as a percentage of available grip.</div>
+          </div>
+          <div class="data-cell">
+            <span class="data-cell-label">// GPS</span>
+            <div class="data-cell-title">Lap Timing</div>
+            <div class="data-cell-desc">Lap start and finish timestamps detected automatically using the auto-anchor GPS system. Stored per lap for session history and comparison.</div>
+          </div>
+        </div>
+
+        <h2 id="how-it-gets-stored">HOW THE DATA GETS STORED</h2>
+
+        <p>During a session ThrottleX writes sensor readings to a structured log at high frequency. Each sample contains a timestamp in epoch milliseconds, the lean angle reading, the lateral and longitudinal G values, the GPS speed, latitude, and longitude, and derived values calculated from those inputs.</p>
+
+        <p>When the session ends the log is finalized and stored on the device as a .tlx file. This is ThrottleX's native export format. The .tlx file is a structured JSON document containing all session samples in chronological order alongside session metadata including the start time, total distance, peak values, and the auto-anchor lap timing data.</p>
+
+        <p>The .tlx format was designed specifically for the telemetry overlay use case. The recordStartEpochMs field in the file header records the exact millisecond the session began, which enables frame-perfect synchronization between the .tlx data and any camera footage recorded during the same session.</p>
+
+        <h2 id="export-formats">EXPORT FORMATS AND WHAT THEY ARE FOR</h2>
+
+        <h3>PDF ride report</h3>
+        <p>The PDF report is the post-session analysis document. It takes the raw session data and renders it as a human-readable summary with visual charts, the G-G traction diagram, the MotoGP-style bike silhouette showing left and right lean arcs, the technical skill radar chart, and the Flick Rate and Entry Bite coaching metrics. This is the format designed for review, sharing with a coach, or keeping as a personal record of your development over time.</p>
+
+        <h3>GPX file</h3>
+        <p>GPX is a standard GPS exchange format supported by virtually every mapping application and GPS device on the market. The GPX export from ThrottleX contains your route as a series of GPS waypoints with timestamps. This is the format to use if you want to view your ride route in Google Maps, share it with other riders, or import it into a navigation device.</p>
+
+        <h3>KML heatmap</h3>
+        <p>KML is Google Earth's native format. The ThrottleX KML export takes your route and colors it based on lean angle intensity, from green at low lean angles through yellow and into red at the deepest lean angles. Open it in Google Earth and you can fly through your session in 3D with floating apex labels showing your peak lean angle in each corner. This is the most visually striking export and the most immediately useful for identifying which corners you pushed hard and which ones you held back in.</p>
+
+        <h3>The .tlx native format</h3>
+        <p>The raw .tlx export contains all the session data at full resolution. This is the format used for video overlay synchronization. When the camera integration and overlay studio ship, the .tlx file is what the desktop tool will use to place the telemetry data frame-accurately over your camera footage.</p>
+
+        <h2 id="what-the-data-enables">WHAT THE DATA ACTUALLY ENABLES</h2>
+
+        <h3>Post-session review without forgetting</h3>
+        <p>Human memory is unreliable for the details that matter most in riding analysis. You remember the corner where the front felt light. You remember that one lap that felt fast. You do not remember whether your braking point on the back straight was 50 meters earlier than your average or whether your lean angle in turn four was 4 degrees lower than turn three. Data logging remembers all of it. Every corner, every lap, every session.</p>
+
+        <h3>Trend analysis across sessions</h3>
+        <p>A single session of data tells you where you are. Multiple sessions tell you whether you are improving. Comparing your average lean angle on the same road across ten sessions spread over three months shows whether your confidence is genuinely growing or staying flat. That comparison is only possible because each session was logged and stored rather than lived through and forgotten.</p>
+
+        <h3>Objective identification of weak areas</h3>
+        <p>Feel is subjective. Data is not. A rider who believes they corner equally well in both directions will often discover a 6 to 10 degree asymmetry in their average lean angle when they look at actual logged data. A rider who believes their braking is aggressive will often find their Entry Bite score (the measure of G-load carried into the turn-in phase) is modest, revealing that all the braking is happening in a straight line before the corner entry rather than trailing into the apex as they believed.</p>
+
+        <h3>Coaching conversations</h3>
+        <p>A PDF ride report shared with a riding coach gives the coach objective data about what the rider is actually doing rather than relying on the rider's self-report of how the session felt. The skill radar chart, the G-G diagram, and the left and right lean comparison all give a coach specific, quantified things to address rather than general impressions.</p>
+
+        <div class="callout">
+          <span class="callout-label">// Log Every Session</span>
+          <p>ThrottleX Pro stores your complete session history with full data logging for every ride. PDF reports, KML heatmaps, GPX exports, and the raw .tlx format for every session. One-time $9.99 on Google Play with a free trial of 3 days or 3 sessions.</p>
+        </div>
+
+        <h2 id="phone-vs-dedicated-loggers">PHONE VERSUS DEDICATED DATA LOGGERS</h2>
+
+        <p>Dedicated motorcycle data loggers like the Aim Solo or MyChron series have some advantages over phone-based logging. They can connect directly to the bike's ECU for engine data, they use higher quality GPS receivers, and their sensors are purpose-built for motorsport rather than adapted from consumer electronics.</p>
+
+        <p>The tradeoff is cost, complexity, and installation. A dedicated data logger with ECU integration can cost several hundred dollars and requires mounting, wiring, and configuration. A phone running ThrottleX costs $9.99 and is ready to log in the time it takes to mount it to the bars and press start.</p>
+
+        <p>For the vast majority of track day riders and street riders the phone-based approach captures every data channel that is actually useful for rider development. Lean angle, G-force, GPS speed, lap timing, and traction efficiency are all available without any hardware beyond what most riders already carry. The 20 percent of capability that dedicated loggers offer beyond this is relevant for professional racing contexts, not for a rider trying to understand whether their left and right cornering is symmetrical.</p>
+
+        <h2 id="bottom-line">THE BOTTOM LINE</h2>
+
+        <p>Data logging turns riding from an experience into a record. Not to diminish the experience. The feeling of a good session on a great road is one of the best things motorcycling offers. But the record is what makes improvement systematic rather than accidental. It is the difference between hoping you are getting better and knowing it, session by session, number by number, corner by corner.</p>
+
+        <p>Your phone is already a capable data logger. All it needs is the right app and a solid mount.</p>
+
+      </article>
+
+      <aside class="article-sidebar">
+        <div class="sidebar-card">
+          <h4>// In This Article</h4>
+          <ul>
+            <li><a href="#what-data-logging-is">What Data Logging Actually Is</a></li>
+            <li><a href="#what-gets-logged">What Gets Logged</a></li>
+            <li><a href="#how-it-gets-stored">How the Data Gets Stored</a></li>
+            <li><a href="#export-formats">Export Formats</a></li>
+            <li><a href="#what-the-data-enables">What the Data Actually Enables</a></li>
+            <li><a href="#phone-vs-dedicated-loggers">Phone vs Dedicated Loggers</a></li>
+            <li><a href="#bottom-line">The Bottom Line</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-cta">
+          <h4>LOG EVERY SESSION.</h4>
+          <p>ThrottleX Pro stores complete session history with PDF reports, KML heatmaps, and GPX exports for every ride.</p>
+          <a href="https://play.google.com/store/apps/details?id=com.alloy.throttlex" target="_blank">GET THROTTLEX · $9.99</a>
+        </div>
+        <div class="sidebar-card">
+          <h4>// More From The Blog</h4>
+          <ul>
+            <li><a href="what-is-motorcycle-telemetry.html">What Is Motorcycle Telemetry?</a></li>
+            <li><a href="what-is-gps-lap-timing-and-how-does-it-work.html">What Is GPS Lap Timing?</a></li>
+            <li><a href="how-to-read-your-motorcycle-telemetry-data-after-a-ride.html">How to Read Your Telemetry Data</a></li>
+            <li><a href="how-to-use-ride-data-to-set-goals-between-sessions.html">How to Use Ride Data to Set Goals</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <section class="related-section">
+    <div class="container">
+      <span class="section-label">// Keep Reading</span>
+      <h2>MORE FROM THE BLOG</h2>
+      <div class="related-grid">
+        <a href="what-is-motorcycle-telemetry.html" class="related-card">
+          <span class="related-card-tag">// Fundamentals</span>
+          <h3>What Is Motorcycle Telemetry and Why Does It Matter?</h3>
+          <p>MotoGP teams have used telemetry for decades. Now that same technology lives in your pocket.</p>
+        </a>
+        <a href="what-is-gps-lap-timing-and-how-does-it-work.html" class="related-card">
+          <span class="related-card-tag">// Data and Telemetry</span>
+          <h3>What Is GPS Lap Timing and How Does It Work?</h3>
+          <p>GPS lap timing replaces physical timing loops with a virtual line defined entirely in software. Here is exactly how it works.</p>
+        </a>
+        <a href="how-to-read-your-motorcycle-telemetry-data-after-a-ride.html" class="related-card">
+          <span class="related-card-tag">// Data and Telemetry</span>
+          <h3>How to Read Your Motorcycle Telemetry Data After a Ride</h3>
+          <p>Collecting data is only half the equation. Here is how to actually read and interpret it so it leads to real improvement.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">THROTTLE<span>X</span></div>
+        <div class="footer-links">
+          <a href="../index.html#features">Features</a>
+          <a href="../index.html#pricing">Pricing</a>
+          <a href="../blog.html">Blog</a>
+          <a href="../privacy.html">Privacy Policy</a>
+        </div>
+        <div class="footer-copy">© 2026 ThrottleX · Hand-coded by a Solo Rider.</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

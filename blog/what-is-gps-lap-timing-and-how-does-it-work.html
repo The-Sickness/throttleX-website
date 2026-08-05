@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What Is GPS Lap Timing and How Does It Work? | ThrottleX Blog</title>
+  <meta name="description" content="GPS lap timing is one of the most useful tools a track day rider can have. Here is exactly how it works, what makes it accurate, and how ThrottleX uses it to measure your performance on circuit." />
+  <meta name="keywords" content="GPS lap timing motorcycle, how does GPS lap timing work, motorcycle lap timer GPS, auto lap timing motorcycle, ThrottleX lap timer, GPS lap timer track day, motorcycle track timing" />
+  <link rel="canonical" href="https://throttlexapp.com/blog/what-is-gps-lap-timing-and-how-does-it-work.html" />
+
+  <meta property="og:title" content="What Is GPS Lap Timing and How Does It Work?" />
+  <meta property="og:description" content="GPS lap timing is one of the most useful tools a track day rider can have. Here is exactly how it works and what makes it accurate." />
+  <meta property="og:url" content="https://throttlexapp.com/blog/what-is-gps-lap-timing-and-how-does-it-work.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://throttlexapp.com/images/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="What Is GPS Lap Timing and How Does It Work?" />
+  <meta name="twitter:description" content="GPS lap timing is one of the most useful tools a track day rider can have. Here is exactly how it works." />
+  <meta name="twitter:image" content="https://throttlexapp.com/images/og-image.jpg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What Is GPS Lap Timing and How Does It Work?",
+    "description": "GPS lap timing is one of the most useful tools a track day rider can have. Here is exactly how it works, what makes it accurate, and how ThrottleX uses it to measure your performance on circuit.",
+    "author": { "@type": "Organization", "name": "ThrottleX" },
+    "publisher": { "@type": "Organization", "name": "ThrottleX", "url": "https://throttlexapp.com" },
+    "datePublished": "2026-08-05",
+    "url": "https://throttlexapp.com/blog/what-is-gps-lap-timing-and-how-does-it-work.html"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="../images/favicon.png" />
+
+  <script type="text/javascript">
+    window.addEventListener('load', function() {
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "ws11p9jp3h");
+    });
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.addEventListener('load', function() {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-8PRHNYKLWZ';
+      s.onload = function() { gtag('js', new Date()); gtag('config', 'G-8PRHNYKLWZ'); };
+      document.head.appendChild(s);
+    });
+  </script>
+
+  <style>
+    :root {
+      --red: #e8001e; --red-glow: rgba(232,0,30,0.15);
+      --black: #050507; --dark: #0d0d10; --dark2: #121215; --dark3: #1a1a1f;
+      --border: rgba(255,255,255,0.07); --border-red: rgba(232,0,30,0.3);
+      --text: #e8e8ec; --text-dim: #7a7a88; --text-dimmer: #4a4a55;
+      --font-display: 'Bebas Neue', sans-serif;
+      --font-cond: 'Barlow Condensed', sans-serif;
+      --font-body: 'Barlow', sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--black); color: var(--text); font-family: var(--font-body); font-weight: 300; line-height: 1.6; overflow-x: hidden; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; background: rgba(5,5,7,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-logo { font-family: var(--font-display); font-size: 1.6rem; color: #fff; }
+    .nav-logo span { color: var(--red); }
+    .nav-links { display: flex; gap: 2rem; align-items: center; }
+    .nav-links a { font-family: var(--font-cond); font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim); transition: color 0.2s; }
+    .nav-links a:hover { color: #fff; }
+    .nav-cta { background: var(--red); color: #fff !important; padding: 0.5rem 1.25rem; font-weight: 700; }
+    @media(max-width:900px){ .nav-links { display: none; } }
+    .article-header { padding: 9rem 0 4rem; border-bottom: 1px solid var(--border); }
+    .breadcrumb { font-family: var(--font-cond); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-dimmer); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .breadcrumb a:hover { color: var(--red); }
+    .article-tag { font-family: var(--font-cond); font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--red); display: block; margin-bottom: 1rem; }
+    .article-header h1 { font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 5rem); line-height: 0.95; color: #fff; margin-bottom: 1.5rem; max-width: 820px; }
+    .article-meta { display: flex; gap: 2rem; flex-wrap: wrap; }
+    .meta-item { font-family: var(--font-cond); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dimmer); }
+    .meta-item strong { color: var(--text-dim); }
+    .article-body { display: grid; grid-template-columns: 1fr 320px; gap: 5rem; padding: 5rem 0; align-items: start; }
+    article h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.8rem); color: #fff; margin: 3rem 0 1.25rem; line-height: 1; }
+    article h3 { font-family: var(--font-cond); font-size: 1.1rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); margin: 2rem 0 0.75rem; }
+    article p { font-size: 0.97rem; color: var(--text-dim); line-height: 1.85; margin-bottom: 1.25rem; }
+    article strong { color: var(--text); font-weight: 600; }
+    article ul { list-style: none; margin: 0.5rem 0 1.5rem; display: flex; flex-direction: column; gap: 0.6rem; }
+    article ul li { font-size: 0.95rem; color: var(--text-dim); line-height: 1.6; display: flex; align-items: flex-start; gap: 0.6rem; }
+    article ul li::before { content: '//'; color: var(--red); font-family: var(--font-cond); font-size: 0.75rem; margin-top: 0.2rem; flex-shrink: 0; }
+    .callout { background: var(--dark2); border-left: 3px solid var(--red); padding: 1.5rem 1.75rem; margin: 2rem 0; }
+    .callout-label { font-family: var(--font-cond); font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--red); display: block; margin-bottom: 0.75rem; }
+    .callout p { margin-bottom: 0; font-size: 0.95rem; }
+    .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; background: var(--border); margin: 2rem 0; }
+    .stat-box { background: var(--dark2); padding: 1.5rem; text-align: center; }
+    .stat-box .num { font-family: var(--font-display); font-size: 2.2rem; color: var(--red); line-height: 1; display: block; }
+    .stat-box .label { font-family: var(--font-cond); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-dimmer); margin-top: 0.4rem; display: block; }
+    .article-sidebar { position: sticky; top: 6rem; }
+    .sidebar-card { background: var(--dark2); border: 1px solid var(--border); padding: 1.75rem; margin-bottom: 1.5rem; }
+    .sidebar-card h4 { font-family: var(--font-cond); font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 1rem; }
+    .sidebar-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .sidebar-card ul li a { font-size: 0.85rem; color: var(--text-dim); display: flex; align-items: flex-start; gap: 0.5rem; line-height: 1.4; transition: color 0.2s; }
+    .sidebar-card ul li a::before { content: '//'; color: var(--red); font-family: var(--font-cond); font-size: 0.7rem; margin-top: 0.15rem; flex-shrink: 0; }
+    .sidebar-card ul li a:hover { color: #fff; }
+    .sidebar-cta { background: var(--dark2); border: 1px solid var(--border-red); padding: 1.75rem; text-align: center; margin-bottom: 1.5rem; }
+    .sidebar-cta h4 { font-family: var(--font-display); font-size: 1.4rem; color: #fff; margin-bottom: 0.75rem; }
+    .sidebar-cta p { font-size: 0.85rem; color: var(--text-dim); margin-bottom: 1.25rem; line-height: 1.6; }
+    .sidebar-cta a { display: block; background: var(--red); color: #fff; font-family: var(--font-cond); font-weight: 700; font-size: 0.9rem; letter-spacing: 0.08em; padding: 0.85rem; transition: background 0.2s; }
+    .sidebar-cta a:hover { background: #c0001a; }
+    .related-section { padding: 5rem 0; border-top: 1px solid var(--border); }
+    .section-label { font-family: var(--font-cond); font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--red); margin-bottom: 0.75rem; display: block; }
+    .related-section h2 { font-family: var(--font-display); font-size: 2.5rem; color: #fff; margin-bottom: 2.5rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+    .related-card { background: var(--dark2); border: 1px solid var(--border); padding: 1.75rem; transition: border-color 0.2s; display: block; }
+    .related-card:hover { border-color: var(--border-red); }
+    .related-card-tag { font-family: var(--font-cond); font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 0.6rem; display: block; }
+    .related-card h3 { font-family: var(--font-cond); font-weight: 700; font-size: 1.1rem; color: #fff; margin-bottom: 0.5rem; line-height: 1.3; }
+    .related-card p { font-size: 0.85rem; color: var(--text-dim); line-height: 1.6; }
+    footer { padding: 2.5rem 0; border-top: 1px solid var(--border); }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-logo { font-family: var(--font-display); font-size: 1.2rem; }
+    .footer-logo span { color: var(--red); }
+    .footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    .footer-links a { font-family: var(--font-cond); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dimmer); transition: color 0.2s; }
+    .footer-links a:hover { color: var(--red); }
+    .footer-copy { font-size: 0.78rem; color: var(--text-dimmer); }
+    @media(max-width:900px){ .article-body { grid-template-columns: 1fr; gap: 3rem; } .article-sidebar { position: static; } .stat-row { grid-template-columns: 1fr 1fr; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="../index.html" class="nav-logo">THROTTLE<span>X</span></a>
+    <div class="nav-links">
+      <a href="../index.html#features">Features</a>
+      <a href="../index.html#pricing">Pricing</a>
+      <a href="../blog.html">Blog</a>
+      <a href="../bugs.html">Bug Tracker</a>
+      <a href="https://play.google.com/store/apps/details?id=com.alloy.throttlex" target="_blank" class="nav-cta">Get the App</a>
+    </div>
+  </nav>
+
+  <header class="article-header">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <span>//</span>
+        <a href="../blog.html">Blog</a>
+        <span>//</span>
+        <span>Data and Telemetry</span>
+      </div>
+      <span class="article-tag">// Data and Telemetry</span>
+      <h1>What Is GPS Lap Timing and How Does It Work?</h1>
+      <div class="article-meta">
+        <span class="meta-item">By <strong>ThrottleX Team</strong></span>
+        <span class="meta-item">Published <strong>August 5, 2026</strong></span>
+        <span class="meta-item">Read time <strong>9 min</strong></span>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="article-body">
+      <article>
+
+        <p>Lap timing used to require dedicated hardware. Transponders mounted to the bike, timing loops buried in the track surface, a scoring tower processing signals from every car and motorcycle on the circuit. Professional motorsport still uses this infrastructure. But for the everyday track day rider something far more accessible has taken its place. GPS lap timing does the same job using the satellite receiver already inside your phone.</p>
+
+        <p>This article explains how GPS lap timing actually works, what determines its accuracy, and how ThrottleX uses it to give you meaningful lap time data without any additional hardware.</p>
+
+        <h2 id="how-gps-works">HOW GPS WORKS IN THE FIRST PLACE</h2>
+
+        <p>Your phone's GPS receiver communicates with a constellation of satellites orbiting the Earth at roughly 20,000 kilometers altitude. At any given moment your phone can see between 6 and 12 of these satellites depending on your location, sky visibility, and the quality of your device's antenna.</p>
+
+        <p>Each satellite continuously broadcasts a signal that includes its precise position and the exact time the signal was sent. Your phone receives these signals from multiple satellites simultaneously and calculates the time delay between when each signal was sent and when it arrived. Since radio signals travel at the speed of light, that time delay translates directly into a distance. With signals from at least four satellites your phone can calculate its position in three dimensions with reasonable accuracy.</p>
+
+        <p>The position fix is updated continuously. Most phone GPS receivers update at 1Hz, meaning one position fix per second. Higher end phones and dedicated GPS receivers can update at 5Hz or 10Hz. The update rate matters for lap timing because a faster update rate means more position data points per second and therefore a more precise calculation of exactly when you crossed the start and finish line.</p>
+
+        <div class="stat-row">
+          <div class="stat-box">
+            <span class="num">1Hz</span>
+            <span class="label">Standard Phone GPS Update Rate</span>
+          </div>
+          <div class="stat-box">
+            <span class="num">6-12</span>
+            <span class="label">Satellites Visible at Once</span>
+          </div>
+          <div class="stat-box">
+            <span class="num">3-5m</span>
+            <span class="label">Typical Position Accuracy</span>
+          </div>
+        </div>
+
+        <h2 id="virtual-start-finish">THE VIRTUAL START AND FINISH LINE</h2>
+
+        <p>A traditional timing loop is a physical wire buried in the track surface. When your transponder passes over it the loop detects the signal and records a timestamp. GPS lap timing replaces this physical infrastructure with a virtual line defined entirely in software.</p>
+
+        <p>The app defines a start and finish line as two GPS coordinates, essentially two points in space that together form a line crossing the track. As the rider moves around the circuit the app continuously compares the current GPS position to the stored line coordinates. When the calculated position crosses from one side of the line to the other a lap is registered and a timestamp is recorded.</p>
+
+        <p>The precision of this crossing detection depends on the GPS update rate and the speed at which the rider crosses the line. At 100 mph a rider covers roughly 45 meters per second. A 1Hz GPS update rate means the position is sampled every 45 meters at that speed. The app interpolates between the last position before the line and the first position after the line to estimate the precise crossing time, but that interpolation introduces some margin of error that a higher update rate reduces.</p>
+
+        <h2 id="auto-anchor">HOW AUTO-ANCHOR WORKS</h2>
+
+        <p>Setting a start and finish line manually before every session is impractical. You would need to know the exact GPS coordinates of the timing line at every circuit you visit and enter them before you ride. ThrottleX solves this with auto-anchor logic.</p>
+
+        <p>When you start a session ThrottleX begins recording your GPS track from the moment you leave the pit lane. After your first complete lap the app analyzes your track to identify the most likely start and finish location. It looks for the point on your track where your trajectory most closely returns to a previous position after completing a circuit, which is the mathematical signature of a lap completion.</p>
+
+        <p>Once the anchor point is established it is saved for that circuit. On subsequent laps the app uses the saved anchor to trigger timing automatically. If you ride the same circuit again ThrottleX recognizes the location and restores the anchor without any setup required. The system learns your circuits over time.</p>
+
+        <h2 id="accuracy">WHAT AFFECTS ACCURACY</h2>
+
+        <h3>GPS signal quality</h3>
+        <p>Open circuits under clear skies produce the best GPS accuracy because the receiver has a clear line of sight to the maximum number of satellites. Circuits surrounded by tall grandstands, trees, or buildings can produce multipath errors where signals bounce off structures before reaching the antenna, introducing position errors. ThrottleX displays a GPS quality indicator on the dashboard so you can see signal strength in real time and know when conditions are affecting your data.</p>
+
+        <h3>Phone antenna quality</h3>
+        <p>Not all phone GPS antennas are equal. Flagship Android devices generally have better GPS performance than budget phones due to higher quality antenna hardware and support for multiple satellite constellations including GPS, GLONASS, Galileo, and BeiDou. Using more constellations means more satellites visible at once which improves both accuracy and update consistency.</p>
+
+        <h3>Mount position and vibration</h3>
+        <p>How and where you mount your phone affects GPS accuracy in two ways. A phone mounted in a clear, open position on the bars has better satellite visibility than one tucked into a fairing pocket. And vibration transmitted through a rigid mount can introduce noise into the GPS signal stream. This is one of the reasons a quality mount with vibration isolation like the SP Connect Anti Vibration Module produces cleaner GPS data than a cheap clamp mount that transmits engine vibration directly into the phone.</p>
+
+        <h3>Consistency over absolute precision</h3>
+        <p>The most important thing to understand about GPS lap timing is that consistency matters more than absolute precision. If your GPS system has a systematic error of 0.2 seconds due to interpolation, that error is present on every lap equally. Comparing lap 3 to lap 7 is still completely valid because the same systematic error applies to both. GPS lap timing is excellent for measuring improvement within a session. It is less suited for comparing your times to times set by other riders using different equipment and apps.</p>
+
+        <h2 id="what-throttlex-does">WHAT THROTTLEX DOES WITH LAP DATA</h2>
+
+        <p>ThrottleX Pro captures lap times automatically using the auto-anchor system and stores them in your session history. After each session you can review individual lap times, identify your best lap, and compare your performance across multiple sessions at the same circuit.</p>
+
+        <p>The lap timing data integrates with the rest of your telemetry. Your best lap and worst lap can be compared not just by time but by the lean angle, G-force, and traction efficiency data for each lap. A lap that is two seconds faster than your average might show higher traction efficiency and a larger average lean angle. A slower lap might show hesitation in specific corners through lower Flick Rate data. The lap time becomes a headline number that the telemetry data explains in detail.</p>
+
+        <p>The Voice Coach integration with lap timing is one of the most immediately useful features for track riders. ThrottleX announces each lap time through your Bluetooth headset as you cross the start and finish line. You do not need to look at the dashboard to know whether your last lap was faster or slower. The information arrives at the exact moment it is most relevant and you can keep your eyes on the track where they belong.</p>
+
+        <div class="callout">
+          <span class="callout-label">// Auto Lap Timing in ThrottleX Pro</span>
+          <p>ThrottleX Pro includes automatic GPS lap timing with auto-anchor detection, lap time history, voice announcements through your Bluetooth headset, and full telemetry data for every individual lap. One-time $9.99 on Google Play with a free trial of 3 days or 3 sessions.</p>
+        </div>
+
+        <h2 id="vs-transponders">GPS LAP TIMING VS TRANSPONDER SYSTEMS</h2>
+
+        <p>Professional transponder timing systems are more accurate than GPS. A modern AMB transponder system has timing accuracy to within a few milliseconds because the detection is triggered by a physical signal at a fixed point in space rather than by a GPS position calculation. GPS systems operating at 1Hz with interpolation have accuracy closer to 0.1 to 0.3 seconds depending on conditions.</p>
+
+        <p>For most track day riders this difference is irrelevant. The transponder system tells you your lap time to the millisecond. GPS tells you your lap time to within a tenth or two. Neither is going to change your approach to the next corner. What GPS offers that transponders do not is integration with all the other data your phone is collecting simultaneously. Your lean angle, G-force, traction efficiency, and Flick Rate data are all timestamped to the same clock as your lap times. That integration is what makes GPS lap timing a meaningful development tool rather than just a stopwatch.</p>
+
+        <h2 id="bottom-line">THE BOTTOM LINE</h2>
+
+        <p>GPS lap timing is not magic. It is satellite geometry, position interpolation, and consistent virtual line detection. Understanding how it works helps you interpret what the numbers mean and what their limitations are. Consistent, accurate within its constraints, and deeply integrated with the rest of your riding data, GPS lap timing gives every track day rider access to tools that professional teams have used for decades without requiring any hardware beyond the phone already on your bars.</p>
+
+      </article>
+
+      <aside class="article-sidebar">
+        <div class="sidebar-card">
+          <h4>// In This Article</h4>
+          <ul>
+            <li><a href="#how-gps-works">How GPS Works</a></li>
+            <li><a href="#virtual-start-finish">The Virtual Start and Finish Line</a></li>
+            <li><a href="#auto-anchor">How Auto-Anchor Works</a></li>
+            <li><a href="#accuracy">What Affects Accuracy</a></li>
+            <li><a href="#what-throttlex-does">What ThrottleX Does With Lap Data</a></li>
+            <li><a href="#vs-transponders">GPS vs Transponder Systems</a></li>
+            <li><a href="#bottom-line">The Bottom Line</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-cta">
+          <h4>AUTO LAP TIMING.</h4>
+          <p>ThrottleX Pro times your laps automatically, announces them through your headset, and stores the full telemetry for every lap.</p>
+          <a href="https://play.google.com/store/apps/details?id=com.alloy.throttlex" target="_blank">GET THROTTLEX · $9.99</a>
+        </div>
+        <div class="sidebar-card">
+          <h4>// More From The Blog</h4>
+          <ul>
+            <li><a href="what-is-motorcycle-telemetry.html">What Is Motorcycle Telemetry?</a></li>
+            <li><a href="how-to-prepare-for-your-first-motorcycle-track-day.html">How to Prepare for Your First Track Day</a></li>
+            <li><a href="street-riding-vs-track-riding-what-is-actually-different.html">Street vs Track Riding</a></li>
+            <li><a href="understanding-g-force-data-on-a-motorcycle.html">Understanding G-Force Data</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <section class="related-section">
+    <div class="container">
+      <span class="section-label">// Keep Reading</span>
+      <h2>MORE FROM THE BLOG</h2>
+      <div class="related-grid">
+        <a href="what-is-motorcycle-telemetry.html" class="related-card">
+          <span class="related-card-tag">// Fundamentals</span>
+          <h3>What Is Motorcycle Telemetry and Why Does It Matter?</h3>
+          <p>MotoGP teams have used telemetry for decades. Now that same technology lives in your pocket.</p>
+        </a>
+        <a href="how-to-prepare-for-your-first-motorcycle-track-day.html" class="related-card">
+          <span class="related-card-tag">// Track Days</span>
+          <h3>How to Prepare for Your First Motorcycle Track Day</h3>
+          <p>Everything you need to know about bike prep, gear, what to expect, and how to get the most out of your first session on circuit.</p>
+        </a>
+        <a href="street-riding-vs-track-riding-what-is-actually-different.html" class="related-card">
+          <span class="related-card-tag">// Riding Skills</span>
+          <h3>Street Riding vs Track Riding: What Is Actually Different?</h3>
+          <p>Street and track riding look similar from the outside but require completely different mindsets and approaches.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">THROTTLE<span>X</span></div>
+        <div class="footer-links">
+          <a href="../index.html#features">Features</a>
+          <a href="../index.html#pricing">Pricing</a>
+          <a href="../blog.html">Blog</a>
+          <a href="../privacy.html">Privacy Policy</a>
+        </div>
+        <div class="footer-copy">© 2026 ThrottleX · Hand-coded by a Solo Rider.</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
