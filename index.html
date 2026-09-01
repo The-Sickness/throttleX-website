@@ -418,7 +418,7 @@
         <a href="#features" class="btn-ghost">See All Features ↓</a>
       </div>
       <p class="trial-sub">🎉 Free to start. Try Pro free for 3 days or 3 sessions, whichever comes first. Then $9.99 one-time.</p>
-      <p class="ios-hero-hint">ThrottleX will never be on iOS. Not because we didn't try to figure it out. Because Apple locks developers out of their own hardware the moment your screen goes dark. The accelerometer in your iPhone can handle 100Hz. Apple caps background access to 10Hz at best and calls it battery optimization. It is not optimization. It is control. ThrottleX requires unfiltered, continuous, high-frequency sensor data to do what it does. Android provides that. Apple does not. Buy accordingly.</p>
+      <p class="ios-hero-hint">Android only. <a href="#why-not-ios" style="color:var(--red);text-decoration:underline;text-underline-offset:3px;">Why not iOS?</a></p>
       <div class="hero-stats">
         <div class="stat">
           <span class="stat-num">100<span style="font-size:1.4rem;vertical-align:baseline;">Hz</span></span>
@@ -1264,15 +1264,23 @@
     </div>
   </section>
 
-  <!-- iOS STATEMENT -->
-  <section class="ios-waitlist">
+  <!-- WHY NOT iOS -->
+  <section id="why-not-ios" style="padding:5rem 0;border-top:1px solid var(--border)">
     <div class="container">
-      <div class="ios-waitlist-inner">
-        <div class="ios-waitlist-text">
-          <div class="section-eyebrow">// Android Only</div>
-          <h2 class="ios-waitlist-heading">NOT ON<br/><span>iOS. EVER.</span></h2>
-          <p class="ios-waitlist-body">ThrottleX will never be on iOS. Not because we didn't try to figure it out. Because Apple locks developers out of their own hardware the moment your screen goes dark. The accelerometer in your iPhone can handle 100Hz. Apple caps background access to 10Hz at best and calls it battery optimization. It is not optimization. It is control. ThrottleX requires unfiltered, continuous, high-frequency sensor data to do what it does. Android provides that. Apple does not. Buy accordingly.</p>
-        </div>
+      <div class="section-eyebrow">// Why Not iOS?</div>
+      <h2 class="section-title" style="margin-bottom:2rem;">WHY NOT<br/><span>iOS?</span></h2>
+      <div style="max-width:760px">
+        <p style="font-size:0.97rem;color:var(--text-dim);line-height:1.85;margin-bottom:1.25rem;">ThrottleX is not on iOS. It will not be on iOS. Ever. Not because we did not try to figure it out. We did. Here is exactly what we found.</p>
+        <p style="font-size:0.97rem;color:var(--text-dim);line-height:1.85;margin-bottom:1.25rem;">Apple sells you a 100Hz accelerometer, charges you $1,200 for the privilege, and then the moment your screen goes dark, they throttle every developer's access to that sensor down to roughly 10Hz. They call it battery optimization. It is not. It is Apple deciding that the hardware in your pocket belongs to them, not you.</p>
+        <p style="font-size:0.97rem;color:var(--text);font-weight:500;line-height:1.85;margin-bottom:0.5rem;">We looked at every workaround.</p>
+        <p style="font-size:0.97rem;color:var(--text-dim);line-height:1.85;margin-bottom:1.25rem;"><strong style="color:var(--text)">The fake navigation hack</strong> keeps your app alive using a background location manager but Apple still clamps the motion sensor delivery rate the moment you leave the foreground. You get a continuous log of heavily downsampled data. The high-frequency physics required for precise lean angle and rapid braking transitions get completely flattened. Useless.</p>
+        <p style="font-size:0.97rem;color:var(--text-dim);line-height:1.85;margin-bottom:1.25rem;"><strong style="color:var(--text)">The silent audio trick</strong> forces a persistent background thread by playing an inaudible loop. It keeps the process alive. It does not bypass the sensor cap. And if you try to ship it, Apple's App Store review team rejects you under Guideline 2.5.4 for using background audio to mine sensors. They have seen it before.</p>
+        <p style="font-size:0.97rem;color:var(--text-dim);line-height:1.85;margin-bottom:1.25rem;"><strong style="color:var(--text)">The Apple Watch offload</strong> sounds clever until you remember that a rider's wrist is the worst possible place to measure vehicle telemetry. Every countersteering input, every tuck behind the windscreen, every arm adjustment contaminates the data. ThrottleX needs the sensor rigidly fixed to the bike's frame or triple clamp. A watch strapped to a moving human arm is not that.</p>
+        <p style="font-size:0.97rem;color:var(--text-dim);line-height:1.85;margin-bottom:1.25rem;"><strong style="color:var(--text)">The only way to get true unthrottled 100Hz sensor data on iOS</strong> is to force the screen to stay on for the entire ride. Full brightness. Engine heat. Direct sunlight. The phone thermally throttles and shuts down within 20 minutes. That is not a product. That is a fire hazard.</p>
+        <p style="font-size:0.97rem;color:var(--text-dim);line-height:1.85;margin-bottom:1.25rem;">So here is where that leaves us. To build ThrottleX for iOS we would have to either force every rider to keep their screen on for the entire ride, or ship an external Bluetooth sensor puck and tell you to buy more hardware. We are not doing either of those things.</p>
+        <p style="font-size:0.97rem;color:var(--text-dim);line-height:1.85;margin-bottom:1.25rem;">On Android, you lock your phone, slip it in your pocket, mount it to your bars, or leave it in a tank bag. The background service runs. Every micro-degree of lean angle. Every braking G-force. Raw. Unfiltered. Continuous. At 100Hz. Exactly as intended.</p>
+        <p style="font-size:0.97rem;color:var(--text-dim);line-height:1.85;margin-bottom:2rem;">Android gives developers access to the hardware their users paid for. Apple does not. Apple built a walled garden, sold you a house inside it, and kept the keys.</p>
+        <p style="font-family:var(--font-display);font-size:1.6rem;color:var(--red);letter-spacing:0.05em;">ANDROID ONLY. NO COMPROMISES. NO APOLOGY. YOUR MOVE.</p>
       </div>
     </div>
   </section>
