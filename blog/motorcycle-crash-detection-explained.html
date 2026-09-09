@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Motorcycle Crash Detection Explained | ThrottleX Blog</title>
+  <meta name="description" content="Motorcycle crash detection uses IMU sensors to identify a crash in real time and automatically alert your emergency contact with your GPS location. Here is exactly how it works and why it matters." />
+  <meta name="keywords" content="motorcycle crash detection, motorcycle crash detection app, motorcycle SOS app, motorcycle emergency alert, crash detection android motorcycle, ThrottleX crash detection, motorcycle safety app, motorcycle accident alert" />
+  <link rel="canonical" href="https://throttlexapp.com/blog/motorcycle-crash-detection-explained.html" />
+  <meta property="og:title" content="Motorcycle Crash Detection Explained" /><meta property="og:description" content="Motorcycle crash detection uses IMU sensors to identify a crash in real time and automatically alert your emergency contact with your GPS location." /><meta property="og:type" content="article" /><meta property="og:image" content="https://throttlexapp.com/images/og-image.jpg" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Motorcycle Crash Detection Explained","datePublished":"2026-09-09","author":{"@type":"Organization","name":"ThrottleX"},"publisher":{"@type":"Organization","name":"ThrottleX","url":"https://throttlexapp.com"}}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="../images/favicon.png" />
+  <script>window.addEventListener('load',function(){(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","ws11p9jp3h")});</script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}window.addEventListener('load',function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-8PRHNYKLWZ';s.onload=function(){gtag('js',new Date());gtag('config','G-8PRHNYKLWZ')};document.head.appendChild(s)});</script>
+  <style>
+    :root{--red:#e8001e;--red-glow:rgba(232,0,30,0.15);--black:#050507;--dark2:#121215;--dark3:#1a1a1f;--border:rgba(255,255,255,0.07);--border-red:rgba(232,0,30,0.3);--text:#e8e8ec;--text-dim:#7a7a88;--text-dimmer:#4a4a55;--font-display:'Bebas Neue',sans-serif;--font-cond:'Barlow Condensed',sans-serif;--font-body:'Barlow',sans-serif}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:var(--black);color:var(--text);font-family:var(--font-body);font-weight:300;line-height:1.6;overflow-x:hidden}a{color:inherit;text-decoration:none}.container{max-width:1200px;margin:0 auto;padding:0 2rem}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.25rem 2rem;display:flex;justify-content:space-between;align-items:center;background:rgba(5,5,7,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}.nav-logo{font-family:var(--font-display);font-size:1.6rem;color:#fff}.nav-logo span{color:var(--red)}.nav-links{display:flex;gap:2rem;align-items:center}.nav-links a{font-family:var(--font-cond);font-size:0.85rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-dim);transition:color 0.2s}.nav-links a:hover{color:#fff}.nav-cta{background:var(--red);color:#fff!important;padding:0.5rem 1.25rem;font-weight:700}@media(max-width:900px){.nav-links{display:none}}
+    .article-header{padding:9rem 0 4rem;border-bottom:1px solid var(--border)}.breadcrumb{font-family:var(--font-cond);font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-dimmer);margin-bottom:1.5rem;display:flex;align-items:center;gap:0.5rem}.breadcrumb a:hover{color:var(--red)}.article-tag{font-family:var(--font-cond);font-size:0.75rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--red);display:block;margin-bottom:1rem}.article-header h1{font-family:var(--font-display);font-size:clamp(2.5rem,6vw,5rem);line-height:0.95;color:#fff;margin-bottom:1.5rem;max-width:820px}.article-meta{display:flex;gap:2rem;flex-wrap:wrap}.meta-item{font-family:var(--font-cond);font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-dimmer)}.meta-item strong{color:var(--text-dim)}
+    .article-body{display:grid;grid-template-columns:1fr 320px;gap:5rem;padding:5rem 0;align-items:start}article h2{font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.8rem);color:#fff;margin:3rem 0 1.25rem;line-height:1}article h3{font-family:var(--font-cond);font-size:1.1rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--red);margin:2rem 0 0.75rem}article p{font-size:0.97rem;color:var(--text-dim);line-height:1.85;margin-bottom:1.25rem}article strong{color:var(--text);font-weight:600}article ul{list-style:none;margin:0.5rem 0 1.5rem;display:flex;flex-direction:column;gap:0.6rem}article ul li{font-size:0.95rem;color:var(--text-dim);line-height:1.6;display:flex;align-items:flex-start;gap:0.6rem}article ul li::before{content:'//';color:var(--red);font-family:var(--font-cond);font-size:0.75rem;margin-top:0.2rem;flex-shrink:0}
+    .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--border);margin:2rem 0}.stat-box{background:var(--dark2);padding:1.5rem;text-align:center}.stat-box .num{font-family:var(--font-display);font-size:2.2rem;color:var(--red);line-height:1;display:block}.stat-box .label{font-family:var(--font-cond);font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-dimmer);margin-top:0.4rem;display:block}
+    .callout{background:var(--dark2);border-left:3px solid var(--red);padding:1.5rem 1.75rem;margin:2rem 0}.callout-label{font-family:var(--font-cond);font-size:0.7rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--red);display:block;margin-bottom:0.75rem}.callout p{margin-bottom:0;font-size:0.95rem}
+    .timeline{margin:2rem 0;display:flex;flex-direction:column;gap:0}.timeline-item{display:flex;gap:1.5rem;position:relative}.timeline-item:not(:last-child)::before{content:'';position:absolute;left:19px;top:40px;bottom:-1px;width:2px;background:var(--border)}.timeline-num{width:40px;height:40px;border-radius:50%;background:var(--red-glow);border:1px solid var(--border-red);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:1.1rem;color:var(--red);flex-shrink:0}.timeline-content{padding-bottom:2rem;flex:1}.timeline-title{font-family:var(--font-cond);font-size:0.9rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text);margin-bottom:0.4rem}.timeline-desc{font-size:0.9rem;color:var(--text-dim);line-height:1.7}
+    .article-sidebar{position:sticky;top:6rem}.sidebar-card{background:var(--dark2);border:1px solid var(--border);padding:1.75rem;margin-bottom:1.5rem}.sidebar-card h4{font-family:var(--font-cond);font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--red);margin-bottom:1rem}.sidebar-card ul{list-style:none;display:flex;flex-direction:column;gap:0.6rem}.sidebar-card ul li a{font-size:0.85rem;color:var(--text-dim);display:flex;align-items:flex-start;gap:0.5rem;line-height:1.4;transition:color 0.2s}.sidebar-card ul li a::before{content:'//';color:var(--red);font-family:var(--font-cond);font-size:0.7rem;margin-top:0.15rem;flex-shrink:0}.sidebar-card ul li a:hover{color:#fff}.sidebar-cta{background:var(--dark2);border:1px solid var(--border-red);padding:1.75rem;text-align:center;margin-bottom:1.5rem}.sidebar-cta h4{font-family:var(--font-display);font-size:1.4rem;color:#fff;margin-bottom:0.75rem}.sidebar-cta p{font-size:0.85rem;color:var(--text-dim);margin-bottom:1.25rem;line-height:1.6}.sidebar-cta a{display:block;background:var(--red);color:#fff;font-family:var(--font-cond);font-weight:700;font-size:0.9rem;letter-spacing:0.08em;padding:0.85rem;transition:background 0.2s}.sidebar-cta a:hover{background:#c0001a}
+    .related-section{padding:5rem 0;border-top:1px solid var(--border)}.section-label{font-family:var(--font-cond);font-size:0.75rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--red);margin-bottom:0.75rem;display:block}.related-section h2{font-family:var(--font-display);font-size:2.5rem;color:#fff;margin-bottom:2.5rem}.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem}.related-card{background:var(--dark2);border:1px solid var(--border);padding:1.75rem;transition:border-color 0.2s;display:block}.related-card:hover{border-color:var(--border-red)}.related-card-tag{font-family:var(--font-cond);font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--red);margin-bottom:0.6rem;display:block}.related-card h3{font-family:var(--font-cond);font-weight:700;font-size:1.1rem;color:#fff;margin-bottom:0.5rem;line-height:1.3}.related-card p{font-size:0.85rem;color:var(--text-dim);line-height:1.6}
+    footer{padding:2.5rem 0;border-top:1px solid var(--border)}.footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}.footer-logo{font-family:var(--font-display);font-size:1.2rem}.footer-logo span{color:var(--red)}.footer-links{display:flex;gap:1.5rem;flex-wrap:wrap}.footer-links a{font-family:var(--font-cond);font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-dimmer);transition:color 0.2s}.footer-links a:hover{color:var(--red)}.footer-copy{font-size:0.78rem;color:var(--text-dimmer)}
+    @media(max-width:900px){.article-body{grid-template-columns:1fr;gap:3rem}.article-sidebar{position:static}.stat-row{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="../index.html" class="nav-logo">THROTTLE<span>X</span></a>
+    <div class="nav-links">
+      <a href="../index.html#features">Features</a><a href="../index.html#pricing">Pricing</a><a href="../blog.html">Blog</a><a href="../bugs.html">Bug Tracker</a>
+      <a href="https://play.google.com/store/apps/details?id=com.alloy.throttlex" target="_blank" class="nav-cta">Get the App</a>
+    </div>
+  </nav>
+
+  <header class="article-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="../index.html">Home</a><span>//</span><a href="../blog.html">Blog</a><span>//</span><span>Safety</span></div>
+      <span class="article-tag">// Safety</span>
+      <h1>Motorcycle Crash Detection Explained</h1>
+      <div class="article-meta">
+        <span class="meta-item">By <strong>ThrottleX Team</strong></span>
+        <span class="meta-item">Published <strong>September 9, 2026</strong></span>
+        <span class="meta-item">Read time <strong>9 min</strong></span>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="article-body">
+      <article>
+
+        <p>Most riders think about crash detection the way they think about insurance. Something they hope they never need but would be glad to have. What fewer riders understand is how crash detection actually works at a technical level, what it can and cannot detect, and why the reliability of the system depends heavily on the platform it runs on.</p>
+
+        <p>This article explains exactly how smartphone-based motorcycle crash detection works, what happens in the seconds after a crash is detected, and what makes the difference between a system that actually helps and one that is just a marketing checkbox.</p>
+
+        <h2 id="the-problem">THE PROBLEM CRASH DETECTION SOLVES</h2>
+
+        <p>Motorcycle crashes are different from car crashes in one critical way. In a car crash the vehicle stays with you. Emergency services can locate a wrecked car by its position on the road, bystanders can see it, and you may be conscious enough to call for help yourself.</p>
+
+        <p>A motorcycle crash can throw the rider and the bike in completely different directions. The bike may come to rest visible on the road while the rider slides into a ditch, a field, or through a barrier. If you are unconscious, remote, and alone, nobody may know where you are. In rural canyon riding, track days, or any situation where other riders are not immediately present, the window between a crash and discovery can be measured in hours.</p>
+
+        <p>Crash detection closes that window. If the system works correctly, your emergency contact gets your exact GPS coordinates within a minute of impact. Finding you is no longer dependent on someone else happening to pass by.</p>
+
+        <h2 id="how-it-works">HOW IT ACTUALLY WORKS</h2>
+
+        <h3>The IMU is the foundation</h3>
+        <p>Crash detection is built on the same inertial measurement unit that powers the lean angle and G-force readings you see on the dashboard. The IMU contains a 3-axis accelerometer measuring linear forces in G units and a 3-axis gyroscope measuring rotational rate. Together they produce a continuous stream of data describing exactly what the phone is experiencing in six degrees of freedom at any given moment.</p>
+
+        <p>In normal riding this data looks like smooth, predictable patterns. Cornering produces lateral G. Braking produces longitudinal G. Lean angle changes gradually as the bike tips into and out of corners. A crash produces something completely different: a sudden, high-magnitude spike across multiple axes simultaneously, often followed by rapid and chaotic rotation as the rider tumbles, then an abrupt stop.</p>
+
+        <h3>The detection thresholds</h3>
+        <p>ThrottleX uses two simultaneous trigger conditions that must both be met before a crash alert is fired. An impact of 4.0G or greater combined with a tip-over angle of 65 degrees or more. Both conditions must be present within the same detection window. This dual-condition approach is what separates a legitimate crash detection system from one that fires false positives every time you hit a pothole or drop the bike in a parking lot at low speed.</p>
+
+        <div class="stat-row">
+          <div class="stat-box"><span class="num">4.0G</span><span class="label">Minimum Impact Threshold</span></div>
+          <div class="stat-box"><span class="num">65°</span><span class="label">Tip-Over Angle Threshold</span></div>
+          <div class="stat-box"><span class="num">30s</span><span class="label">Countdown Before SOS Fires</span></div>
+        </div>
+
+        <h3>Sample window confirmation</h3>
+        <p>A single G-force spike is not enough to trigger the alert. ThrottleX confirms the reading across a sample window before acting on it. This means a brief vibration or a single bad sensor reading cannot fire a false alarm. The system looks for sustained evidence of a crash event rather than reacting to any individual data point. The confirmation window is short enough that a real crash is caught immediately but long enough to filter out transient sensor noise.</p>
+
+        <h3>The 30 second countdown</h3>
+        <p>Once both thresholds are met and the confirmation window passes, a full-screen countdown begins. Thirty seconds. Large text. A single large cancel button. This is intentional. A low-speed drop, a stall in traffic, or an off at slow speed might meet the detection criteria. The countdown gives a conscious, unhurt rider the opportunity to cancel before the alert fires. If the rider is unconscious, incapacitated, or in genuine distress, thirty seconds passes and the SOS sends automatically.</p>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-num">1</div>
+            <div class="timeline-content">
+              <div class="timeline-title">Impact Detected</div>
+              <div class="timeline-desc">IMU reads 4.0G or greater combined with 65 degree or greater tip-over angle within the confirmation window.</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-num">2</div>
+            <div class="timeline-content">
+              <div class="timeline-title">30 Second Countdown Begins</div>
+              <div class="timeline-desc">Full-screen countdown with large cancel button. A conscious rider cancels here. An incapacitated rider does not.</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-num">3</div>
+            <div class="timeline-content">
+              <div class="timeline-title">SMS Fires Automatically</div>
+              <div class="timeline-desc">If countdown completes without cancellation, an automated SMS goes to your emergency contact.</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-num">4</div>
+            <div class="timeline-content">
+              <div class="timeline-title">GPS Location Included</div>
+              <div class="timeline-desc">The SMS contains your exact GPS coordinates and a Google Maps link. Your contact can share it directly with emergency services.</div>
+            </div>
+          </div>
+        </div>
+
+        <h2 id="the-sms">THE SMS AND WHAT IT CONTAINS</h2>
+
+        <p>The automated message goes to the emergency contact you set up in ThrottleX before your ride. It contains a plain-language alert, your current GPS coordinates in decimal format, and a Google Maps link that opens your exact location on any smartphone. Your emergency contact does not need any special app. They tap the link, see where you are, and can relay that information directly to emergency services with a precise location rather than a vague description of a road.</p>
+
+        <p>This is significantly more useful than a 911 call from a panicked contact who does not know exactly where you are. Search and rescue teams can act on GPS coordinates immediately. They cannot act on "somewhere on the canyon road north of town."</p>
+
+        <h2 id="always-on">ALWAYS-ON BACKGROUND DETECTION</h2>
+
+        <p>For crash detection to be useful it has to be running when a crash happens. That sounds obvious but it is the part that most riders do not think about. If the app requires you to have it in the foreground, open and active on screen, then a crash that happens with a locked screen produces no alert. The detection has to run in the background continuously while you ride.</p>
+
+        <p>ThrottleX runs crash detection as a persistent background service on Android. Once you start a session the detection continues whether the screen is locked, the app is in the background, or your phone has gone to sleep. This is one of the reasons ThrottleX is Android only. Android's background service architecture allows this kind of persistent, high-frequency sensor monitoring without interruption. It is not a workaround. It is the platform working as designed.</p>
+
+        <p>The system arms automatically once you are moving at 8 mph or faster and disarms when you stop. This means it will not fire at a traffic light or when you are pushing the bike around in a parking lot.</p>
+
+        <h2 id="limitations">WHAT CRASH DETECTION CANNOT DO</h2>
+
+        <p>Being honest about limitations matters more than overselling the feature.</p>
+
+        <ul>
+          <li><strong>It requires GPS signal.</strong> In a tunnel, underground parking, or any location where GPS cannot get a fix, the coordinates in the SMS will be less accurate or may reflect your last known position rather than your exact crash location.</li>
+          <li><strong>It requires your phone to survive the crash.</strong> A phone that is destroyed, submerged, or separated from the rider cannot send an alert. A quality mount reduces the chance of the phone being thrown from the bike but it is not a guarantee.</li>
+          <li><strong>It requires a cellular signal.</strong> The SMS requires mobile network coverage. In genuinely remote areas without signal the alert cannot send. The app will retry when signal is restored but in a deep coverage gap that may take time.</li>
+          <li><strong>It is not a replacement for emergency services.</strong> Crash detection gets help coming to your location. It is not a substitute for a helmet, riding gear, or calling 911 directly if you are conscious and able to do so.</li>
+        </ul>
+
+        <div class="callout">
+          <span class="callout-label">// Set It Up Before You Ride</span>
+          <p>Crash detection only works if you have set up an emergency contact before the session. Go to ThrottleX settings, add your contact's name and mobile number, and confirm the SMS permission is granted. Do it before your next ride. Not after.</p>
+        </div>
+
+        <h2 id="who-it-is-for">WHO CRASH DETECTION IS REALLY FOR</h2>
+
+        <p>The honest answer is that crash detection is not primarily for the rider. Riders tend to think they will be fine. Crash detection is for the person waiting for you to come home.</p>
+
+        <p>A spouse, a parent, a partner who knows you are out on a long canyon run or a track day and has no way of knowing whether a delay in your return means traffic or something worse. Crash detection gives that person a concrete answer within 30 seconds of a serious incident instead of hours of increasingly anxious wondering.</p>
+
+        <p>For solo riders in particular the case is straightforward. Nobody knows where you are. Nobody is watching. Nobody will notice for hours if something goes wrong. Crash detection is the difference between lying injured in a ditch for an afternoon and having someone on the way to your coordinates within a minute of impact.</p>
+
+        <h2 id="bottom-line">THE BOTTOM LINE</h2>
+
+        <p>Motorcycle crash detection is not a gimmick. It is a specific, technically grounded feature that solves a real problem that motorcycle crashes create. The implementation matters enormously. A system that runs continuously in the background, requires dual-condition confirmation to avoid false positives, gives you a cancellation window, and delivers precise GPS coordinates via SMS is genuinely useful. One that runs only in the foreground, fires on potholes, or delivers a vague location is not.</p>
+
+        <p>Set up your emergency contact. Go for your ride. Come back. But if you do not come back, the people who matter to you will know exactly where you are within 30 seconds of impact. That is what crash detection is for.</p>
+
+      </article>
+
+      <aside class="article-sidebar">
+        <div class="sidebar-card">
+          <h4>// In This Article</h4>
+          <ul>
+            <li><a href="#the-problem">The Problem It Solves</a></li>
+            <li><a href="#how-it-works">How It Actually Works</a></li>
+            <li><a href="#the-sms">The SMS and What It Contains</a></li>
+            <li><a href="#always-on">Always-On Background Detection</a></li>
+            <li><a href="#limitations">What It Cannot Do</a></li>
+            <li><a href="#who-it-is-for">Who It Is Really For</a></li>
+            <li><a href="#bottom-line">The Bottom Line</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-cta">
+          <h4>RIDE ALONE. NEVER ALONE.</h4>
+          <p>ThrottleX crash detection sends your GPS coordinates to your emergency contact automatically. Included in Pro at $9.99 one-time.</p>
+          <a href="https://play.google.com/store/apps/details?id=com.alloy.throttlex" target="_blank">GET THROTTLEX · $9.99</a>
+        </div>
+        <div class="sidebar-card">
+          <h4>// More From The Blog</h4>
+          <ul>
+            <li><a href="motorcycle-riding-gear-and-apparel-guide.html">Motorcycle Riding Gear Guide</a></li>
+            <li><a href="how-weather-affects-motorcycle-grip.html">How Weather Affects Grip</a></li>
+            <li><a href="what-is-motorcycle-telemetry.html">What Is Motorcycle Telemetry?</a></li>
+            <li><a href="motorcycle-data-logging-explained.html">Motorcycle Data Logging Explained</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <section class="related-section">
+    <div class="container">
+      <span class="section-label">// Keep Reading</span>
+      <h2>MORE FROM THE BLOG</h2>
+      <div class="related-grid">
+        <a href="motorcycle-riding-gear-and-apparel-guide.html" class="related-card"><span class="related-card-tag">// Safety</span><h3>Motorcycle Riding Gear and Apparel: A Complete Guide</h3><p>Helmets, jackets, gloves, boots, and pants explained by category. What actually matters and what order to buy it in.</p></a>
+        <a href="how-weather-affects-motorcycle-grip.html" class="related-card"><span class="related-card-tag">// Riding Skills</span><h3>How Weather Affects Motorcycle Grip and What to Do About It</h3><p>Temperature, humidity, rain, and road surface all change your available traction. Here is what to do about each one.</p></a>
+        <a href="why-your-phone-is-a-serious-motorcycle-data-logger.html" class="related-card"><span class="related-card-tag">// Data and Telemetry</span><h3>Why Your Phone Is a Serious Motorcycle Data Logger</h3><p>The hardware in a modern Android phone is more capable than most riders realize. Here is the full picture.</p></a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">THROTTLE<span>X</span></div>
+        <div class="footer-links"><a href="../index.html#features">Features</a><a href="../index.html#pricing">Pricing</a><a href="../blog.html">Blog</a><a href="../privacy.html">Privacy Policy</a></div>
+        <div class="footer-copy">© 2026 ThrottleX · Hand-coded by a Solo Rider.</div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
