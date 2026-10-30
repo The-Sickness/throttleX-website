@@ -247,7 +247,7 @@
         <p>ThrottleX does this fusion with a Kalman filter. A Kalman filter keeps a running model of how the bike should behave and an estimate of how much it trusts each sensor at every moment. Each new sample is compared against what the model predicted. If the gyroscope and accelerometer agree, the estimate firms up. If they disagree, the filter weighs each one by how reliable it is in that situation, and it can even estimate the gyroscope bias itself and remove it as you ride. It is the same family of algorithm used in aircraft navigation, and it is far more capable than a simple average of the two sensors.</p>
 
         <h3>Why sample rate matters</h3>
-        <p>The filter is only as good as the data it is fed. A fast flick from full lean on one side to full lean on the other can happen in well under a second. At 20 samples per second the filter gets a handful of snapshots of that transition. At 100 samples per second it gets five times as many, which means sharper peaks, less smoothing of real events, and a cleaner Flick Rate. ThrottleX runs the IMU at up to 100Hz or higher on supported hardware for exactly this reason.</p>
+        <p>The filter is only as good as the data it is fed. A fast flick from full lean on one side to full lean on the other can happen in well under a second. At 20 samples per second the filter gets a handful of snapshots of that transition. At 100 samples per second it gets five times as many, which means sharper peaks, less smoothing of real events, and a cleaner Flick Rate. ThrottleX runs the IMU at up to 100Hz on supported hardware for exactly this reason.</p>
 
         <h2 id="real-world-factors">WHAT STILL AFFECTS YOUR NUMBER</h2>
 
